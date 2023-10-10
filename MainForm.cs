@@ -440,6 +440,36 @@ namespace Expedition_Builder_Online
             TT_Character_Load();
         }
 
+        void Char_Update_Silent(string Code)
+        {
+            Character.Load(Code);
+            Character_Data_Convert();
+
+            Affinity_Calculate();
+            Gear_Calculate();
+            Ability_Calculate(); // Calculates abilities and prints them
+            Talent_Calculate();
+            Talent_Calculate_TradeOff();
+
+            Character_Data_Print();
+            Character_Data_Return();
+            
+            Character.Save(GSheets.TabStats, GSheets.TabStatsRange);
+        }
+
+        void Char_Update_MainCast()
+        {
+            Char_Update_Silent("antonio");
+            Char_Update_Silent("andrew");
+            Char_Update_Silent("theresa");
+            Char_Update_Silent("chimbie");
+            Char_Update_Silent("leira");
+            Char_Update_Silent("john");
+            Char_Update_Silent("erebus");
+            Char_Update_Silent("rilies");
+            Char_Update_Silent("pearl");
+        }
+
         /*
  0: Role
          * 0:Skill
@@ -616,6 +646,11 @@ namespace Expedition_Builder_Online
         }
         private void TxtCode_TextChanged(object sender, EventArgs e)
         {
+            if(TxtCode.Text == "UpdateAll")
+            {
+                Char_Update_MainCast();
+            }
+
             if (TT_Char_Check)
             { TT_Character_Load(); }         
         }
@@ -2406,14 +2441,14 @@ namespace Expedition_Builder_Online
                 TalentStats[14] += 5;
                 TalentStats[15] -= 3;
             }
-            if (TalentChoice[26] > 0)
+            if (TalentChoice[27] > 0)
             {
                 TalentStats[1] += TenPercent; // RP
                 TalentStats[5] -= TenPercent; // Ph Pow
                 TalentStats[9] -= TenPercent; // Ma Pow
                 TalentStats[13] -= TenPercent; // He Pow
             }
-            else if (TalentChoice[27] > 0)
+            else if (TalentChoice[26] > 0)
             {
                 TalentStats[1] -= TenPercent; // RP
                 TalentStats[5] += TenPercent; // Ph Pow
