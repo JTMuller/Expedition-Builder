@@ -1,0 +1,958 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Stat-PProw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-PProw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_49A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_49A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_24D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_24D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gear-ReplaceMini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gear-ReplaceMini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Earth_Mineral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Earth_Mineral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_29A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_29A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_6D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_6D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-TN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-TN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-TX-A7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-TX-A7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-AChest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-AChest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_49D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_49D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_39D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_39D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Lightning_Magnetism" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Lightning_Magnetism.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_29D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_29D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-TO2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-TO2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-D-A3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-D-A3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_54D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_54D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Light_Prismatic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Light_Prismatic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-HP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-HP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-AGloves" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-AGloves.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Earth_Sand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Earth_Sand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_13A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_13A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_1D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_1D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gear-Equip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gear-Equip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tab-5-DeactiveS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tab-5-DeactiveS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_19A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_19A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-WN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-WN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-WP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-WP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_7D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_7D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_22D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_22D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_6A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_6A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-D4-Empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-D4-Empty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_35A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_35A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_52A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_52A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screen-4S" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screen-4S.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-LP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-LP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-Armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-Armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Arcane_Illusion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Arcane_Illusion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-Quest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-Quest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T2-D5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T2-D5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T2-A6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T2-A6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_50A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_50A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T1-A5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T1-A5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_34A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_34A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_33A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_33A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_14A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_14A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tab-4-ActiveS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tab-4-ActiveS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_15D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_15D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ability-D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ability-D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_23A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_23A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_None" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_None.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tab-5-SelectS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tab-5-SelectS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-D-D3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-D-D3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_13D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_13D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_1A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_1A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-N" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-N.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-D5-Empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-D5-Empty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Lightning_Storm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Lightning_Storm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Shadow_Necrotic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Shadow_Necrotic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_38D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_38D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_42A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_42A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tab-1-SelectS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tab-1-SelectS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_18D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_18D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_51A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_51A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Shadow_Darkness" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Shadow_Darkness.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Water_Flow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Water_Flow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_0D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_0D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_41A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_41A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tab-3-DeactiveS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tab-3-DeactiveS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-ACloak2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-ACloak2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_38A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_38A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-ACloak" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-ACloak.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-AB9-Mentality" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-AB9-Mentality.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_18A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_18A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-Role" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-Role.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-AChest2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-AChest2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_12A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_12A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_50D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_50D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_4D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_4D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-PPower" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-PPower.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ability-A-Zero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ability-A-Zero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-D-A7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-D-A7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-D-D4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-D-D4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-CritFail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-CritFail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-Avoid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-Avoid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-Resist" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-Resist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T2-D2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T2-D2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-S-Exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-S-Exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T1-D1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T1-D1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_44D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_44D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_31A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_31A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_2A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_2A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_37A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_37A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-TM2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-TM2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-AShoulders2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-AShoulders2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gear-EquipMini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gear-EquipMini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ability-A-End" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ability-A-End.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_27A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_27A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tab-2-SelectS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tab-2-SelectS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tab-4-DeactiveS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tab-4-DeactiveS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_17D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_17D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-TN2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-TN2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-WP2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-WP2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_48A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_48A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_53D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_53D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T2-A4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T2-A4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-AHelm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-AHelm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-ABoots2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-ABoots2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tab-2-ActiveS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tab-2-ActiveS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_43D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_43D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_23D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_23D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_30D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_30D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Energy_Force" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Energy_Force.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_36D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_36D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T2-A1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T2-A1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T1-D2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T1-D2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screen-3S" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screen-3S.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_24A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_24A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_22A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_22A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_45A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_45A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-WN2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-WN2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-RP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-RP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-TO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-TO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_16A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_16A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-Attune" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-Attune.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-T2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-T2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_11A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_11A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_54A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_54A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_20D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_20D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-T" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-T.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_53A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_53A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_5D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_5D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_46A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_46A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-Rgn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-Rgn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_31D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_31D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_28D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_28D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_32D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_32D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-Prec" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-Prec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-TX-D7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-TX-D7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-AB5-Magica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-AB5-Magica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_25D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_25D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ability-A-Center" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ability-A-Center.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-WM2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-WM2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T1-A4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T1-A4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T1-A1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T1-A1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-D-A2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-D-A2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screen-1S" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screen-1S.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T2-D6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T2-D6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_28A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_28A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T1-D5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T1-D5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_36A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_36A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_27D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_27D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_5A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_5A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-XP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-XP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-Lvl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-Lvl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-WH2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-WH2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-AB8-Finesse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-AB8-Finesse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Arcane_Magic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Arcane_Magic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Water_Ice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Water_Ice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_0A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_0A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-S-Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-S-Save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_17A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_17A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_35D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_35D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gear-Replace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gear-Replace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ability-A-Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ability-A-Start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_52D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_52D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T2-Empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T2-Empty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_3D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_3D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T2-D1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T2-D1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_46D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_46D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Primal_Beastial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Primal_Beastial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-ABoots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-ABoots.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Energy_Anima" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Energy_Anima.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T1-D6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T1-D6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_33D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_33D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T1-A2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T1-A2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Primal_Shamanistic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Primal_Shamanistic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-D-A4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-D-A4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_15A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_15A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_25A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_25A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_7A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_7A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Psi_Ki" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Psi_Ki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-Ward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-Ward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_48D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_48D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_10A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_10A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Chaos_Gambler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Chaos_Gambler.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-HProw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-HProw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-AB4-Knowledge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-AB4-Knowledge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Void_Consuming" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Void_Consuming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screen-5S" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screen-5S.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-TX-D3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-TX-D3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_47D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_47D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_4A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_4A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-Source" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-Source.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-CritHit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-CritHit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_47A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_47A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-APants" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-APants.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-TM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-TM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_45D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_45D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_34D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_34D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Psi_Psychic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Psi_Psychic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_14D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_14D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tab-1-DeactiveS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tab-1-DeactiveS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-N2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-N2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_8A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_8A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-Comment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-Comment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_39A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_39A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tab-3-SelectS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tab-3-SelectS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-D-D2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-D-D2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T1-Empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T1-Empty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_12D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_12D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screen-2S" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screen-2S.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_51D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_51D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_26D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_26D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Fire_Mythical" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Fire_Mythical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-D-A6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-D-A6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-AB1-Strength" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-AB1-Strength.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-AGloves2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-AGloves2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tab-1-ActiveS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tab-1-ActiveS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Nature_Wind" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Nature_Wind.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_8D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_8D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T2-A5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T2-A5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-D3-Empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-D3-Empty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-WH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-WH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T1-A6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T1-A6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tab-5-ActiveS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tab-5-ActiveS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Nature_Fae" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Nature_Fae.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_41D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_41D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T2-D4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T2-D4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-D6-Empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-D6-Empty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_2D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_2D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-MProw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-MProw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-AB3-Perception" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-AB3-Perception.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Void_Space" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Void_Space.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_40D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_40D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Chaos_Anomaly" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Chaos_Anomaly.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_16D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_16D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_3A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_3A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_26A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_26A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-WM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-WM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_40A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_40A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-MP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-MP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-S-Sheets" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-S-Sheets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Poison_Alchemic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Poison_Alchemic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-S-Load" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-S-Load.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_19D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_19D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_43A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_43A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-AB7-Deception" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-AB7-Deception.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tab-4-SelectS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tab-4-SelectS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_44A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_44A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_10D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_10D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-AB2-Control" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-AB2-Control.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_37D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_37D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-AHelm2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-AHelm2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-AShoulders" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-AShoulders.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_42D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_42D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Light_Holy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Light_Holy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-HPower" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-HPower.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_30A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_30A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T1-D4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T1-D4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_21A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_21A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_11D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_11D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-TX-A3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-TX-A3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_21D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_21D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_9A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_9A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_20A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_20A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Poison_Toxic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Poison_Toxic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tab-3-ActiveS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tab-3-ActiveS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-I-APants2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-I-APants2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_32A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_32A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-S-Help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-S-Help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_Fire_Flame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S_Fire_Flame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stat-MPower" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stat-MPower.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI-AB6-Survival" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI-AB6-Survival.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Affinity-T2-A2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Affinity-T2-A2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_9D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_9D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tab-2-DeactiveS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tab-2-DeactiveS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_55A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_55A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EI_T_55D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EI_T_55D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

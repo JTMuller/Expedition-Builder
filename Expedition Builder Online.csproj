@@ -1,0 +1,1145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A553D401-BE21-4936-8532-EB6E121E48F9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Expedition_Builder_Online</RootNamespace>
+    <AssemblyName>Expedition Builder Online</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>IcoPR.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C43A76C1D09832BBEAC4E6E912FC43E84C325DA0</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Expedition Builder Online_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.Apis, Version=1.61.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.1.61.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.61.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Auth.1.61.0\lib\net461\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.61.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Auth.1.61.0\lib\net461\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.61.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Core.1.61.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.61.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.1.61.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Sheets.v4, Version=1.61.0.3141, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Sheets.v4.1.61.0.3141\lib\net45\Google.Apis.Sheets.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestScreen.Designer.cs">
+      <DependentUpon>TestScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestScreen.resx">
+      <DependentUpon>TestScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Expedition Builder Online_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T1-Empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T2-Empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T1-A1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T1-D1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-TX-A3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-TX-D3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T1-A5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T1-A6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T1-D5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T1-D6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T2-A5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T2-A6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T2-D5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T2-D6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T1-A2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T1-A4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T1-D2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T1-D4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T2-A2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T2-A4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T2-D2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T2-D4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-TX-A7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-TX-D7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T2-D1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-T2-A1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-D3-Empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-D4-Empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-D5-Empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-D6-Empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-D-A2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-D-A3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-D-A4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-D-A6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-D-A7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-D-D2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-D-D3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-D-D4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-D-D6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affinity-D-D7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-ABoots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-ABoots2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-AChest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-AChest2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-ACloak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-ACloak2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-AGloves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-AGloves2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-AHelm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-AHelm2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-APants.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-APants2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-AShoulders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-AShoulders2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-N.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-N2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-T.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-T2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-TN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-TN2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-TO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-TO2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-WH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-WH2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-WM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-WM2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-WN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-WN2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-WP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-WP2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-TM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-I-TM2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screen-1S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screen-2S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screen-3S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screen-4S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screen-5S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tab-1-ActiveS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tab-1-DeactiveS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tab-1-SelectS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tab-2-ActiveS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tab-2-DeactiveS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tab-2-SelectS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tab-3-ActiveS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tab-3-DeactiveS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tab-3-SelectS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tab-4-ActiveS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tab-4-DeactiveS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tab-4-SelectS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tab-5-ActiveS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tab-5-DeactiveS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tab-5-SelectS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-Armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-Attune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-Avoid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-Comment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-CritFail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-CritHit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-HP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-HPower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-HProw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-LP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-Lvl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-MP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-MPower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-MProw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-PPower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-PProw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-Prec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-Resist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-Rgn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-RP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-Ward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-Source.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gear-Equip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gear-EquipMini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gear-Replace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gear-ReplaceMini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-AB1-Strength.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-AB2-Control.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-AB3-Perception.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-AB4-Knowledge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-AB5-Magica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-AB6-Survival.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-AB7-Deception.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-AB8-Finesse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-AB9-Mentality.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ability-A-Zero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ability-D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ability-A-Center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ability-A-End.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ability-A-Start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-S-Load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-S-Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-XP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-Quest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stat-Role.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_0A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_0D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_1A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_1D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_2A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_2D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_3A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_4A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_4D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_5A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_5D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_6A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_6D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_7A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_7D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_8A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_8D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_9A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_9D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_10A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_10D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T11A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T11D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T12A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T12D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T13A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T13D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T14A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T14D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T15A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T15D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T16A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T16D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T17A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T17D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T18A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T18D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T19A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T19D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T20A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T20D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T21A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T21D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T22A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T22D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T23A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T23D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T24A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T24D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T25A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T25D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T26A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T26D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T27A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T27D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T28A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T28D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T29A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T29D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T30A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T30D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T31A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T31D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T32A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T32D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_11A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_11D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_12A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_12D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_13A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_13D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_14A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_14D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_15A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_15D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_16A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_16D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_17A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_17D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_18A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_18D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_19A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_19D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_20A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_20D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_21A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_21D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_22A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_22D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_23A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_23D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_24A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_24D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_25A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_25D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_26A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_26D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_27A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_27D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_28A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_28D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_29A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_29D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_30A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_30D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_31A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_31D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_32A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_32D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_33A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_33D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_34A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_34D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_36A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_36D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_37A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_37D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_38A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_38D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_39A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_39D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_40A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_40D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_41A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_41D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_42A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_42D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_43A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_43D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_44A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_44D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_45A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_45D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_46A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_46D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_47A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_47D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_48A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_48D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_49A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_49D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_50A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_50D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_51A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_51D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_52A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_52D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_53A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_53D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_54A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_54D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_35A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_35D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Arcane_Illusion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Arcane_Magic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Chaos_Anomaly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Chaos_Gambler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Earth_Mineral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Earth_Sand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Energy_Anima.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Energy_Force.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Fire_Flame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Fire_Mythical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Light_Holy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Light_Prismatic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Lightning_Magnetism.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Lightning_Storm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Nature_Fae.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Nature_Wind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_None.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Poison_Alchemic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Poison_Toxic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Primal_Beastial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Primal_Shamanistic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Psi_Ki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Psi_Psychic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Shadow_Darkness.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Shadow_Necrotic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Void_Consuming.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Void_Space.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Water_Flow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_Water_Ice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-S-Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-S-Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI-S-Sheets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_55A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EI_T_55D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IcoPR.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

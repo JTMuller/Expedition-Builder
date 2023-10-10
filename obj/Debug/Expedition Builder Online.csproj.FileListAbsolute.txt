@@ -1,0 +1,33 @@
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Expedition Builder Online.exe.config
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Expedition Builder Online.exe
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Expedition Builder Online.pdb
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Google.Apis.Auth.dll
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Google.Apis.Core.dll
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Google.Apis.dll
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Google.Apis.Sheets.v4.dll
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Google.Apis.pdb
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Google.Apis.xml
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Google.Apis.Auth.xml
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Google.Apis.Core.pdb
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Google.Apis.Core.xml
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Google.Apis.Sheets.v4.pdb
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Google.Apis.Sheets.v4.xml
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ragez\source\repos\Expedition Builder Online\obj\Debug\Expedition Builder Online.csproj.AssemblyReference.cache
+C:\Users\ragez\source\repos\Expedition Builder Online\obj\Debug\Expedition_Builder_Online.TestScreen.resources
+C:\Users\ragez\source\repos\Expedition Builder Online\obj\Debug\Expedition_Builder_Online.Properties.Resources.resources
+C:\Users\ragez\source\repos\Expedition Builder Online\obj\Debug\Expedition Builder Online.csproj.GenerateResource.cache
+C:\Users\ragez\source\repos\Expedition Builder Online\obj\Debug\Expedition Builder Online.csproj.CoreCompileInputs.cache
+C:\Users\ragez\source\repos\Expedition Builder Online\obj\Debug\Expedition Builder Online.csproj.CopyComplete
+C:\Users\ragez\source\repos\Expedition Builder Online\obj\Debug\Expedition Builder Online.exe
+C:\Users\ragez\source\repos\Expedition Builder Online\obj\Debug\Expedition Builder Online.pdb
+C:\Users\ragez\source\repos\Expedition Builder Online\obj\Debug\Expedition_Builder_Online.MainForm.resources
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Expedition Builder Online.exe.manifest
+C:\Users\ragez\source\repos\Expedition Builder Online\bin\Debug\Expedition Builder Online.application
+C:\Users\ragez\source\repos\Expedition Builder Online\obj\Debug\Expedition Builder Online.TrustInfo.xml
+C:\Users\ragez\source\repos\Expedition Builder Online\obj\Debug\Expedition Builder Online.exe.manifest
+C:\Users\ragez\source\repos\Expedition Builder Online\obj\Debug\Expedition Builder Online.application
