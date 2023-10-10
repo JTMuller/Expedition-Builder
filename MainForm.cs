@@ -199,14 +199,26 @@ namespace Expedition_Builder_Online
 
                 GValueRange.Values = new List<IList<Object>>();
                 List<Object> GValueRangeInner = new List<Object>();
-                GValueRangeInner.Add(Character.Code);
-                GValueRangeInner.Add(Character.Name);
-                if (Tab == GSheets.TabChar)
+                if ((Fresh && Tab == GSheets.TabChar) || (Tab == GSheets.TabStats)) // first editions need to be placed for fresh characters
+                {
+                    GValueRangeInner.Add(Character.Code);
+                    GValueRangeInner.Add(Character.Name);
+                }  
+                if (Fresh && Tab == GSheets.TabChar)
                 {
                     for (int i = 0; i <= 90; i++)
                     {
                         GValueRangeInner.Add(Character.Data[i]);
                     }
+                }
+                else if (Tab == GSheets.TabChar)
+                {
+                    for (int i = 3; i <= 90; i++)
+                    {
+                        GValueRangeInner.Add(Character.Data[i]);
+                    }
+                    RangeFrom = "!G";
+                    GRange = $"{Tab}" + RangeFrom + Placement + RangeTo + Placement;
                 }
                 else if (Tab == GSheets.TabStats)
                 {
