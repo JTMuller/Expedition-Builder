@@ -105,10 +105,8 @@ namespace Expedition_Builder_Online
         ToolTip[] TT_Character = new ToolTip[31]; // 28 Tooltips, and 3 extra for source, save and load
         ToolTip[] TT_Affinity = new ToolTip[6]; // 6 Tooltips, not exclusive for each button
         ToolTip[] TT_Gear = new ToolTip[12]; // 12 Tooltips, for each gearpiece
-        ToolTip[] TT_Talent = new ToolTip[56]; // 56 Tooltips, for each talent
         bool TT_Char_Check = false;
         bool TT_Affinity_Check = false;
-        bool TT_Talent_Check = false;
         bool HelpMode = false;
 
 
@@ -1168,13 +1166,14 @@ namespace Expedition_Builder_Online
         //
         //          Gear Loading (Tab 4)
         //
+
         public static class Gear
         {
             public static string[] Name = new string[12];
             public static string[] Type = new string[12];
             public static string[] Source = new string[12];
             public static string[] Description = new string[12];
-            public static bool[] Equiped = new bool[12];
+            public static bool[] Equiped = new bool[12]; // not in class
             public static string[] Quality = new string[12];
             public static List<int[]> Stats = new List<int[]>()
             { new int[31], new int[31], new int[31], new int[31], new int[31], new int[31], new int[31], new int[31], new int[31], new int[31], new int[31], new int[31] };
@@ -1762,406 +1761,574 @@ namespace Expedition_Builder_Online
 
         //
         //          Becoming Talented (Tab 5)
-        //
-
-        List<Image> Talent_A = new List<Image>()
+        //       
+        public class Talent
         {
-            Resources.EI_T_0A,
-            Resources.EI_T_1A,
-            Resources.EI_T_2A,
-            Resources.EI_T_3A,
-            Resources.EI_T_4A,
-            Resources.EI_T_5A,
-            Resources.EI_T_6A,
-            Resources.EI_T_7A,
-            Resources.EI_T_8A,
-            Resources.EI_T_9A,
-            Resources.EI_T_10A,
+            public Image Image_A = null;
+            public Image Image_D = null;
+            public int Cost = 0;
+            public int Exclusive = 0;
+            public string Name = null;
+            public string Description = null;
+            public string Effect = null;
+            public PictureBox Box = null;
+            public ToolTip TT = new ToolTip() 
+            {
+                BackColor = SColor.Black, 
+                ForeColor = SColor.White,
+            };
 
-            Resources.EI_T_11A,
-            Resources.EI_T_12A,
-            Resources.EI_T_13A,
-            Resources.EI_T_14A,
-            Resources.EI_T_15A,
-            Resources.EI_T_16A,
-            Resources.EI_T_17A,
-            Resources.EI_T_18A,
-            Resources.EI_T_19A,
-            Resources.EI_T_20A,
-            Resources.EI_T_21A,
+            public void TT_Generate()
+            {
+                TT.ToolTipTitle = Name;
+                string Caption = string.Format("Point Cost: {1}{0}" + Description + "{0}" + Effect, Environment.NewLine, Cost);
+                TT.SetToolTip(Box, Caption);
+            }
+        }
 
-            Resources.EI_T_22A,
-            Resources.EI_T_23A,
-            Resources.EI_T_24A,
-            Resources.EI_T_25A,
-            Resources.EI_T_26A,
-            Resources.EI_T_27A,
-            Resources.EI_T_28A,
-            Resources.EI_T_29A,
-            Resources.EI_T_30A,
-            Resources.EI_T_31A,
-            Resources.EI_T_32A,
-
-            Resources.EI_T_33A,
-            Resources.EI_T_34A,
-            Resources.EI_T_35A,
-            Resources.EI_T_36A,
-            Resources.EI_T_37A,
-            Resources.EI_T_38A,
-            Resources.EI_T_39A,
-            Resources.EI_T_40A,
-            Resources.EI_T_41A,
-            Resources.EI_T_42A,
-            Resources.EI_T_43A,
-
-            Resources.EI_T_44A,
-            Resources.EI_T_45A,
-            Resources.EI_T_46A,
-            Resources.EI_T_47A,
-            Resources.EI_T_48A,
-            Resources.EI_T_49A,
-            Resources.EI_T_50A,
-            Resources.EI_T_51A,
-            Resources.EI_T_52A,
-            Resources.EI_T_53A,
-            Resources.EI_T_54A,
-
-            Resources.EI_T_55A
+        List<Talent> Talents = new List<Talent>()
+        {
+            // AFFINITY TALENTS
+            new Talent
+            {
+                Image_A = Resources.EI_T_0A,
+                Image_D = Resources.EI_T_0D,
+                Cost = 15,
+                Name = "Natural Affinity: Strike",
+                Description = "You've got this!{0}Your Strike affinity will have a higher maximum to reach!",
+                Effect = "(Get 1 additional growth rank to the chosen part of the Affinity)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_1A,
+                Image_D = Resources.EI_T_1D,
+                Cost = 15,
+                Name = "Natural Affinity: Survival",
+                Description = "You've got this!{0}Your Survival affinity will have a higher maximum to reach!",
+                Effect = "(Get 1 additional growth rank to the chosen part of the Affinity)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_2A,
+                Image_D = Resources.EI_T_2D,
+                Cost = 15,
+                Name = "Natural Affinity: Endurance",
+                Description = "You've got this!{0}Your Endurance affinity will have a higher maximum to reach!",
+                Effect = "(Get 1 additional growth rank to the chosen part of the Affinity)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_3A,
+                Image_D = Resources.EI_T_3D,
+                Cost = 15,
+                Name = "Natural Affinity: Flexibility",
+                Description = "You've got this!{0}Your Flexibility affinity will have a higher maximum to reach!",
+                Effect = "(Get 1 additional growth rank to the chosen part of the Affinity)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_4A,
+                Image_D = Resources.EI_T_4D,
+                Cost = 10,
+                Name = "Hybrid Potency: Strike",
+                Description = "I get it, you do not want downsides.{0}Your Strike affinity will have a higher minimum.{0}No dump stats for you, my friend.",
+                Effect = "(Get 1 additional growth rank to the unchosen part of the Affinity)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_5A,
+                Image_D = Resources.EI_T_5D,
+                Cost = 10,
+                Name = "Hybrid Potency: Survival",
+                Description = "I get it, you do not want downsides.{0}Your Survival affinity will have a higher minimum.{0}No dump stats for you, my friend.",
+                Effect = "(Get 1 additional growth rank to the unchosen part of the Affinity)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_6A,
+                Image_D = Resources.EI_T_6D,
+                Cost = 10,
+                Name = "Hybrid Potency: Endurance",
+                Description = "I get it, you do not want downsides.{0}Your Endurance affinity will have a higher minimum.{0}No dump stats for you, my friend.",
+                Effect = "(Get 1 additional growth rank to the unchosen part of the Affinity)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_7A,
+                Image_D = Resources.EI_T_7D,
+                Cost = 10,
+                Name = "Hybrid Potency: Flexibility",
+                Description = "I get it, you do not want downsides.{0}Your Flexibility affinity will have a higher minimum.{0}No dump stats for you, my friend.",
+                Effect = "(Get 1 additional growth rank to the unchosen part of the Affinity)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_8A,
+                Image_D = Resources.EI_T_8D,
+                Cost = 12,
+                Name = "Ironskin",
+                Description = "They think they slash you.{0}They think wrong.",
+                Effect = "(Get 1 additional growth rank to the Armor part of the Defense Affinity)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_9A,
+                Image_D = Resources.EI_T_9D,
+                Cost = 12,
+                Name = "Barrier",
+                Description = "It might not be visible, but{0}it certainly works.",
+                Effect = "(Get 1 additional growth rank to the Warding part of the Defense Affinity)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_10A,
+                Image_D = Resources.EI_T_10D,
+                Cost = 12,
+                Name = "Regenerate",
+                Description = "It is very important to keep yourself alive.{0}And to do so, it's better to be very healable.",
+                Effect = "(Get 1 additional growth rank to the Ease part of the Defense Affinity)"
+            },
+            // GEAR TALENTS
+            new Talent
+            {
+                Image_A = Resources.EI_T_11A,
+                Image_D = Resources.EI_T_11D,
+                Cost = 26,
+                Name = "Old Favorite",
+                Description = "Everyone likes to smack others with something,{0}but nothing is as satisfying as using your favorite smacking stick.{0}Of course our competence gives prowess!",
+                Effect = "(+3 Physical Prowess when using a martial weapon)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_12A,
+                Image_D = Resources.EI_T_12D,
+                Cost = 26,
+                Name = "Competent Wizardry",
+                Description = "My weapon will do pew pew, kablamo, pazazzz!{0}Some more prowess will never hurt when using my magical stick",
+                Effect = "(+3 Magical Prowess when using a magical weapon)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_13A,
+                Image_D = Resources.EI_T_13D,
+                Cost = 26,
+                Name = "My Faithfull Tools",
+                Description = "Faith is our strength.{0}Using it wisely will allow us{0}When wearing the right tool{0}It shall give us more prowess",
+                Effect = "(+3 Healing Prowess when using a supporting weapon)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_14A,
+                Image_D = Resources.EI_T_14D,
+                Cost = 22,
+                Name = "Anything Will Do",
+                Description = "Just grab a stick or something.{0}Just not one of those conventional weapons.",
+                Effect = "(+2 on all Prowess when not using a specified weapon)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_15A,
+                Image_D = Resources.EI_T_15D,
+                Cost = 20,
+                Name = "Comfortable Wear",
+                Description = "This outfit fits like a charm!{0} You get 1 avoidance for every of the following{0}slots which has an item equiped:{0}Shoulders, Chest, Gloves, Pants",
+                Effect = "(Get +1 Avoidance for each of these armor slots that you filled:{0}Shoulders, Chest, Gloves, Pants)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_16A,
+                Image_D = Resources.EI_T_16D,
+                Cost = 20,
+                Name = "Grounded in Reality",
+                Description = "The power to resist{0} You get 1 resistance for every of the following{0}slots which has an item equiped:{0}Head, Cloak, Chest, Boots",
+                Effect = "(Get +1 Resistance for each of these armor slots that you filled:{0}Head, Cloak, Chest, Boots)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_17A,
+                Image_D = Resources.EI_T_17D,
+                Cost = 20,
+                Name = "Healing Magnets",
+                Description = "Use your trinkets to find solace{0} You get 1 attune for every of trinket{0}slot which has an item equiped",
+                Effect = "(Get +1 Attune for each of these trinket armor slots that you filled)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_18A,
+                Image_D = Resources.EI_T_18D,
+                Cost = 28,
+                Name = "I Am Unbreakable",
+                Description = "Who needs clothes anyway?{0}You get 1 armor, warding and ease if you aren't fully equiped.",
+                Effect = "(Get +1 Armor, Warding and Ease){0}(Requires an unequiped Gear Slot)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_19A,
+                Image_D = Resources.EI_T_19D,
+                Cost = 25,
+                Name = "The One Ring",
+                Description = "You only ever need one ring",
+                Effect = "(Get +2 Resource Points){0}(Required exactly 1 Ring Trinket to be equiped)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_20A,
+                Image_D = Resources.EI_T_20D,
+                Cost = 14,
+                Name = "Medal of Honor",
+                Description = "You served the people well{0}Wear your medals with pride!{0}If you have 4 medals equiped, get an{0}Abiltiy bonus!",
+                Effect = "(Get +1 on all Abilities){0}(Required 4 Medal Trinkets to be equiped)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_21A,
+                Image_D = Resources.EI_T_21D,
+                Cost = -20,
+                Name = "Cursebearer",
+                Description = "Don't you just love gear{0}with a fair bit of extra challenge?{0}Cursed Gear gives you additional penalties.",
+                Effect = "(Get -2 Health Points for each Cursed Gear item equiped)"
+            },
+            // TRADE OFF TALENTS
+            new Talent
+            {
+                Exclusive = 23,
+                Image_A = Resources.EI_T_22A,
+                Image_D = Resources.EI_T_22D,
+                Cost = 12,
+                Name = "Cowardice",
+                Description = "Because why would you even try to hit something.{0}As long as you don't get hit, you do not lose.",
+                Effect = "(Get -10% Precision Growth){0}(Get +10% Avoidance and Resistance Growth)"
+            },
+            new Talent
+            {
+                Exclusive = 22,
+                Image_A = Resources.EI_T_23A,
+                Image_D = Resources.EI_T_23D,
+                Cost = 12,
+                Name = "Recklessness",
+                Description = "True fighters handle just take attacks,{0}and they will make sure to return the favor.",
+                Effect = "(Get +10% Precision Growth){0}(Get -10% Avoidance and Resistance Growth)"
+            },
+            new Talent
+            {
+                Exclusive = 25,
+                Image_A = Resources.EI_T_24A,
+                Image_D = Resources.EI_T_24D,
+                Cost = 12,
+                Name = "Plaguedoctor",
+                Description = "A little bit of sickness gives you so much more profit.{0}Becoming tougher to heal is well worth the better attunement!",
+                Effect = "(Get -5 Ease){0}(Get +3 Attune)"
+            },
+            new Talent
+            {
+                Exclusive = 24,
+                Image_A = Resources.EI_T_25A,
+                Image_D = Resources.EI_T_25D,
+                Cost = 12,
+                Name = "Nine Lives",
+                Description = "So petable, so hard to be pet.{0}So healable, so hard to be healed",
+                Effect = "(Get +5 Ease){0}(Get -3 Attune)"
+            },
+            new Talent
+            {
+                Exclusive = 27,
+                Image_A = Resources.EI_T_26A,
+                Image_D = Resources.EI_T_26D,
+                Cost = 12,
+                Name = "Make it Count",
+                Description = "Power is for the taking!{0}However, you will not be as resourceful as you could be.",
+                Effect = "(Get -10% Resource Point Growth){0}(Get +10% Power Growth)"
+            },
+            new Talent
+            {
+                Exclusive = 26,
+                Image_A = Resources.EI_T_27A,
+                Image_D = Resources.EI_T_27D,
+                Cost = 12,
+                Name = "More, Not Stronger",
+                Description = "The winner is the one who{0}can still keep going!",
+                Effect = "(Get +10% Resource Point Growth){0}(Get -10% Power Growth)"
+            },
+            new Talent
+            {
+                Exclusive = 29,
+                Image_A = Resources.EI_T_28A,
+                Image_D = Resources.EI_T_28D,
+                Cost = 16,
+                Name = "Lone Wolf",
+                Description = "Others only get in the way.{0}All this connected nonsense is nothing for you.{0}All your Link Points will become extra Resource Points instead.",
+                Effect = "(Lose all natural Link Points, Gain them as Resource Points)"
+            },
+            new Talent
+            {
+                Exclusive = 28,
+                Image_A = Resources.EI_T_29A,
+                Image_D = Resources.EI_T_29D,
+                Cost = 16,
+                Name = "Connected",
+                Description = "My friends are my power, literally!{0}As long as your pals know some decent moves..{0}All your Resource Points will become extra Link Points instead.",
+                Effect = "(Lose all natural Resource Points, Gain them as Resource Points)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_30A,
+                Image_D = Resources.EI_T_30D,
+                Cost = 16,
+                Name = "Eye for an Eye",
+                Description = "Eye for an eye.{0}Smackdown for a smackdown.",
+                Effect = "(Lose all natural Armor, Gain it as Physical Power)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_31A,
+                Image_D = Resources.EI_T_31D,
+                Cost = 16,
+                Name = "Glass Cannon",
+                Description = "Sacrifice all your defenses.{0}Obtain even more offenses.{0}Glass cannons do shoot hard!",
+                Effect = "(Lose all natural Warding, Gain it as Magical Power)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_32A,
+                Image_D = Resources.EI_T_32D,
+                Cost = 16,
+                Name = "Selfless",
+                Description = "You better dodge, because you{0}will barely get healed anymore.",
+                Effect = "(Lose all natural Ease, Gain it as Healing Power)"
+            },
+            // GROWTH TALENTS
+            new Talent
+            {
+                Image_A = Resources.EI_T_33A,
+                Image_D = Resources.EI_T_33D,
+                Cost = 24,
+                Name = "Unlimited Power!",
+                Description = "Unlimited might be an overstatement,{0}but every little bit of resource helps, right?",
+                Effect = "(Get +10% Resource Point Growth)"
+            },
+            new Talent
+            {
+                Exclusive = 35,
+                Image_A = Resources.EI_T_34A,
+                Image_D = Resources.EI_T_34D,
+                Cost = 24,
+                Name = "Like the Wind",
+                Description = "Sting like a butterfly, strike like the...{0}Wait...{0}No?{0}Well, GOTTA GO FAST THEN!",
+                Effect = "(Get +10% Movement Point Growth)"
+            },
+            new Talent
+            {
+                Exclusive = 34,
+                Image_A = Resources.EI_T_35A,
+                Image_D = Resources.EI_T_35D,
+                Cost = -24,
+                Name = "Slow and Steady",
+                Description = "Just taunt the enemy enough to come to you!",
+                Effect = "(Get -10% Movement Point Growth)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_36A,
+                Image_D = Resources.EI_T_36D,
+                Cost = 18,
+                Name = "Trust me, I'm a Doctor",
+                Description = "Wait, are you really a doctor?{0}'I can do the healing'{0}I do not feel safe{0}'But with this talent it's even more healing!",
+                Effect = "(Get +3 Healing Power)"
+            },
+            new Talent
+            {
+                Exclusive = 38,
+                Image_A = Resources.EI_T_37A,
+                Image_D = Resources.EI_T_37D,
+                Cost = 24,
+                Name = "I Just Wanna Live",
+                Description = "As long as you have health, you are not dead.{0}So better get more of it then!",
+                Effect = "(Get +30% Health Point Growth)"
+            },
+            new Talent
+            {
+                Exclusive = 37,
+                Image_A = Resources.EI_T_38A,
+                Image_D = Resources.EI_T_38D,
+                Cost = -24,
+                Name = "Just Don't Get Hit",
+                Description = "Pain and misery always hit the spot.{0}Knowing you can't lose what you haven't got.",
+                Effect = "(Get -30% Health Point Growth)"
+            },
+            new Talent
+            {
+                Exclusive = 40,
+                Image_A = Resources.EI_T_39A,
+                Image_D = Resources.EI_T_39D,
+                Cost = 20,
+                Name = "High Roller",
+                Description = "Just what if everything had more{0}chances to be the best?",
+                Effect = "(Get +1 Critical Success)"
+            },
+            new Talent
+            {
+                Exclusive = 39,
+                Image_A = Resources.EI_T_40A,
+                Image_D = Resources.EI_T_40D,
+                Cost = -20,
+                Name = "Skillfull Mistake",
+                Description = "We all like to live a little...{0}..but this just seems like asking for it.",
+                Effect = "(Get +1 Critical Failure)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_41A,
+                Image_D = Resources.EI_T_41D,
+                Cost = 14,
+                Name = "Elemental Prowess",
+                Description = "Your own element is something you should be good at.{0}Some extra prowess never hurts then!",
+                Effect = "(+2 Prowess on all Origin skills)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_42A,
+                Image_D = Resources.EI_T_42D,
+                Cost = 16,
+                Name = "Source Overdrive",
+                Description = "Your source of power is your core.{0}You should figure out it's full potential.",
+                Effect = "(Get a complete elemental source)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_43A,
+                Image_D = Resources.EI_T_43D,
+                Cost = 14,
+                Name = "Connected Prowess",
+                Description = "You should be a true teamplayer.{0}Or you are just using your friends for power..{0}Either way, prowess on link skills helps!",
+                Effect = "(+2 Prowess on all Link skills)"
+            },
+            // SKILL TALENTS
+            new Talent
+            {
+                Image_A = Resources.EI_T_44A,
+                Image_D = Resources.EI_T_44D,
+                Cost = 16,
+                Name = "God Eater",
+                Description = "Sometimes you make stupid decisions.{0}Sometimes it was intentional.{0}Either way, to quickly solve this problem, you need more prowess!",
+                Effect = "(Get +6 on all Prowess){0}(Requires a (too) high level opponent)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_45A,
+                Image_D = Resources.EI_T_45D,
+                Cost = 24,
+                Name = "Combat Meditation",
+                Description = "Being passive might save you one day.{0}You get 1 resource point at the end of your turn if you did not use your Main action to attack",
+                Effect = "(Gain the 'Combat Meditation' Passive Skill)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_46A,
+                Image_D = Resources.EI_T_46D,
+                Cost = 15,
+                Name = "Initial T",
+                Description = "It's gonna be so exciting!{0}On the first turn of combat, get double the movement points{0}and two Main actions. You do not have a Minor action.",
+                Effect = "(Gain the 'Initial T' Passive Skill)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_47A,
+                Image_D = Resources.EI_T_47D,
+                Cost = 20,
+                Name = "Hyperfocus",
+                Description = "Take a breather for once, and focus.{0}You'll notice that things aren't as hard as they seem.{0}You can use this stored power when you really need it.",
+                Effect = "(Gain the 'Hyperfocus' Skill Set)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_48A,
+                Image_D = Resources.EI_T_48D,
+                Cost = 25,
+                Name = "Minor Bargain",
+                Description = "More is more, and time is resource!{0}You can use Minor action indefinitly, but each time{0}you use it in a turn, it costs 1 extra resource point.",
+                Effect = "(Gain the 'Minor Bargain' Passive Skill)"
+            },
+            new Talent
+            {
+                Exclusive = 50,
+                Image_A = Resources.EI_T_49A,
+                Image_D = Resources.EI_T_49D,
+                Cost = 15,
+                Name = "Experienced Adventurer",
+                Description = "I get knocked down,{0}I get up again.{0}You are never gonna keep me down",
+                Effect = "(Gain the 'Experienced Adventurer' Passive Skill)"
+            },
+            new Talent
+            {
+                Exclusive = 49,
+                Image_A = Resources.EI_T_50A,
+                Image_D = Resources.EI_T_50D,
+                Cost = -15,
+                Name = "Too Much Pain",
+                Description = "I get knocked down,{0}I give up again.{0}You are always gonna keep me down",
+                Effect = "(Gain the 'Too Much Pain' Passive Skill)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_51A,
+                Image_D = Resources.EI_T_51D,
+                Cost = -18,
+                Name = "Blind Master",
+                Description = "I see in other ways..{0}..just not as good as I wanted..",
+                Effect = "(Gain the 'Blind Master' Passive Skill)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_52A,
+                Image_D = Resources.EI_T_52D,
+                Cost = 44,
+                Name = "Self-inserted Heroics",
+                Description = "You are always there!{0}When a party member gains skills, you can say{0}'I was also there'{0}Your party might start to hate you for this",
+                Effect = "(Gain +10 Skill Ranks for all calculations)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_53A,
+                Image_D = Resources.EI_T_53D,
+                Cost = 1,
+                Name = "Yee of Yellow Faith",
+                Description = "Once you get yellow, you always want to go back!{0}All Critical Hits are Unavoidable and Piercing.{0}All Critical Failures hit yourself.{0}Live a litte, become one with the yellow.",
+                Effect = "(Gain the 'Yellow Faith' Passive Skill)"
+            },
+            new Talent
+            {
+                Image_A = Resources.EI_T_54A,
+                Image_D = Resources.EI_T_54D,
+                Cost = 28,
+                Name = "Master of Many Faces",
+                Description = "Everybody knows your name and fame.{0}But not your other name.{0}Or the other one.",
+                Effect = "(Gain +10 Role Ranks for all calculations)"
+            },
+            // ABILITY TALENT
+            new Talent
+            {
+                Image_A = Resources.EI_T_55A,
+                Image_D = Resources.EI_T_55D,
+                Cost = 10,
+                Name = "True Ability",
+                Description = "Reflecting on your abilities makes{0}them improve ever so slowly..{0}",
+                Effect = "(Gain 1 Ability Growth Point){0}{0}This Talent can be chosen multiple times.{0}Select it with the left mousebutton,{0}and deselect it with the right one"
+            }
         };
 
-        List<Image> Talent_D = new List<Image>()
+        int[] Talent_Box(int Index)
         {
-            Resources.EI_T_0D,
-            Resources.EI_T_1D,
-            Resources.EI_T_2D,
-            Resources.EI_T_3D,
-            Resources.EI_T_4D,
-            Resources.EI_T_5D,
-            Resources.EI_T_6D,
-            Resources.EI_T_7D,
-            Resources.EI_T_8D,
-            Resources.EI_T_9D,
-            Resources.EI_T_10D,
+            int[] V = new int[2];
+            V[0] = (int)Math.Floor((double)Index / 11) + 1;
+            V[1] = Index % 11; // j value
 
-            Resources.EI_T_11D,
-            Resources.EI_T_12D,
-            Resources.EI_T_13D,
-            Resources.EI_T_14D,
-            Resources.EI_T_15D,
-            Resources.EI_T_16D,
-            Resources.EI_T_17D,
-            Resources.EI_T_18D,
-            Resources.EI_T_19D,
-            Resources.EI_T_20D,
-            Resources.EI_T_21D,
-
-            Resources.EI_T_22D,
-            Resources.EI_T_23D,
-            Resources.EI_T_24D,
-            Resources.EI_T_25D,
-            Resources.EI_T_26D,
-            Resources.EI_T_27D,
-            Resources.EI_T_28D,
-            Resources.EI_T_29D,
-            Resources.EI_T_30D,
-            Resources.EI_T_31D,
-            Resources.EI_T_32D,
-
-            Resources.EI_T_33D,
-            Resources.EI_T_34D,
-            Resources.EI_T_35D,
-            Resources.EI_T_36D,
-            Resources.EI_T_37D,
-            Resources.EI_T_38D,
-            Resources.EI_T_39D,
-            Resources.EI_T_40D,
-            Resources.EI_T_41D,
-            Resources.EI_T_42D,
-            Resources.EI_T_43D,
-
-            Resources.EI_T_44D,
-            Resources.EI_T_45D,
-            Resources.EI_T_46D,
-            Resources.EI_T_47D,
-            Resources.EI_T_48D,
-            Resources.EI_T_49D,
-            Resources.EI_T_50D,
-            Resources.EI_T_51D,
-            Resources.EI_T_52D,
-            Resources.EI_T_53D,
-            Resources.EI_T_54D,
-
-            Resources.EI_T_55D
-        };
-
-        List<int> Talent_Cost = new List<int>()
+            return V;
+        } // Which PictureBox is used for the Index?
+        int Talent_Select_Index(int NrTal, int NrTalS)
         {
-            15, //"Natural Affinity: Strike",             // 0
-            15, //"Natural Affinity: Survival",           // 1
-            15, //"Natural Affinity: Endurance",          // 2
-            15, //"Natural Affinity: Flexibility",        // 3
-            10, //"Hybrid Potency: Strike",               // 4
-            10, //"Hybrid Potency: Survival",             // 5
-            10, //"Hybrid Potency: Endurance",            // 6
-            10, //"Hybrid Potency: Flexibility",          // 7
-            12, //"Ironskin",                             // 8
-            12, //"Barrier",                              // 9
-            12, //"Regenerate",                           // 10
-
-            26, //"Old Favorite",                         // 11
-            26, //"Competent Wizardry",                   // 12
-            26, //"My Faithfull Tools",                   // 13
-            22, //"Anything Will Do",                     // 14
-            20, //"Comfortable Wear",                     // 15
-            20, //"Grounded in Reality",                  // 16
-            20, //"Healing Magnets",                      // 17
-            28, //"I Am Unbreakable",                     // 18
-            25, //"The One Ring",                         // 19
-            14, //"Medal of Honor",                       // 20
-           -20, //"Cursebearer",                          // 21
-
-            12, //"Cowardice",    // ex1                  // 22
-            12, //"Recklessness", // ex1                  // 23
-            12, //"Plaguedoctor", // ex2                  // 24
-            12, //"Nine Lives",   // ex2                  // 25
-            12, //"Make it Count",        // ex3          // 26
-            12, //"More, Not Stronger",   // ex3          // 27
-            16, //"Lone Wolf", // ex4                     // 28
-            16, //"Connected", // ex4                     // 29
-            16, //"Eye for an Eye",                       // 30
-            16, //"Glass Cannon",                         // 31
-            16, //"Selfless",                             // 32
-
-            24, //"Unlimited Power!",                     // 33
-            24, //"Like the Wind",        // ex5          // 34
-           -24, //"Slow and Steady",      // ex5          // 35
-            18, //"Trust me, I'm a Doctor",               // 36
-            24, //"I Just Wanna Live",    // ex6          // 37
-           -24, //"Just Don't Get Hit",   // ex6          // 38
-            20, //"High Roller",          // ex7          // 39
-           -20, //"Skillfull Mistake",    // ex7          // 40
-            14, //"Elemental Prowess",                    // 41
-            16, //"Source Overdrive",                     // 42
-            14, //"Connected Prowess",                    // 43
-
-            16,  //"God Eater",                            // 44
-            24,  //"Combat Meditation",                    // 45
-            15,  //"Initial T",                            // 46
-            20,  //"Hyperfocus",                           // 47
-            25,  //"Minor Bargain",                        // 48
-            15,  //"Experienced Adventurer", // ex8        // 49
-           -15,  //"Too Much Pain",          // ex8        // 50
-           -18,  //"Blind Master",                         // 51
-            44,  //"Self-inserted Heroics",                // 52
-            1,   //"Yee of Yellow Faith",                  // 53
-            28,  //"Master of Many Faces"                  // 54
-
-            10   //"True Ability"                          // 55
-        };
-
-        List<string> Talent_Names = new List<string>()
-        {
-            "Natural Affinity: Strike",             // 0
-            "Natural Affinity: Survival",           // 1
-            "Natural Affinity: Endurance",          // 2
-            "Natural Affinity: Flexibility",        // 3
-            "Hybrid Potency: Strike",               // 4
-            "Hybrid Potency: Survival",             // 5
-            "Hybrid Potency: Endurance",            // 6
-            "Hybrid Potency: Flexibility",          // 7
-            "Ironskin",                             // 8
-            "Barrier",                              // 9
-            "Regenerate",                           // 10
-
-            "Old Favorite",                         // 11
-            "Competent Wizardry",                   // 12
-            "My Faithfull Tools",                   // 13
-            "Anything Will Do",                     // 14
-            "Comfortable Wear",                     // 15
-            "Grounded in Reality",                  // 16
-            "Healing Magnets",                      // 17
-            "I Am Unbreakable",                     // 18
-            "The One Ring",                         // 19
-            "Medal of Honor",                       // 20
-            "Cursebearer",                          // 21
-
-            "Cowardice",    // ex1                  // 22
-            "Recklessness", // ex1                  // 23
-            "Plaguedoctor", // ex2                  // 24
-            "Nine Lives",   // ex2                  // 25
-            "Make it Count",        // ex3          // 26
-            "More, Not Stronger",   // ex3          // 27
-            "Lone Wolf", // ex4                     // 28
-            "Connected", // ex4                     // 29
-            "Eye for an Eye",                       // 30
-            "Glass Cannon",                         // 31
-            "Selfless",                             // 32
-
-            "Unlimited Power!",                     // 33
-            "Like the Wind",        // ex5          // 34
-            "Slow and Steady",      // ex5          // 35
-            "Trust me, I'm a Doctor",               // 36
-            "I Just Wanna Live",    // ex6          // 37
-            "Just Don't Get Hit",   // ex6          // 38
-            "High Roller",          // ex7          // 39
-            "Skillfull Mistake",    // ex7          // 40
-            "Elemental Prowess",                    // 41
-            "Source Overdrive",                     // 42
-            "Connected Prowess",                    // 43
-
-            "God Eater",                            // 44
-            "Combat Meditation",                    // 45
-            "Initial T",                            // 46
-            "Hyperfocus",                           // 47
-            "Minor Bargain",                        // 48
-            "Experienced Adventurer", // ex8        // 49
-            "Too Much Pain",          // ex8        // 50
-            "Blind Master",                         // 51
-            "Self-inserted Heroics",                // 52: Gain Quest XP as if you were there
-            "Yee of Yellow Faith",                  // 53
-            "Master of Many Faces",                 // 54
-
-            "True Ability"                          // 55
-        };
-
-        List<int> Talent_Exclusivity = new List<int>()
-        {
-            0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-            0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-           23, 22, 25, 24, 27, 26, 29, 28,  0,  0,  0,
-            0, 35, 34,  0, 38, 37, 40, 39,  0,  0,  0,
-            0,  0,  0,  0,  0, 50, 49,  0,  0,  0,  0, 0
-        };
-
-        List<string> Talent_Description = new List<string>()
-        {
-            string.Format("You've got this!{0}Your Strike affinity will have a higher maximum to reach!", Environment.NewLine),
-            string.Format("You've got this!{0}Your Survival affinity will have a higher maximum to reach!", Environment.NewLine),
-            string.Format("You've got this!{0}Your Endurance affinity will have a higher maximum to reach!", Environment.NewLine),
-            string.Format("You've got this!{0}Your Flexibbility affinity will have a higher maximum to reach!", Environment.NewLine),
-            string.Format("I get it, you do not want downsides.{0}Your Strike affinity will have a higher minimum.{0}No dump stats for you, my friend.", Environment.NewLine),
-            string.Format("I get it, you do not want downsides.{0}Your Survival affinity will have a higher minimum.{0}No dump stats for you, my friend.", Environment.NewLine),
-            string.Format("I get it, you do not want downsides.{0}Your Endurance affinity will have a higher minimum.{0}No dump stats for you, my friend.", Environment.NewLine),
-            string.Format("I get it, you do not want downsides.{0}Your Flexibility affinity will have a higher minimum.{0}No dump stats for you, my friend.", Environment.NewLine),
-            string.Format("They think they slash you.{0}They think wrong.", Environment.NewLine),
-            string.Format("It might not be visible, but{0}it certainly works.", Environment.NewLine),
-            string.Format("It is very important to keep yourself alive.{0}And to do so, it's better to be very healable.", Environment.NewLine),
-
-            string.Format("Everyone likes to smack others with something,{0}but nothing is as satisfying as using your favorite smacking stick.{0}Of course our competence gives prowess!", Environment.NewLine),
-            string.Format("My weapon will do pew pew, kablamo, pazazzz!{0}Some more prowess will never hurt when using my magical stick", Environment.NewLine),
-            string.Format("Faith is our strength.{0}Using it wisely will allow us{0}When wearing the right tool{0}It shall give us more prowess", Environment.NewLine),
-            string.Format("Just grab a stick or something.{0}Just not one of those conventional weapons.", Environment.NewLine),
-            string.Format("This outfit fits like a charm!{0} You get 1 avoidance for every of the following{0}slots which has an item equiped:{0}Shoulders, Chest, Gloves, Pants", Environment.NewLine),
-            string.Format("The power to resist{0} You get 1 resistance for every of the following{0}slots which has an item equiped:{0}Head, Cloak, Chest, Boots", Environment.NewLine),
-            string.Format("Use your trinkets to find solace{0} You get 1 attune for every of trinket{0}slot which has an item equiped", Environment.NewLine),
-            string.Format("Who needs clothes anyway?{0}You get 1 armor, warding and ease if you aren't fully equiped.", Environment.NewLine),
-            string.Format("You only ever need one ring", Environment.NewLine),
-            string.Format("You served the people well{0}Wear your medals with pride!{0}If you have 4 medals equiped, get an{0}Abiltiy bonus!", Environment.NewLine),
-            string.Format("Don't you just love gear{0}with a fair bit of extra challenge?{0}Cursed Gear gives you additional penalties.", Environment.NewLine),
-
-            string.Format("Because why would you even try to hit something.{0}As long as you don't get hit, you do not lose.", Environment.NewLine),
-            string.Format("True fighters handle just take attacks,{0}and they will make sure to return the favor.", Environment.NewLine),
-            string.Format("A little bit of sickness gives you so much more profit.{0}Becoming tougher to heal is well worth the better attunement!", Environment.NewLine),
-            string.Format("So petable, so hard to be pet.{0}So healable, so hard to be healed", Environment.NewLine),
-            string.Format("Power is for the taking!{0}However, you will not be as resourceful as you could be.", Environment.NewLine),
-            string.Format("The winner is the one who{0}can still keep going!", Environment.NewLine),
-            string.Format("Others only get in the way.{0}All this connected nonsense is nothing for you.{0}All your Link Points will become extra Resource Points instead.", Environment.NewLine),
-            string.Format("My friends are my power, literally!{0}As long as your pals know some decent moves..{0}All your Resource Points will become extra Link Points instead.", Environment.NewLine),
-            string.Format("Eye for an eye.{0}Smackdown for a smackdown.", Environment.NewLine),
-            string.Format("Sacrifice all your defenses.{0}Obtain even more offenses.{0}Glass cannons do shoot hard!", Environment.NewLine),
-            string.Format("You better dodge, because you{0}will barely get healed anymore.", Environment.NewLine),
-
-            string.Format("Unlimited might be an overstatement,{0}but every little bit of resource helps, right?", Environment.NewLine),
-            string.Format("Sting like a butterfly, strike like the...{0}Wait...{0}No?{0}Well, GOTTA GO FAST THEN!", Environment.NewLine),
-            string.Format("Just taunt the enemy enough to come to you!", Environment.NewLine),
-            string.Format("Wait, are you really a doctor?{0}'I can do the healing'{0}I do not feel safe{0}'But with this talent it's even more healing!", Environment.NewLine),
-            string.Format("As long as you have health, you are not dead.{0}So better get more of it then!", Environment.NewLine),
-            string.Format("Pain and misery always hit the spot.{0}Knowing you can't lose what you haven't got.", Environment.NewLine),
-            string.Format("Just what if everything had more{0}chances to be the best?", Environment.NewLine),
-            string.Format("We all like to live a little...{0}..but this just seems like asking for it.", Environment.NewLine),
-            string.Format("Your own element is something you should be good at.{0}Some extra prowess never hurts then!", Environment.NewLine),
-            string.Format("Your source of power is your core.{0}You should figure out it's full potential.", Environment.NewLine),
-            string.Format("You should be a true teamplayer.{0}Or you are just using your friends for power..{0}Either way, prowess on link skills helps!", Environment.NewLine),
-
-            string.Format("Sometimes you make stupid decisions.{0}Sometimes it was intentional.{0}Either way, to quickly solve this problem, you need more prowess!", Environment.NewLine),
-            string.Format("Being passive might save you one day.{0}You get 1 resource point at the end of your turn if you did not use your Main action to attack", Environment.NewLine),
-            string.Format("It's gonna be so exciting!{0}On the first turn of combat, get double the movement points{0}and two Main actions. You do not have a Minor action.", Environment.NewLine),
-            string.Format("Take a breather for once, and focus.{0}You'll notice that things aren't as hard as they seem.{0}You can use this stored power when you really need it.", Environment.NewLine),
-            string.Format("More is more, and time is resource!{0}You can use Minor action indefinitly, but each time{0}you use it in a turn, it costs 1 extra resource point.", Environment.NewLine),
-            string.Format("I get knocked down,{0}I get up again.{0}You are never gonna keep me down", Environment.NewLine),
-            string.Format("I get knocked down,{0}I give up again.{0}You are always gonna keep me down", Environment.NewLine),
-            string.Format("I see in other ways..{0}..just not as good as I wanted..", Environment.NewLine),
-            string.Format("You are always there!{0}When a party member gains skills, you can say{0}'I was also there'{0}Your party might start to hate you for this", Environment.NewLine),
-            string.Format("Once you get yellow, you always want to go back!{0}All Critical Hits are Unavoidable and Piercing.{0}All Critical Failures hit yourself.{0}Live a litte, become one with the yellow.", Environment.NewLine),
-            string.Format("Everybody knows your name and fame.{0}But not your other name.{0}Or the other one.", Environment.NewLine),
-
-            string.Format("Reflecting on your abilities makes{0}them improve ever so slowly..{0}",Environment.NewLine)
-        };
-
-        List<string> Talent_Effect = new List<string>()
-        {
-            string.Format("(Get 1 additional growth rank to the chosen part of the Affinity)", Environment.NewLine),
-            string.Format("(Get 1 additional growth rank to the chosen part of the Affinity)", Environment.NewLine),
-            string.Format("(Get 1 additional growth rank to the chosen part of the Affinity)", Environment.NewLine),
-            string.Format("(Get 1 additional growth rank to the chosen part of the Affinity)", Environment.NewLine),
-            string.Format("(Get 1 additional growth rank to the unchosen part of the Affinity)", Environment.NewLine),
-            string.Format("(Get 1 additional growth rank to the unchosen part of the Affinity)", Environment.NewLine),
-            string.Format("(Get 1 additional growth rank to the unchosen part of the Affinity)", Environment.NewLine),
-            string.Format("(Get 1 additional growth rank to the unchosen part of the Affinity)", Environment.NewLine),
-            string.Format("(Get 1 additional growth rank to the Armor part of the Defense Affinity)", Environment.NewLine),
-            string.Format("(Get 1 additional growth rank to the Warding part of the Defense Affinity)", Environment.NewLine),
-            string.Format("(Get 1 additional growth rank to the Ease part of the Defense Affinity)", Environment.NewLine),
-
-            string.Format("(+3 Physical Prowess when using a martial weapon)", Environment.NewLine),
-            string.Format("(+3 Magical Prowess when using a magical weapon)", Environment.NewLine),
-            string.Format("(+3 Healing Prowess when using a supporting weapon)", Environment.NewLine),
-            string.Format("(+2 on all Prowess when not using a specified weapon)", Environment.NewLine),
-            string.Format("(Get +1 Avoidance for each of these armor slots that you filled:{0}Shoulders, Chest, Gloves, Pants)", Environment.NewLine),
-            string.Format("(Get +1 Resistance for each of these armor slots that you filled:{0}Head, Cloak, Chest, Boots)", Environment.NewLine),
-            string.Format("(Get +1 Attune for each of these trinket armor slots that you filled)", Environment.NewLine),
-            string.Format("(Get +1 Armor, Warding and Ease){0}(Requires an unequiped Gear Slot)", Environment.NewLine),
-            string.Format("(Get +2 Resource Points){0}(Required exactly 1 Ring Trinket to be equiped)", Environment.NewLine),
-            string.Format("(Get +1 on all Abilities){0}(Required 4 Medal Trinkets to be equiped)", Environment.NewLine),
-            string.Format("(Get -2 Health Points for each Cursed Gear item equiped)", Environment.NewLine),
-
-            string.Format("(Get -10% Precision Growth){0}(Get +10% Avoidance and Resistance Growth)", Environment.NewLine),
-            string.Format("(Get +10% Precision Growth){0}(Get -10% Avoidance and Resistance Growth)", Environment.NewLine),
-            string.Format("(Get -5 Ease){0}(Get +3 Attune)", Environment.NewLine),
-            string.Format("(Get +5 Ease){0}(Get -3 Attune)", Environment.NewLine),
-            string.Format("(Get -10% Resource Point Growth){0}(Get +10% Power Growth)", Environment.NewLine),
-            string.Format("(Get +10% Resource Point Growth){0}(Get -10% Power Growth)", Environment.NewLine),
-            string.Format("(Lose all natural Link Points, Gain them as Resource Points)", Environment.NewLine),
-            string.Format("(Lose all natural Resource Points, Gain them as Resource Points)", Environment.NewLine),
-            string.Format("(Lose all natural Armor, Gain it as Physical Power)", Environment.NewLine),
-            string.Format("(Lose all natural Warding, Gain it as Magical Power)", Environment.NewLine),
-            string.Format("(Lose all natural Ease, Gain it as Healing Power)", Environment.NewLine),
-
-            string.Format("(Get +10% Resource Point Growth)", Environment.NewLine),
-            string.Format("(Get +10% Movement Point Growth)", Environment.NewLine),
-            string.Format("(Get -10% Movement Point Growth)", Environment.NewLine),
-            string.Format("(Get +3 Healing Power)", Environment.NewLine),
-            string.Format("(Get +30% Health Point Growth)", Environment.NewLine),
-            string.Format("(Get -30% Health Point Growth)", Environment.NewLine),
-            string.Format("(Get +1 Critical Success)", Environment.NewLine),
-            string.Format("(Get +1 Critical Failure)", Environment.NewLine),
-            string.Format("(+2 Prowess on all Origin skills)", Environment.NewLine),
-            string.Format("(Get a full elemental source)", Environment.NewLine),
-            string.Format("(+2 Prowess on all Link skills)", Environment.NewLine),
-
-            string.Format("(Get +6 on all Prowess){0}(Requires a (too) high level opponent)", Environment.NewLine),
-            string.Format("(Gain the 'Combat Meditation' Passive Skill)", Environment.NewLine),
-            string.Format("(Gain the 'Initial T' Passive Skill)", Environment.NewLine),
-            string.Format("(Gain the 'Hyperfocus' Skill Set)", Environment.NewLine),
-            string.Format("(Gain the 'Minor Bargain' Passive Skill)", Environment.NewLine),
-            string.Format("(Gain the 'Experienced Adventurer' Passive Skill)", Environment.NewLine),
-            string.Format("(Gain the 'Too Much Pain' Passive Skill)", Environment.NewLine),
-            string.Format("(Gain the 'Blind Master' Passive Skill)", Environment.NewLine),
-            string.Format("(Gain +10 Skill Ranks for all calculations)", Environment.NewLine),
-            string.Format("(Gain the 'Yellow Faith' Passive Skill)", Environment.NewLine),
-            string.Format("(Gain +10 Role Ranks for all calculations)", Environment.NewLine),
-
-            string.Format("(Gain 1 Ability Growth Point){0}{0}This Talent can be chosen multiple times.{0}Select it with the left mousebutton,{0}and deselect it with the right one", Environment.NewLine)
-        };
+            int S = (NrTal - 1) * 11 + NrTalS;
+            return S;
+        } // What Index is used for the PictureBox?
 
         private void Talent_Activate(object sender, EventArgs e)
         {
@@ -2178,13 +2345,13 @@ namespace Expedition_Builder_Online
 
         private void Talent_Activate_Ability(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left && TalentPoints >= Talent_Cost[55]) // Activate
+            if (e.Button == MouseButtons.Left && TalentPoints >= Talents[55].Cost) // Activate
             {
                 Talent_Selected_Ability(true);
             }
-            else if (e.Button == MouseButtons.Left && TalentPoints < Talent_Cost[55])
+            else if (e.Button == MouseButtons.Left && TalentPoints < Talents[55].Cost)
             {
-                MessageBox.Show(string.Format("You have {2} Talent Points, but require {1} to obtain this Talent.{0}Remove other Talents or gain more points to get it.", Environment.NewLine, Talent_Cost[55], TalentPoints), "Not Enough Points", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show(string.Format("You have {2} Talent Points, but require {1} to obtain this Talent.{0}Remove other Talents or gain more points to get it.", Environment.NewLine, Talents[55].Cost, TalentPoints), "Not Enough Points", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
             else if (e.Button == MouseButtons.Right && TalentChoice[55] > 0 && AbilityGrowthPoints > 0) //  Deactivate
             {
@@ -2204,10 +2371,10 @@ namespace Expedition_Builder_Online
         {
             int Selection = Talent_Select_Index(NrTalent, NrTalentS);
 
-            int Exclusive = Talent_Exclusivity.ElementAt(Selection);
+            int Exclusive = Talents[Selection].Exclusive;
             if (TalentChoice[Exclusive] > 0 && Exclusive != 0)
             {
-                MessageBox.Show(string.Format("You have already chosen '{0}', which is exclusive with this talent.{1}Deactivate '{0}' to choose this Talent.", Talent_Names.ElementAt(Exclusive), Environment.NewLine), "This Talent is Exclusive", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("You have already chosen '{0}', which is exclusive with this talent.{1}Deactivate '{0}' to choose this Talent.", Talents[Exclusive].Name, Environment.NewLine), "This Talent is Exclusive", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -2215,13 +2382,13 @@ namespace Expedition_Builder_Online
                 {
                     Talent_Selected(NrTalent, NrTalentS, Selection, false);
                 }
-                else if (TalentPoints >= Talent_Cost[Selection]) // Pick the Talent
+                else if (TalentPoints >= Talents[Selection].Cost) // Pick the Talent
                 {
                     Talent_Selected(NrTalent, NrTalentS, Selection, true);
                 }
                 else
                 {
-                    MessageBox.Show(string.Format("You have {2} Talent Points, but require {1} to obtain this Talent.{0}Remove other Talents or gain more points to get it.", Environment.NewLine, Talent_Cost[Selection], TalentPoints), "Not Enough Points", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    MessageBox.Show(string.Format("You have {2} Talent Points, but require {1} to obtain this Talent.{0}Remove other Talents or gain more points to get it.", Environment.NewLine, Talents[Selection].Cost, TalentPoints), "Not Enough Points", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 
                 }
             }
@@ -2246,13 +2413,13 @@ namespace Expedition_Builder_Online
             {
                 TalentChoice[55] += 1;
                 AbilityGrowthPointsMax += 1;
-                TalentPoints -= Talent_Cost[55];
+                TalentPoints -= Talents[55].Cost;
             }
             else if (Pay)
             {
                 TalentChoice[55] -= 1;
                 AbilityGrowthPointsMax -= 1;
-                TalentPoints += Talent_Cost[55];
+                TalentPoints += Talents[55].Cost;
             }
             else
             {
@@ -2260,11 +2427,11 @@ namespace Expedition_Builder_Online
             }
             if (TalentChoice[55] > 0)
             {
-                PbTalent6.Image = Talent_A.ElementAt(55);
+                PbTalent6.Image = Talents[55].Image_A;
             }
             else
             {
-                PbTalent6.Image = Talent_D.ElementAt(55);
+                PbTalent6.Image = Talents[55].Image_D;
             }
             LblTalent6.Text = TalentChoice[55].ToString();
         }
@@ -2276,19 +2443,19 @@ namespace Expedition_Builder_Online
 
             if (Activate && Pay)
             {
-                ThisBox.Image = Talent_A.ElementAt(Select);
+                ThisBox.Image = Talents[Select].Image_A;
                 TalentChoice[Select] = 1;
-                TalentPoints -= Talent_Cost[Select];
+                TalentPoints -= Talents[Select].Cost;
             }
             else if (Pay)
             {
-                ThisBox.Image = Talent_D.ElementAt(Select);
+                ThisBox.Image = Talents[Select].Image_D; 
                 TalentChoice[Select] = 0;
-                TalentPoints += Talent_Cost[Select];
+                TalentPoints += Talents[Select].Cost;
             }
             else
             {
-                ThisBox.Image = Talent_D.ElementAt(Select);
+                ThisBox.Image = Talents[Select].Image_D;
                 TalentChoice[Select] = 0;
             }
         }
@@ -2299,14 +2466,16 @@ namespace Expedition_Builder_Online
             TalentPoints = TalentPointsMax;
             for (int i = 0; i <= 55; i++)
             {
-                TalentPoints -= TalentChoice[i] * Talent_Cost.ElementAt(i);
+                TalentPoints -= TalentChoice[i] * Talents[i].Cost;
             }
         }
 
-        void Talent_Calculate()
+        void Talent_Plot_Affinity()
         {
             // Show the Natural Affinity and Hybrid Potency signs, Talents are handled elsewhere
             PictureBox PbAff = null;
+            string[] Talent_Affinity_String = new string[8] { "PbAff3_7", "PbAff4_7", "PbAff5_7", "PbAff6_7", "PbAff3_6", "PbAff4_6", "PbAff5_6", "PbAff6_6" };
+
             for (int i = 0; i < 8; i++)
             {
                 PbAff = this.Controls.Find(Talent_Affinity_String[i], true).FirstOrDefault() as PictureBox;
@@ -2319,6 +2488,11 @@ namespace Expedition_Builder_Online
                     PbAff.Visible = false;
                 }
             }
+        }
+
+        void Talent_Calculate()
+        {
+            Talent_Plot_Affinity();
 
             Array.Clear(TalentStats, 0, TalentStats.Length);
             if (TalentChoice[52] > 0) // Heroics
@@ -2411,9 +2585,12 @@ namespace Expedition_Builder_Online
             {
                 for (int i = 0; i <= 11; i++)
                 {
-                    if (Gear.Quality[i].Substring(0,6) == "Cursed")
+                    if (Gear.Quality[i] != null)
                     {
-                        TalentStats[0] -= 2; // Health
+                        if (Gear.Quality[i].Substring(0, 6) == "Cursed")
+                        {
+                            TalentStats[0] -= 2; // Health
+                        }
                     }
                 }
             }
@@ -2528,14 +2705,6 @@ namespace Expedition_Builder_Online
             }
         }
 
-        string[] Talent_Affinity_String = new string[8] { "PbAff3_7", "PbAff4_7", "PbAff5_7", "PbAff6_7", "PbAff3_6", "PbAff4_6", "PbAff5_6", "PbAff6_6" };
-
-        int Talent_Select_Index(int NrTal, int NrTalS)
-        {
-            int S = (NrTal - 1) * 11 + NrTalS;
-            return S;
-        }
-
         void Talent_Label_Update()
         {
             LblTalentPoint.Text = string.Format("{1} Talent Points{0}of the{0}{2} available", Environment.NewLine, TalentPoints, TalentPointsMax);
@@ -2543,71 +2712,20 @@ namespace Expedition_Builder_Online
 
         void TT_Talent_Load()
         {
+            int[] Nr = null;
             string PbTalName = null;
-            PictureBox PbT = null;
-            int Sel = 0;
 
-            for (int i = 1; i <= 6; i++)
+            for (int i = 0; i < Talents.Count; i++)
             {
-                if (i <= 5)
-                {
-                    for (int j = 0; j <= 10; j++)
-                    {
-                        Sel = Talent_Select_Index(i, j);
-                        if (TT_Talent_Check)
-                        { TT_Talent[Sel].Dispose(); } // Always refresh
-                        TT_Talent[Sel] = new ToolTip();
-
-                        PbTalName = "PbTalent" + i.ToString() + "_" + j.ToString();
-                        PbT = this.Controls.Find(PbTalName, true).FirstOrDefault() as PictureBox;
-
-                        TT_Talent[Sel].ToolTipTitle = Talent_Names[Sel];
-                        string TT = string.Format("Point Cost: {0}{1}", Talent_Cost[Sel], Environment.NewLine);
-                        TT += Talent_Description[Sel] + Environment.NewLine + Talent_Effect[Sel];
-                        TT_Talent[Sel].SetToolTip(PbT, TT);
-                    }
-                }
+                Nr = Talent_Box(i);
+                if (i != 55) // There are no 6 subvalues at the moment
+                { PbTalName = "PbTalent" + Nr[0].ToString() + "_" + Nr[1].ToString(); }
                 else
-                {
-                    Sel = Talent_Select_Index(i, 0);
-                    if (TT_Talent_Check)
-                    { TT_Talent[Sel].Dispose(); } // Always refresh
-                    TT_Talent[Sel] = new ToolTip();
+                { PbTalName = "PbTalent" + Nr[0].ToString(); }
 
-                    PbTalName = "PbTalent" + i.ToString();
-                    PbT = this.Controls.Find(PbTalName, true).FirstOrDefault() as PictureBox;
-
-                    TT_Talent[Sel].ToolTipTitle = Talent_Names[Sel];
-                    string TT = string.Format("Point Cost: {0}{1}", Talent_Cost[Sel], Environment.NewLine);
-                    TT += Talent_Description[Sel] + Environment.NewLine + Talent_Effect[Sel];
-                    TT_Talent[Sel].SetToolTip(PbT, TT);
-                }
-                
+                Talents[i].Box = this.Controls.Find(PbTalName, true).FirstOrDefault() as PictureBox;
+                Talents[i].TT_Generate();
             }
-
-            /*
-             *             for (int i = 1; i <= 5; i++)
-            {
-                for (int j = 0; j <= 10; j++)
-                {
-                    int Sel = Talent_Select_Index(i,j);
-                    if(TT_Talent_Check)
-                    { TT_Talent[Sel].Dispose(); } // Always refresh
-                    TT_Talent[Sel] = new ToolTip();
-
-                    PbTalName = "PbTalent" + i.ToString() + "_" + j.ToString();
-                    PbT = this.Controls.Find(PbTalName, true).FirstOrDefault() as PictureBox;
-
-                    TT_Talent[Sel].ToolTipTitle = Talent_Names[Sel];
-                    string TT = string.Format("Point Cost: {0}{1}", Talent_Cost[Sel], Environment.NewLine);
-                    TT += Talent_Description[Sel] + Environment.NewLine + Talent_Effect[Sel];
-                    TT_Talent[Sel].SetToolTip(PbT, TT);
-                }
-            }
-
-             */
-
-            TT_Talent_Check = true;
         }
 
         /// 
