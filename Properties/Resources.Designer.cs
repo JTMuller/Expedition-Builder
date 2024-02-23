@@ -2113,6 +2113,46 @@ namespace Expedition_Builder_Online.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Gear_SearchAny {
+            get {
+                object obj = ResourceManager.GetObject("Gear-SearchAny", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gear_SearchSelective {
+            get {
+                object obj = ResourceManager.GetObject("Gear-SearchSelective", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gear_SearchSelectTypeA {
+            get {
+                object obj = ResourceManager.GetObject("Gear-SearchSelectTypeA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gear_SearchSelectTypeD {
+            get {
+                object obj = ResourceManager.GetObject("Gear-SearchSelectTypeD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap S_Arcane_Illusion {
             get {
                 object obj = ResourceManager.GetObject("S_Arcane_Illusion", resourceCulture);
