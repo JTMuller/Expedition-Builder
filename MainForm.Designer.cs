@@ -29,76 +29,60 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.Pnl5 = new System.Windows.Forms.Panel();
-            this.LblTalent6 = new System.Windows.Forms.Label();
-            this.PbTalent6 = new System.Windows.Forms.PictureBox();
-            this.PbHelp5 = new System.Windows.Forms.PictureBox();
-            this.LblTalentPoint = new System.Windows.Forms.Label();
-            this.PnlTalent5 = new System.Windows.Forms.Panel();
-            this.LblTalent5 = new System.Windows.Forms.Label();
-            this.PbTalent5_10 = new System.Windows.Forms.PictureBox();
-            this.PbTalent5_9 = new System.Windows.Forms.PictureBox();
-            this.PbTalent5_8 = new System.Windows.Forms.PictureBox();
-            this.PbTalent5_7 = new System.Windows.Forms.PictureBox();
-            this.PbTalent5_6 = new System.Windows.Forms.PictureBox();
-            this.PbTalent5_5 = new System.Windows.Forms.PictureBox();
-            this.PbTalent5_4 = new System.Windows.Forms.PictureBox();
-            this.PbTalent5_3 = new System.Windows.Forms.PictureBox();
-            this.PbTalent5_2 = new System.Windows.Forms.PictureBox();
-            this.PbTalent5_1 = new System.Windows.Forms.PictureBox();
-            this.PbTalent5_0 = new System.Windows.Forms.PictureBox();
-            this.PnlTalent4 = new System.Windows.Forms.Panel();
-            this.LblTalent4 = new System.Windows.Forms.Label();
-            this.PbTalent4_10 = new System.Windows.Forms.PictureBox();
-            this.PbTalent4_9 = new System.Windows.Forms.PictureBox();
-            this.PbTalent4_8 = new System.Windows.Forms.PictureBox();
-            this.PbTalent4_7 = new System.Windows.Forms.PictureBox();
-            this.PbTalent4_6 = new System.Windows.Forms.PictureBox();
-            this.PbTalent4_5 = new System.Windows.Forms.PictureBox();
-            this.PbTalent4_4 = new System.Windows.Forms.PictureBox();
-            this.PbTalent4_3 = new System.Windows.Forms.PictureBox();
-            this.PbTalent4_2 = new System.Windows.Forms.PictureBox();
-            this.PbTalent4_1 = new System.Windows.Forms.PictureBox();
-            this.PbTalent4_0 = new System.Windows.Forms.PictureBox();
-            this.PnlTalent3 = new System.Windows.Forms.Panel();
-            this.LblTalent3 = new System.Windows.Forms.Label();
-            this.PbTalent3_10 = new System.Windows.Forms.PictureBox();
-            this.PbTalent3_9 = new System.Windows.Forms.PictureBox();
-            this.PbTalent3_8 = new System.Windows.Forms.PictureBox();
-            this.PbTalent3_7 = new System.Windows.Forms.PictureBox();
-            this.PbTalent3_6 = new System.Windows.Forms.PictureBox();
-            this.PbTalent3_5 = new System.Windows.Forms.PictureBox();
-            this.PbTalent3_4 = new System.Windows.Forms.PictureBox();
-            this.PbTalent3_3 = new System.Windows.Forms.PictureBox();
-            this.PbTalent3_2 = new System.Windows.Forms.PictureBox();
-            this.PbTalent3_1 = new System.Windows.Forms.PictureBox();
-            this.PbTalent3_0 = new System.Windows.Forms.PictureBox();
-            this.PnlTalent2 = new System.Windows.Forms.Panel();
-            this.LblTalent2 = new System.Windows.Forms.Label();
-            this.PbTalent2_10 = new System.Windows.Forms.PictureBox();
-            this.PbTalent2_9 = new System.Windows.Forms.PictureBox();
-            this.PbTalent2_8 = new System.Windows.Forms.PictureBox();
-            this.PbTalent2_7 = new System.Windows.Forms.PictureBox();
-            this.PbTalent2_6 = new System.Windows.Forms.PictureBox();
-            this.PbTalent2_5 = new System.Windows.Forms.PictureBox();
-            this.PbTalent2_4 = new System.Windows.Forms.PictureBox();
-            this.PbTalent2_3 = new System.Windows.Forms.PictureBox();
-            this.PbTalent2_2 = new System.Windows.Forms.PictureBox();
-            this.PbTalent2_1 = new System.Windows.Forms.PictureBox();
-            this.PbTalent2_0 = new System.Windows.Forms.PictureBox();
-            this.PnlTalent1 = new System.Windows.Forms.Panel();
-            this.LblTalent1 = new System.Windows.Forms.Label();
-            this.PbTalent1_10 = new System.Windows.Forms.PictureBox();
-            this.PbTalent1_9 = new System.Windows.Forms.PictureBox();
-            this.PbTalent1_8 = new System.Windows.Forms.PictureBox();
-            this.PbTalent1_7 = new System.Windows.Forms.PictureBox();
-            this.PbTalent1_6 = new System.Windows.Forms.PictureBox();
-            this.PbTalent1_5 = new System.Windows.Forms.PictureBox();
-            this.PbTalent1_4 = new System.Windows.Forms.PictureBox();
-            this.PbTalent1_3 = new System.Windows.Forms.PictureBox();
-            this.PbTalent1_2 = new System.Windows.Forms.PictureBox();
-            this.PbTalent1_1 = new System.Windows.Forms.PictureBox();
-            this.PbTalent1_0 = new System.Windows.Forms.PictureBox();
+            this.Pnl4 = new System.Windows.Forms.Panel();
+            this.PbGearSearch9 = new System.Windows.Forms.PictureBox();
+            this.PbGearSearch4 = new System.Windows.Forms.PictureBox();
+            this.PbGearSearch3 = new System.Windows.Forms.PictureBox();
+            this.PbGearSearch1 = new System.Windows.Forms.PictureBox();
+            this.PbGearSearch2 = new System.Windows.Forms.PictureBox();
+            this.PbGearSearch8 = new System.Windows.Forms.PictureBox();
+            this.PbGearSearch7 = new System.Windows.Forms.PictureBox();
+            this.PbGearSearch6 = new System.Windows.Forms.PictureBox();
+            this.PbGearSearch5 = new System.Windows.Forms.PictureBox();
+            this.PbHelp4 = new System.Windows.Forms.PictureBox();
+            this.PbGearSearchX = new System.Windows.Forms.PictureBox();
+            this.PbGearEquip12 = new System.Windows.Forms.PictureBox();
+            this.PbGearEquip11 = new System.Windows.Forms.PictureBox();
+            this.PbGearEquip10 = new System.Windows.Forms.PictureBox();
+            this.PbGearEquip9 = new System.Windows.Forms.PictureBox();
+            this.PbGearEquip1 = new System.Windows.Forms.PictureBox();
+            this.LblGearStats12 = new System.Windows.Forms.Label();
+            this.LblGearStats11 = new System.Windows.Forms.Label();
+            this.LblGearStats10 = new System.Windows.Forms.Label();
+            this.LblGearStats9 = new System.Windows.Forms.Label();
+            this.LblGearStats8 = new System.Windows.Forms.Label();
+            this.LblGearStats7 = new System.Windows.Forms.Label();
+            this.LblGearStats6 = new System.Windows.Forms.Label();
+            this.LblGearStats5 = new System.Windows.Forms.Label();
+            this.LblGearStats4 = new System.Windows.Forms.Label();
+            this.LblGearStats3 = new System.Windows.Forms.Label();
+            this.LblGearStats2 = new System.Windows.Forms.Label();
+            this.LblGearStats1 = new System.Windows.Forms.Label();
+            this.PbGearStats12 = new System.Windows.Forms.PictureBox();
+            this.PbGearStats11 = new System.Windows.Forms.PictureBox();
+            this.PbGearStats10 = new System.Windows.Forms.PictureBox();
+            this.PbGearStats9 = new System.Windows.Forms.PictureBox();
+            this.PbGearStats8 = new System.Windows.Forms.PictureBox();
+            this.PbGearStats7 = new System.Windows.Forms.PictureBox();
+            this.PbGearStats6 = new System.Windows.Forms.PictureBox();
+            this.PbGearStats5 = new System.Windows.Forms.PictureBox();
+            this.PbGearStats4 = new System.Windows.Forms.PictureBox();
+            this.PbGearStats3 = new System.Windows.Forms.PictureBox();
+            this.PbGearStats2 = new System.Windows.Forms.PictureBox();
+            this.PbGearStats1 = new System.Windows.Forms.PictureBox();
+            this.CbGearSelect = new System.Windows.Forms.ComboBox();
+            this.PbGear12 = new System.Windows.Forms.PictureBox();
+            this.PbGear11 = new System.Windows.Forms.PictureBox();
+            this.PbGear10 = new System.Windows.Forms.PictureBox();
+            this.PbGear9 = new System.Windows.Forms.PictureBox();
+            this.PbGear8 = new System.Windows.Forms.PictureBox();
+            this.PbGear7 = new System.Windows.Forms.PictureBox();
+            this.PbGear6 = new System.Windows.Forms.PictureBox();
+            this.PbGear5 = new System.Windows.Forms.PictureBox();
+            this.PbGear4 = new System.Windows.Forms.PictureBox();
+            this.PbGear3 = new System.Windows.Forms.PictureBox();
+            this.PbGear2 = new System.Windows.Forms.PictureBox();
+            this.PbGear1 = new System.Windows.Forms.PictureBox();
             this.Pnl1 = new System.Windows.Forms.Panel();
             this.PbSheets = new System.Windows.Forms.PictureBox();
             this.LblHelp = new System.Windows.Forms.Label();
@@ -286,6 +270,76 @@
             this.PbAff1_2 = new System.Windows.Forms.PictureBox();
             this.PbAff1_1 = new System.Windows.Forms.PictureBox();
             this.PbAff1 = new System.Windows.Forms.PictureBox();
+            this.Pnl5 = new System.Windows.Forms.Panel();
+            this.LblTalent6 = new System.Windows.Forms.Label();
+            this.PbTalent6 = new System.Windows.Forms.PictureBox();
+            this.PbHelp5 = new System.Windows.Forms.PictureBox();
+            this.LblTalentPoint = new System.Windows.Forms.Label();
+            this.PnlTalent5 = new System.Windows.Forms.Panel();
+            this.LblTalent5 = new System.Windows.Forms.Label();
+            this.PbTalent5_10 = new System.Windows.Forms.PictureBox();
+            this.PbTalent5_9 = new System.Windows.Forms.PictureBox();
+            this.PbTalent5_8 = new System.Windows.Forms.PictureBox();
+            this.PbTalent5_7 = new System.Windows.Forms.PictureBox();
+            this.PbTalent5_6 = new System.Windows.Forms.PictureBox();
+            this.PbTalent5_5 = new System.Windows.Forms.PictureBox();
+            this.PbTalent5_4 = new System.Windows.Forms.PictureBox();
+            this.PbTalent5_3 = new System.Windows.Forms.PictureBox();
+            this.PbTalent5_2 = new System.Windows.Forms.PictureBox();
+            this.PbTalent5_1 = new System.Windows.Forms.PictureBox();
+            this.PbTalent5_0 = new System.Windows.Forms.PictureBox();
+            this.PnlTalent4 = new System.Windows.Forms.Panel();
+            this.LblTalent4 = new System.Windows.Forms.Label();
+            this.PbTalent4_10 = new System.Windows.Forms.PictureBox();
+            this.PbTalent4_9 = new System.Windows.Forms.PictureBox();
+            this.PbTalent4_8 = new System.Windows.Forms.PictureBox();
+            this.PbTalent4_7 = new System.Windows.Forms.PictureBox();
+            this.PbTalent4_6 = new System.Windows.Forms.PictureBox();
+            this.PbTalent4_5 = new System.Windows.Forms.PictureBox();
+            this.PbTalent4_4 = new System.Windows.Forms.PictureBox();
+            this.PbTalent4_3 = new System.Windows.Forms.PictureBox();
+            this.PbTalent4_2 = new System.Windows.Forms.PictureBox();
+            this.PbTalent4_1 = new System.Windows.Forms.PictureBox();
+            this.PbTalent4_0 = new System.Windows.Forms.PictureBox();
+            this.PnlTalent3 = new System.Windows.Forms.Panel();
+            this.LblTalent3 = new System.Windows.Forms.Label();
+            this.PbTalent3_10 = new System.Windows.Forms.PictureBox();
+            this.PbTalent3_9 = new System.Windows.Forms.PictureBox();
+            this.PbTalent3_8 = new System.Windows.Forms.PictureBox();
+            this.PbTalent3_7 = new System.Windows.Forms.PictureBox();
+            this.PbTalent3_6 = new System.Windows.Forms.PictureBox();
+            this.PbTalent3_5 = new System.Windows.Forms.PictureBox();
+            this.PbTalent3_4 = new System.Windows.Forms.PictureBox();
+            this.PbTalent3_3 = new System.Windows.Forms.PictureBox();
+            this.PbTalent3_2 = new System.Windows.Forms.PictureBox();
+            this.PbTalent3_1 = new System.Windows.Forms.PictureBox();
+            this.PbTalent3_0 = new System.Windows.Forms.PictureBox();
+            this.PnlTalent2 = new System.Windows.Forms.Panel();
+            this.LblTalent2 = new System.Windows.Forms.Label();
+            this.PbTalent2_10 = new System.Windows.Forms.PictureBox();
+            this.PbTalent2_9 = new System.Windows.Forms.PictureBox();
+            this.PbTalent2_8 = new System.Windows.Forms.PictureBox();
+            this.PbTalent2_7 = new System.Windows.Forms.PictureBox();
+            this.PbTalent2_6 = new System.Windows.Forms.PictureBox();
+            this.PbTalent2_5 = new System.Windows.Forms.PictureBox();
+            this.PbTalent2_4 = new System.Windows.Forms.PictureBox();
+            this.PbTalent2_3 = new System.Windows.Forms.PictureBox();
+            this.PbTalent2_2 = new System.Windows.Forms.PictureBox();
+            this.PbTalent2_1 = new System.Windows.Forms.PictureBox();
+            this.PbTalent2_0 = new System.Windows.Forms.PictureBox();
+            this.PnlTalent1 = new System.Windows.Forms.Panel();
+            this.LblTalent1 = new System.Windows.Forms.Label();
+            this.PbTalent1_10 = new System.Windows.Forms.PictureBox();
+            this.PbTalent1_9 = new System.Windows.Forms.PictureBox();
+            this.PbTalent1_8 = new System.Windows.Forms.PictureBox();
+            this.PbTalent1_7 = new System.Windows.Forms.PictureBox();
+            this.PbTalent1_6 = new System.Windows.Forms.PictureBox();
+            this.PbTalent1_5 = new System.Windows.Forms.PictureBox();
+            this.PbTalent1_4 = new System.Windows.Forms.PictureBox();
+            this.PbTalent1_3 = new System.Windows.Forms.PictureBox();
+            this.PbTalent1_2 = new System.Windows.Forms.PictureBox();
+            this.PbTalent1_1 = new System.Windows.Forms.PictureBox();
+            this.PbTalent1_0 = new System.Windows.Forms.PictureBox();
             this.Pnl3 = new System.Windows.Forms.Panel();
             this.PbHelp3 = new System.Windows.Forms.PictureBox();
             this.LblAbilityGrowth = new System.Windows.Forms.Label();
@@ -415,119 +469,53 @@
             this.PbAbility3 = new System.Windows.Forms.PictureBox();
             this.PbAbility2 = new System.Windows.Forms.PictureBox();
             this.PbAbility1 = new System.Windows.Forms.PictureBox();
-            this.Pnl4 = new System.Windows.Forms.Panel();
-            this.PbHelp4 = new System.Windows.Forms.PictureBox();
-            this.PbGearEquip12 = new System.Windows.Forms.PictureBox();
-            this.PbGearEquip11 = new System.Windows.Forms.PictureBox();
-            this.PbGearEquip10 = new System.Windows.Forms.PictureBox();
-            this.PbGearEquip9 = new System.Windows.Forms.PictureBox();
-            this.PbGearEquip1 = new System.Windows.Forms.PictureBox();
-            this.LblGearStats12 = new System.Windows.Forms.Label();
-            this.LblGearStats11 = new System.Windows.Forms.Label();
-            this.LblGearStats10 = new System.Windows.Forms.Label();
-            this.LblGearStats9 = new System.Windows.Forms.Label();
-            this.LblGearStats8 = new System.Windows.Forms.Label();
-            this.LblGearStats7 = new System.Windows.Forms.Label();
-            this.LblGearStats6 = new System.Windows.Forms.Label();
-            this.LblGearStats5 = new System.Windows.Forms.Label();
-            this.LblGearStats4 = new System.Windows.Forms.Label();
-            this.LblGearStats3 = new System.Windows.Forms.Label();
-            this.LblGearStats2 = new System.Windows.Forms.Label();
-            this.LblGearStats1 = new System.Windows.Forms.Label();
-            this.PbGearStats12 = new System.Windows.Forms.PictureBox();
-            this.PbGearStats11 = new System.Windows.Forms.PictureBox();
-            this.PbGearStats10 = new System.Windows.Forms.PictureBox();
-            this.PbGearStats9 = new System.Windows.Forms.PictureBox();
-            this.PbGearStats8 = new System.Windows.Forms.PictureBox();
-            this.PbGearStats7 = new System.Windows.Forms.PictureBox();
-            this.PbGearStats6 = new System.Windows.Forms.PictureBox();
-            this.PbGearStats5 = new System.Windows.Forms.PictureBox();
-            this.PbGearStats4 = new System.Windows.Forms.PictureBox();
-            this.PbGearStats3 = new System.Windows.Forms.PictureBox();
-            this.PbGearStats2 = new System.Windows.Forms.PictureBox();
-            this.PbGearStats1 = new System.Windows.Forms.PictureBox();
-            this.CbGearSelect = new System.Windows.Forms.ComboBox();
-            this.PbGear12 = new System.Windows.Forms.PictureBox();
-            this.PbGear11 = new System.Windows.Forms.PictureBox();
-            this.PbGear10 = new System.Windows.Forms.PictureBox();
-            this.PbGear9 = new System.Windows.Forms.PictureBox();
-            this.PbGear8 = new System.Windows.Forms.PictureBox();
-            this.PbGear7 = new System.Windows.Forms.PictureBox();
-            this.PbGear6 = new System.Windows.Forms.PictureBox();
-            this.PbGear5 = new System.Windows.Forms.PictureBox();
-            this.PbGear4 = new System.Windows.Forms.PictureBox();
-            this.PbGear3 = new System.Windows.Forms.PictureBox();
-            this.PbGear2 = new System.Windows.Forms.PictureBox();
-            this.PbGear1 = new System.Windows.Forms.PictureBox();
             this.PbTab1 = new System.Windows.Forms.PictureBox();
             this.PbTab2 = new System.Windows.Forms.PictureBox();
             this.PbTab3 = new System.Windows.Forms.PictureBox();
             this.PbTab4 = new System.Windows.Forms.PictureBox();
             this.PbTab5 = new System.Windows.Forms.PictureBox();
             this.PbBG = new System.Windows.Forms.PictureBox();
-            this.Pnl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbHelp5)).BeginInit();
-            this.PnlTalent5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_0)).BeginInit();
-            this.PnlTalent4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_0)).BeginInit();
-            this.PnlTalent3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_0)).BeginInit();
-            this.PnlTalent2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_0)).BeginInit();
-            this.PnlTalent1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_0)).BeginInit();
+            this.Pnl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearSearch9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearSearch4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearSearch3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearSearch1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearSearch2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearSearch8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearSearch7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearSearch6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearSearch5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbHelp4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearSearchX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearEquip12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearEquip11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearEquip10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearEquip9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearEquip1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear1)).BeginInit();
             this.Pnl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbSheets)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbHelp)).BeginInit();
@@ -628,6 +616,69 @@
             ((System.ComponentModel.ISupportInitialize)(this.PbAff1_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbAff1_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbAff1)).BeginInit();
+            this.Pnl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbHelp5)).BeginInit();
+            this.PnlTalent5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_0)).BeginInit();
+            this.PnlTalent4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_0)).BeginInit();
+            this.PnlTalent3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_0)).BeginInit();
+            this.PnlTalent2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_0)).BeginInit();
+            this.PnlTalent1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_0)).BeginInit();
             this.Pnl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbHelp3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbAbility9_10)).BeginInit();
@@ -738,37 +789,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PbAbility3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbAbility2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbAbility1)).BeginInit();
-            this.Pnl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbHelp4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearEquip12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearEquip11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearEquip10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearEquip9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearEquip1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbTab1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbTab2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbTab3)).BeginInit();
@@ -777,843 +797,663 @@
             ((System.ComponentModel.ISupportInitialize)(this.PbBG)).BeginInit();
             this.SuspendLayout();
             // 
-            // Pnl5
-            // 
-            this.Pnl5.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Screen_5S;
-            this.Pnl5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Pnl5.Controls.Add(this.LblTalent6);
-            this.Pnl5.Controls.Add(this.PbTalent6);
-            this.Pnl5.Controls.Add(this.PbHelp5);
-            this.Pnl5.Controls.Add(this.LblTalentPoint);
-            this.Pnl5.Controls.Add(this.PnlTalent5);
-            this.Pnl5.Controls.Add(this.PnlTalent4);
-            this.Pnl5.Controls.Add(this.PnlTalent3);
-            this.Pnl5.Controls.Add(this.PnlTalent2);
-            this.Pnl5.Controls.Add(this.PnlTalent1);
-            this.Pnl5.Location = new System.Drawing.Point(0, 0);
-            this.Pnl5.Name = "Pnl5";
-            this.Pnl5.Size = new System.Drawing.Size(1400, 910);
-            this.Pnl5.TabIndex = 3;
-            this.Pnl5.Visible = false;
-            this.Pnl5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Drag_Form);
-            // 
-            // LblTalent6
-            // 
-            this.LblTalent6.BackColor = System.Drawing.Color.Transparent;
-            this.LblTalent6.Font = new System.Drawing.Font("Octapost NBP", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTalent6.ForeColor = System.Drawing.Color.White;
-            this.LblTalent6.Location = new System.Drawing.Point(658, 595);
-            this.LblTalent6.Name = "LblTalent6";
-            this.LblTalent6.Size = new System.Drawing.Size(85, 10);
-            this.LblTalent6.TabIndex = 156;
-            this.LblTalent6.Text = "0";
-            this.LblTalent6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PbTalent6
-            // 
-            this.PbTalent6.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_55D;
-            this.PbTalent6.Location = new System.Drawing.Point(650, 589);
-            this.PbTalent6.Name = "PbTalent6";
-            this.PbTalent6.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent6.TabIndex = 156;
-            this.PbTalent6.TabStop = false;
-            this.PbTalent6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Talent_Activate_Ability);
-            // 
-            // PbHelp5
-            // 
-            this.PbHelp5.Image = global::Expedition_Builder_Online.Properties.Resources.EI_S_Help;
-            this.PbHelp5.Location = new System.Drawing.Point(665, 463);
-            this.PbHelp5.Name = "PbHelp5";
-            this.PbHelp5.Size = new System.Drawing.Size(70, 70);
-            this.PbHelp5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbHelp5.TabIndex = 184;
-            this.PbHelp5.TabStop = false;
-            this.PbHelp5.Visible = false;
-            this.PbHelp5.Click += new System.EventHandler(this.PbHelp5_Click);
-            // 
-            // LblTalentPoint
-            // 
-            this.LblTalentPoint.AutoSize = true;
-            this.LblTalentPoint.BackColor = System.Drawing.Color.Transparent;
-            this.LblTalentPoint.Font = new System.Drawing.Font("Octapost NBP", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTalentPoint.ForeColor = System.Drawing.Color.White;
-            this.LblTalentPoint.Location = new System.Drawing.Point(505, 770);
-            this.LblTalentPoint.Name = "LblTalentPoint";
-            this.LblTalentPoint.Size = new System.Drawing.Size(395, 90);
-            this.LblTalentPoint.TabIndex = 156;
-            this.LblTalentPoint.Text = "60 Talent Points\r\nof the\r\n60 available";
-            this.LblTalentPoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PnlTalent5
-            // 
-            this.PnlTalent5.BackColor = System.Drawing.Color.Transparent;
-            this.PnlTalent5.Controls.Add(this.LblTalent5);
-            this.PnlTalent5.Controls.Add(this.PbTalent5_10);
-            this.PnlTalent5.Controls.Add(this.PbTalent5_9);
-            this.PnlTalent5.Controls.Add(this.PbTalent5_8);
-            this.PnlTalent5.Controls.Add(this.PbTalent5_7);
-            this.PnlTalent5.Controls.Add(this.PbTalent5_6);
-            this.PnlTalent5.Controls.Add(this.PbTalent5_5);
-            this.PnlTalent5.Controls.Add(this.PbTalent5_4);
-            this.PnlTalent5.Controls.Add(this.PbTalent5_3);
-            this.PnlTalent5.Controls.Add(this.PbTalent5_2);
-            this.PnlTalent5.Controls.Add(this.PbTalent5_1);
-            this.PnlTalent5.Controls.Add(this.PbTalent5_0);
-            this.PnlTalent5.Location = new System.Drawing.Point(970, 460);
-            this.PnlTalent5.Name = "PnlTalent5";
-            this.PnlTalent5.Size = new System.Drawing.Size(400, 400);
-            this.PnlTalent5.TabIndex = 158;
-            // 
-            // LblTalent5
-            // 
-            this.LblTalent5.AutoSize = true;
-            this.LblTalent5.BackColor = System.Drawing.Color.Transparent;
-            this.LblTalent5.Font = new System.Drawing.Font("Octapost NBP", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTalent5.ForeColor = System.Drawing.Color.White;
-            this.LblTalent5.Location = new System.Drawing.Point(114, 33);
-            this.LblTalent5.Name = "LblTalent5";
-            this.LblTalent5.Size = new System.Drawing.Size(169, 30);
-            this.LblTalent5.TabIndex = 155;
-            this.LblTalent5.Text = "Skills";
-            this.LblTalent5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PbTalent5_10
-            // 
-            this.PbTalent5_10.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_54D;
-            this.PbTalent5_10.Location = new System.Drawing.Point(250, 300);
-            this.PbTalent5_10.Name = "PbTalent5_10";
-            this.PbTalent5_10.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent5_10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent5_10.TabIndex = 11;
-            this.PbTalent5_10.TabStop = false;
-            this.PbTalent5_10.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent5_9
-            // 
-            this.PbTalent5_9.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_53D;
-            this.PbTalent5_9.Location = new System.Drawing.Point(150, 300);
-            this.PbTalent5_9.Name = "PbTalent5_9";
-            this.PbTalent5_9.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent5_9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent5_9.TabIndex = 10;
-            this.PbTalent5_9.TabStop = false;
-            this.PbTalent5_9.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent5_8
-            // 
-            this.PbTalent5_8.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_52D;
-            this.PbTalent5_8.Location = new System.Drawing.Point(50, 300);
-            this.PbTalent5_8.Name = "PbTalent5_8";
-            this.PbTalent5_8.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent5_8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent5_8.TabIndex = 9;
-            this.PbTalent5_8.TabStop = false;
-            this.PbTalent5_8.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent5_7
-            // 
-            this.PbTalent5_7.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_51D;
-            this.PbTalent5_7.Location = new System.Drawing.Point(300, 200);
-            this.PbTalent5_7.Name = "PbTalent5_7";
-            this.PbTalent5_7.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent5_7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent5_7.TabIndex = 8;
-            this.PbTalent5_7.TabStop = false;
-            this.PbTalent5_7.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent5_6
-            // 
-            this.PbTalent5_6.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_50D;
-            this.PbTalent5_6.Location = new System.Drawing.Point(200, 200);
-            this.PbTalent5_6.Name = "PbTalent5_6";
-            this.PbTalent5_6.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent5_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent5_6.TabIndex = 7;
-            this.PbTalent5_6.TabStop = false;
-            this.PbTalent5_6.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent5_5
-            // 
-            this.PbTalent5_5.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_49D;
-            this.PbTalent5_5.Location = new System.Drawing.Point(100, 200);
-            this.PbTalent5_5.Name = "PbTalent5_5";
-            this.PbTalent5_5.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent5_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent5_5.TabIndex = 6;
-            this.PbTalent5_5.TabStop = false;
-            this.PbTalent5_5.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent5_4
-            // 
-            this.PbTalent5_4.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_48D;
-            this.PbTalent5_4.Location = new System.Drawing.Point(0, 200);
-            this.PbTalent5_4.Name = "PbTalent5_4";
-            this.PbTalent5_4.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent5_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent5_4.TabIndex = 5;
-            this.PbTalent5_4.TabStop = false;
-            this.PbTalent5_4.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent5_3
-            // 
-            this.PbTalent5_3.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_47D;
-            this.PbTalent5_3.Location = new System.Drawing.Point(300, 100);
-            this.PbTalent5_3.Name = "PbTalent5_3";
-            this.PbTalent5_3.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent5_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent5_3.TabIndex = 4;
-            this.PbTalent5_3.TabStop = false;
-            this.PbTalent5_3.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent5_2
-            // 
-            this.PbTalent5_2.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_46D;
-            this.PbTalent5_2.Location = new System.Drawing.Point(200, 100);
-            this.PbTalent5_2.Name = "PbTalent5_2";
-            this.PbTalent5_2.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent5_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent5_2.TabIndex = 3;
-            this.PbTalent5_2.TabStop = false;
-            this.PbTalent5_2.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent5_1
-            // 
-            this.PbTalent5_1.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_45D;
-            this.PbTalent5_1.Location = new System.Drawing.Point(100, 100);
-            this.PbTalent5_1.Name = "PbTalent5_1";
-            this.PbTalent5_1.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent5_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent5_1.TabIndex = 2;
-            this.PbTalent5_1.TabStop = false;
-            this.PbTalent5_1.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent5_0
-            // 
-            this.PbTalent5_0.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_44D;
-            this.PbTalent5_0.Location = new System.Drawing.Point(0, 100);
-            this.PbTalent5_0.Name = "PbTalent5_0";
-            this.PbTalent5_0.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent5_0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent5_0.TabIndex = 1;
-            this.PbTalent5_0.TabStop = false;
-            this.PbTalent5_0.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PnlTalent4
-            // 
-            this.PnlTalent4.BackColor = System.Drawing.Color.Transparent;
-            this.PnlTalent4.Controls.Add(this.LblTalent4);
-            this.PnlTalent4.Controls.Add(this.PbTalent4_10);
-            this.PnlTalent4.Controls.Add(this.PbTalent4_9);
-            this.PnlTalent4.Controls.Add(this.PbTalent4_8);
-            this.PnlTalent4.Controls.Add(this.PbTalent4_7);
-            this.PnlTalent4.Controls.Add(this.PbTalent4_6);
-            this.PnlTalent4.Controls.Add(this.PbTalent4_5);
-            this.PnlTalent4.Controls.Add(this.PbTalent4_4);
-            this.PnlTalent4.Controls.Add(this.PbTalent4_3);
-            this.PnlTalent4.Controls.Add(this.PbTalent4_2);
-            this.PnlTalent4.Controls.Add(this.PbTalent4_1);
-            this.PnlTalent4.Controls.Add(this.PbTalent4_0);
-            this.PnlTalent4.Location = new System.Drawing.Point(30, 460);
-            this.PnlTalent4.Name = "PnlTalent4";
-            this.PnlTalent4.Size = new System.Drawing.Size(400, 400);
-            this.PnlTalent4.TabIndex = 157;
-            // 
-            // LblTalent4
-            // 
-            this.LblTalent4.AutoSize = true;
-            this.LblTalent4.BackColor = System.Drawing.Color.Transparent;
-            this.LblTalent4.Font = new System.Drawing.Font("Octapost NBP", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTalent4.ForeColor = System.Drawing.Color.White;
-            this.LblTalent4.Location = new System.Drawing.Point(120, 33);
-            this.LblTalent4.Name = "LblTalent4";
-            this.LblTalent4.Size = new System.Drawing.Size(169, 30);
-            this.LblTalent4.TabIndex = 155;
-            this.LblTalent4.Text = "Growth";
-            this.LblTalent4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PbTalent4_10
-            // 
-            this.PbTalent4_10.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_43D;
-            this.PbTalent4_10.Location = new System.Drawing.Point(250, 300);
-            this.PbTalent4_10.Name = "PbTalent4_10";
-            this.PbTalent4_10.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent4_10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent4_10.TabIndex = 11;
-            this.PbTalent4_10.TabStop = false;
-            this.PbTalent4_10.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent4_9
-            // 
-            this.PbTalent4_9.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_42D;
-            this.PbTalent4_9.Location = new System.Drawing.Point(150, 300);
-            this.PbTalent4_9.Name = "PbTalent4_9";
-            this.PbTalent4_9.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent4_9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent4_9.TabIndex = 10;
-            this.PbTalent4_9.TabStop = false;
-            this.PbTalent4_9.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent4_8
-            // 
-            this.PbTalent4_8.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_41D;
-            this.PbTalent4_8.Location = new System.Drawing.Point(50, 300);
-            this.PbTalent4_8.Name = "PbTalent4_8";
-            this.PbTalent4_8.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent4_8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent4_8.TabIndex = 9;
-            this.PbTalent4_8.TabStop = false;
-            this.PbTalent4_8.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent4_7
-            // 
-            this.PbTalent4_7.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_40D;
-            this.PbTalent4_7.Location = new System.Drawing.Point(300, 200);
-            this.PbTalent4_7.Name = "PbTalent4_7";
-            this.PbTalent4_7.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent4_7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent4_7.TabIndex = 8;
-            this.PbTalent4_7.TabStop = false;
-            this.PbTalent4_7.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent4_6
-            // 
-            this.PbTalent4_6.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_39D;
-            this.PbTalent4_6.Location = new System.Drawing.Point(200, 200);
-            this.PbTalent4_6.Name = "PbTalent4_6";
-            this.PbTalent4_6.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent4_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent4_6.TabIndex = 7;
-            this.PbTalent4_6.TabStop = false;
-            this.PbTalent4_6.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent4_5
-            // 
-            this.PbTalent4_5.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_38D;
-            this.PbTalent4_5.Location = new System.Drawing.Point(100, 200);
-            this.PbTalent4_5.Name = "PbTalent4_5";
-            this.PbTalent4_5.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent4_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent4_5.TabIndex = 6;
-            this.PbTalent4_5.TabStop = false;
-            this.PbTalent4_5.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent4_4
-            // 
-            this.PbTalent4_4.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_37D;
-            this.PbTalent4_4.Location = new System.Drawing.Point(0, 200);
-            this.PbTalent4_4.Name = "PbTalent4_4";
-            this.PbTalent4_4.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent4_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent4_4.TabIndex = 5;
-            this.PbTalent4_4.TabStop = false;
-            this.PbTalent4_4.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent4_3
-            // 
-            this.PbTalent4_3.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_36D;
-            this.PbTalent4_3.Location = new System.Drawing.Point(300, 100);
-            this.PbTalent4_3.Name = "PbTalent4_3";
-            this.PbTalent4_3.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent4_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent4_3.TabIndex = 4;
-            this.PbTalent4_3.TabStop = false;
-            this.PbTalent4_3.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent4_2
-            // 
-            this.PbTalent4_2.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_35D;
-            this.PbTalent4_2.Location = new System.Drawing.Point(200, 100);
-            this.PbTalent4_2.Name = "PbTalent4_2";
-            this.PbTalent4_2.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent4_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent4_2.TabIndex = 3;
-            this.PbTalent4_2.TabStop = false;
-            this.PbTalent4_2.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent4_1
-            // 
-            this.PbTalent4_1.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_34D;
-            this.PbTalent4_1.Location = new System.Drawing.Point(100, 100);
-            this.PbTalent4_1.Name = "PbTalent4_1";
-            this.PbTalent4_1.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent4_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent4_1.TabIndex = 2;
-            this.PbTalent4_1.TabStop = false;
-            this.PbTalent4_1.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent4_0
-            // 
-            this.PbTalent4_0.Image = ((System.Drawing.Image)(resources.GetObject("PbTalent4_0.Image")));
-            this.PbTalent4_0.Location = new System.Drawing.Point(0, 100);
-            this.PbTalent4_0.Name = "PbTalent4_0";
-            this.PbTalent4_0.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent4_0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent4_0.TabIndex = 1;
-            this.PbTalent4_0.TabStop = false;
-            this.PbTalent4_0.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PnlTalent3
-            // 
-            this.PnlTalent3.BackColor = System.Drawing.Color.Transparent;
-            this.PnlTalent3.Controls.Add(this.LblTalent3);
-            this.PnlTalent3.Controls.Add(this.PbTalent3_10);
-            this.PnlTalent3.Controls.Add(this.PbTalent3_9);
-            this.PnlTalent3.Controls.Add(this.PbTalent3_8);
-            this.PnlTalent3.Controls.Add(this.PbTalent3_7);
-            this.PnlTalent3.Controls.Add(this.PbTalent3_6);
-            this.PnlTalent3.Controls.Add(this.PbTalent3_5);
-            this.PnlTalent3.Controls.Add(this.PbTalent3_4);
-            this.PnlTalent3.Controls.Add(this.PbTalent3_3);
-            this.PnlTalent3.Controls.Add(this.PbTalent3_2);
-            this.PnlTalent3.Controls.Add(this.PbTalent3_1);
-            this.PnlTalent3.Controls.Add(this.PbTalent3_0);
-            this.PnlTalent3.Location = new System.Drawing.Point(970, 30);
-            this.PnlTalent3.Name = "PnlTalent3";
-            this.PnlTalent3.Size = new System.Drawing.Size(400, 400);
-            this.PnlTalent3.TabIndex = 156;
-            // 
-            // LblTalent3
-            // 
-            this.LblTalent3.AutoSize = true;
-            this.LblTalent3.BackColor = System.Drawing.Color.Transparent;
-            this.LblTalent3.Font = new System.Drawing.Font("Octapost NBP", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTalent3.ForeColor = System.Drawing.Color.White;
-            this.LblTalent3.Location = new System.Drawing.Point(75, 33);
-            this.LblTalent3.Name = "LblTalent3";
-            this.LblTalent3.Size = new System.Drawing.Size(256, 30);
-            this.LblTalent3.TabIndex = 155;
-            this.LblTalent3.Text = "Trade Offs";
-            this.LblTalent3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PbTalent3_10
-            // 
-            this.PbTalent3_10.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_32D;
-            this.PbTalent3_10.Location = new System.Drawing.Point(250, 300);
-            this.PbTalent3_10.Name = "PbTalent3_10";
-            this.PbTalent3_10.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent3_10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent3_10.TabIndex = 11;
-            this.PbTalent3_10.TabStop = false;
-            this.PbTalent3_10.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent3_9
-            // 
-            this.PbTalent3_9.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_31D;
-            this.PbTalent3_9.Location = new System.Drawing.Point(150, 300);
-            this.PbTalent3_9.Name = "PbTalent3_9";
-            this.PbTalent3_9.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent3_9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent3_9.TabIndex = 10;
-            this.PbTalent3_9.TabStop = false;
-            this.PbTalent3_9.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent3_8
-            // 
-            this.PbTalent3_8.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_30D;
-            this.PbTalent3_8.Location = new System.Drawing.Point(50, 300);
-            this.PbTalent3_8.Name = "PbTalent3_8";
-            this.PbTalent3_8.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent3_8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent3_8.TabIndex = 9;
-            this.PbTalent3_8.TabStop = false;
-            this.PbTalent3_8.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent3_7
-            // 
-            this.PbTalent3_7.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_29D;
-            this.PbTalent3_7.Location = new System.Drawing.Point(300, 200);
-            this.PbTalent3_7.Name = "PbTalent3_7";
-            this.PbTalent3_7.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent3_7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent3_7.TabIndex = 8;
-            this.PbTalent3_7.TabStop = false;
-            this.PbTalent3_7.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent3_6
-            // 
-            this.PbTalent3_6.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_28D;
-            this.PbTalent3_6.Location = new System.Drawing.Point(200, 200);
-            this.PbTalent3_6.Name = "PbTalent3_6";
-            this.PbTalent3_6.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent3_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent3_6.TabIndex = 7;
-            this.PbTalent3_6.TabStop = false;
-            this.PbTalent3_6.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent3_5
-            // 
-            this.PbTalent3_5.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_27D;
-            this.PbTalent3_5.Location = new System.Drawing.Point(100, 200);
-            this.PbTalent3_5.Name = "PbTalent3_5";
-            this.PbTalent3_5.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent3_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent3_5.TabIndex = 6;
-            this.PbTalent3_5.TabStop = false;
-            this.PbTalent3_5.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent3_4
-            // 
-            this.PbTalent3_4.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_26D;
-            this.PbTalent3_4.Location = new System.Drawing.Point(0, 200);
-            this.PbTalent3_4.Name = "PbTalent3_4";
-            this.PbTalent3_4.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent3_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent3_4.TabIndex = 5;
-            this.PbTalent3_4.TabStop = false;
-            this.PbTalent3_4.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent3_3
-            // 
-            this.PbTalent3_3.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_25D;
-            this.PbTalent3_3.Location = new System.Drawing.Point(300, 100);
-            this.PbTalent3_3.Name = "PbTalent3_3";
-            this.PbTalent3_3.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent3_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent3_3.TabIndex = 4;
-            this.PbTalent3_3.TabStop = false;
-            this.PbTalent3_3.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent3_2
-            // 
-            this.PbTalent3_2.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_24D;
-            this.PbTalent3_2.Location = new System.Drawing.Point(200, 100);
-            this.PbTalent3_2.Name = "PbTalent3_2";
-            this.PbTalent3_2.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent3_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent3_2.TabIndex = 3;
-            this.PbTalent3_2.TabStop = false;
-            this.PbTalent3_2.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent3_1
-            // 
-            this.PbTalent3_1.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_23D;
-            this.PbTalent3_1.Location = new System.Drawing.Point(100, 100);
-            this.PbTalent3_1.Name = "PbTalent3_1";
-            this.PbTalent3_1.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent3_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent3_1.TabIndex = 2;
-            this.PbTalent3_1.TabStop = false;
-            this.PbTalent3_1.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent3_0
-            // 
-            this.PbTalent3_0.Image = ((System.Drawing.Image)(resources.GetObject("PbTalent3_0.Image")));
-            this.PbTalent3_0.Location = new System.Drawing.Point(0, 100);
-            this.PbTalent3_0.Name = "PbTalent3_0";
-            this.PbTalent3_0.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent3_0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent3_0.TabIndex = 1;
-            this.PbTalent3_0.TabStop = false;
-            this.PbTalent3_0.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PnlTalent2
-            // 
-            this.PnlTalent2.BackColor = System.Drawing.Color.Transparent;
-            this.PnlTalent2.Controls.Add(this.LblTalent2);
-            this.PnlTalent2.Controls.Add(this.PbTalent2_10);
-            this.PnlTalent2.Controls.Add(this.PbTalent2_9);
-            this.PnlTalent2.Controls.Add(this.PbTalent2_8);
-            this.PnlTalent2.Controls.Add(this.PbTalent2_7);
-            this.PnlTalent2.Controls.Add(this.PbTalent2_6);
-            this.PnlTalent2.Controls.Add(this.PbTalent2_5);
-            this.PnlTalent2.Controls.Add(this.PbTalent2_4);
-            this.PnlTalent2.Controls.Add(this.PbTalent2_3);
-            this.PnlTalent2.Controls.Add(this.PbTalent2_2);
-            this.PnlTalent2.Controls.Add(this.PbTalent2_1);
-            this.PnlTalent2.Controls.Add(this.PbTalent2_0);
-            this.PnlTalent2.Location = new System.Drawing.Point(500, 30);
-            this.PnlTalent2.Name = "PnlTalent2";
-            this.PnlTalent2.Size = new System.Drawing.Size(400, 400);
-            this.PnlTalent2.TabIndex = 156;
-            // 
-            // LblTalent2
-            // 
-            this.LblTalent2.AutoSize = true;
-            this.LblTalent2.BackColor = System.Drawing.Color.Transparent;
-            this.LblTalent2.Font = new System.Drawing.Font("Octapost NBP", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTalent2.ForeColor = System.Drawing.Color.White;
-            this.LblTalent2.Location = new System.Drawing.Point(144, 33);
-            this.LblTalent2.Name = "LblTalent2";
-            this.LblTalent2.Size = new System.Drawing.Size(117, 30);
-            this.LblTalent2.TabIndex = 155;
-            this.LblTalent2.Text = "Gear";
-            this.LblTalent2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PbTalent2_10
-            // 
-            this.PbTalent2_10.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_21D;
-            this.PbTalent2_10.Location = new System.Drawing.Point(250, 300);
-            this.PbTalent2_10.Name = "PbTalent2_10";
-            this.PbTalent2_10.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent2_10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent2_10.TabIndex = 11;
-            this.PbTalent2_10.TabStop = false;
-            this.PbTalent2_10.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent2_9
-            // 
-            this.PbTalent2_9.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_20D;
-            this.PbTalent2_9.Location = new System.Drawing.Point(150, 300);
-            this.PbTalent2_9.Name = "PbTalent2_9";
-            this.PbTalent2_9.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent2_9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent2_9.TabIndex = 10;
-            this.PbTalent2_9.TabStop = false;
-            this.PbTalent2_9.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent2_8
-            // 
-            this.PbTalent2_8.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_19D;
-            this.PbTalent2_8.Location = new System.Drawing.Point(50, 300);
-            this.PbTalent2_8.Name = "PbTalent2_8";
-            this.PbTalent2_8.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent2_8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent2_8.TabIndex = 9;
-            this.PbTalent2_8.TabStop = false;
-            this.PbTalent2_8.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent2_7
-            // 
-            this.PbTalent2_7.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_18D;
-            this.PbTalent2_7.Location = new System.Drawing.Point(300, 200);
-            this.PbTalent2_7.Name = "PbTalent2_7";
-            this.PbTalent2_7.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent2_7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent2_7.TabIndex = 8;
-            this.PbTalent2_7.TabStop = false;
-            this.PbTalent2_7.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent2_6
-            // 
-            this.PbTalent2_6.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_17D;
-            this.PbTalent2_6.Location = new System.Drawing.Point(200, 200);
-            this.PbTalent2_6.Name = "PbTalent2_6";
-            this.PbTalent2_6.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent2_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent2_6.TabIndex = 7;
-            this.PbTalent2_6.TabStop = false;
-            this.PbTalent2_6.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent2_5
-            // 
-            this.PbTalent2_5.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_16D;
-            this.PbTalent2_5.Location = new System.Drawing.Point(100, 200);
-            this.PbTalent2_5.Name = "PbTalent2_5";
-            this.PbTalent2_5.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent2_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent2_5.TabIndex = 6;
-            this.PbTalent2_5.TabStop = false;
-            this.PbTalent2_5.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent2_4
-            // 
-            this.PbTalent2_4.Image = ((System.Drawing.Image)(resources.GetObject("PbTalent2_4.Image")));
-            this.PbTalent2_4.Location = new System.Drawing.Point(0, 200);
-            this.PbTalent2_4.Name = "PbTalent2_4";
-            this.PbTalent2_4.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent2_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent2_4.TabIndex = 5;
-            this.PbTalent2_4.TabStop = false;
-            this.PbTalent2_4.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent2_3
-            // 
-            this.PbTalent2_3.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_14D;
-            this.PbTalent2_3.Location = new System.Drawing.Point(300, 100);
-            this.PbTalent2_3.Name = "PbTalent2_3";
-            this.PbTalent2_3.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent2_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent2_3.TabIndex = 4;
-            this.PbTalent2_3.TabStop = false;
-            this.PbTalent2_3.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent2_2
-            // 
-            this.PbTalent2_2.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_13D;
-            this.PbTalent2_2.Location = new System.Drawing.Point(200, 100);
-            this.PbTalent2_2.Name = "PbTalent2_2";
-            this.PbTalent2_2.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent2_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent2_2.TabIndex = 3;
-            this.PbTalent2_2.TabStop = false;
-            this.PbTalent2_2.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent2_1
-            // 
-            this.PbTalent2_1.Image = ((System.Drawing.Image)(resources.GetObject("PbTalent2_1.Image")));
-            this.PbTalent2_1.Location = new System.Drawing.Point(100, 100);
-            this.PbTalent2_1.Name = "PbTalent2_1";
-            this.PbTalent2_1.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent2_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent2_1.TabIndex = 2;
-            this.PbTalent2_1.TabStop = false;
-            this.PbTalent2_1.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent2_0
-            // 
-            this.PbTalent2_0.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_11D;
-            this.PbTalent2_0.Location = new System.Drawing.Point(0, 100);
-            this.PbTalent2_0.Name = "PbTalent2_0";
-            this.PbTalent2_0.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent2_0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent2_0.TabIndex = 1;
-            this.PbTalent2_0.TabStop = false;
-            this.PbTalent2_0.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PnlTalent1
-            // 
-            this.PnlTalent1.BackColor = System.Drawing.Color.Transparent;
-            this.PnlTalent1.Controls.Add(this.LblTalent1);
-            this.PnlTalent1.Controls.Add(this.PbTalent1_10);
-            this.PnlTalent1.Controls.Add(this.PbTalent1_9);
-            this.PnlTalent1.Controls.Add(this.PbTalent1_8);
-            this.PnlTalent1.Controls.Add(this.PbTalent1_7);
-            this.PnlTalent1.Controls.Add(this.PbTalent1_6);
-            this.PnlTalent1.Controls.Add(this.PbTalent1_5);
-            this.PnlTalent1.Controls.Add(this.PbTalent1_4);
-            this.PnlTalent1.Controls.Add(this.PbTalent1_3);
-            this.PnlTalent1.Controls.Add(this.PbTalent1_2);
-            this.PnlTalent1.Controls.Add(this.PbTalent1_1);
-            this.PnlTalent1.Controls.Add(this.PbTalent1_0);
-            this.PnlTalent1.Location = new System.Drawing.Point(30, 30);
-            this.PnlTalent1.Name = "PnlTalent1";
-            this.PnlTalent1.Size = new System.Drawing.Size(400, 400);
-            this.PnlTalent1.TabIndex = 0;
-            // 
-            // LblTalent1
-            // 
-            this.LblTalent1.AutoSize = true;
-            this.LblTalent1.BackColor = System.Drawing.Color.Transparent;
-            this.LblTalent1.Font = new System.Drawing.Font("Octapost NBP", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTalent1.ForeColor = System.Drawing.Color.White;
-            this.LblTalent1.Location = new System.Drawing.Point(70, 33);
-            this.LblTalent1.Name = "LblTalent1";
-            this.LblTalent1.Size = new System.Drawing.Size(273, 30);
-            this.LblTalent1.TabIndex = 155;
-            this.LblTalent1.Text = "Affinities";
-            this.LblTalent1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PbTalent1_10
-            // 
-            this.PbTalent1_10.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_10D;
-            this.PbTalent1_10.Location = new System.Drawing.Point(250, 300);
-            this.PbTalent1_10.Name = "PbTalent1_10";
-            this.PbTalent1_10.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent1_10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent1_10.TabIndex = 11;
-            this.PbTalent1_10.TabStop = false;
-            this.PbTalent1_10.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent1_9
-            // 
-            this.PbTalent1_9.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_9D;
-            this.PbTalent1_9.Location = new System.Drawing.Point(150, 300);
-            this.PbTalent1_9.Name = "PbTalent1_9";
-            this.PbTalent1_9.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent1_9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent1_9.TabIndex = 10;
-            this.PbTalent1_9.TabStop = false;
-            this.PbTalent1_9.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent1_8
-            // 
-            this.PbTalent1_8.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_8D;
-            this.PbTalent1_8.Location = new System.Drawing.Point(50, 300);
-            this.PbTalent1_8.Name = "PbTalent1_8";
-            this.PbTalent1_8.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent1_8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent1_8.TabIndex = 9;
-            this.PbTalent1_8.TabStop = false;
-            this.PbTalent1_8.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent1_7
-            // 
-            this.PbTalent1_7.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_7D;
-            this.PbTalent1_7.Location = new System.Drawing.Point(300, 200);
-            this.PbTalent1_7.Name = "PbTalent1_7";
-            this.PbTalent1_7.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent1_7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent1_7.TabIndex = 8;
-            this.PbTalent1_7.TabStop = false;
-            this.PbTalent1_7.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent1_6
-            // 
-            this.PbTalent1_6.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_6D;
-            this.PbTalent1_6.Location = new System.Drawing.Point(200, 200);
-            this.PbTalent1_6.Name = "PbTalent1_6";
-            this.PbTalent1_6.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent1_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent1_6.TabIndex = 7;
-            this.PbTalent1_6.TabStop = false;
-            this.PbTalent1_6.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent1_5
-            // 
-            this.PbTalent1_5.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_5D;
-            this.PbTalent1_5.Location = new System.Drawing.Point(100, 200);
-            this.PbTalent1_5.Name = "PbTalent1_5";
-            this.PbTalent1_5.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent1_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent1_5.TabIndex = 6;
-            this.PbTalent1_5.TabStop = false;
-            this.PbTalent1_5.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent1_4
-            // 
-            this.PbTalent1_4.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_4D;
-            this.PbTalent1_4.Location = new System.Drawing.Point(0, 200);
-            this.PbTalent1_4.Name = "PbTalent1_4";
-            this.PbTalent1_4.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent1_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent1_4.TabIndex = 5;
-            this.PbTalent1_4.TabStop = false;
-            this.PbTalent1_4.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent1_3
-            // 
-            this.PbTalent1_3.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_3D;
-            this.PbTalent1_3.Location = new System.Drawing.Point(300, 100);
-            this.PbTalent1_3.Name = "PbTalent1_3";
-            this.PbTalent1_3.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent1_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent1_3.TabIndex = 4;
-            this.PbTalent1_3.TabStop = false;
-            this.PbTalent1_3.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent1_2
-            // 
-            this.PbTalent1_2.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_2D;
-            this.PbTalent1_2.Location = new System.Drawing.Point(200, 100);
-            this.PbTalent1_2.Name = "PbTalent1_2";
-            this.PbTalent1_2.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent1_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent1_2.TabIndex = 3;
-            this.PbTalent1_2.TabStop = false;
-            this.PbTalent1_2.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent1_1
-            // 
-            this.PbTalent1_1.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_1D;
-            this.PbTalent1_1.Location = new System.Drawing.Point(100, 100);
-            this.PbTalent1_1.Name = "PbTalent1_1";
-            this.PbTalent1_1.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent1_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent1_1.TabIndex = 2;
-            this.PbTalent1_1.TabStop = false;
-            this.PbTalent1_1.Click += new System.EventHandler(this.Talent_Activate);
-            // 
-            // PbTalent1_0
-            // 
-            this.PbTalent1_0.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_0D;
-            this.PbTalent1_0.Location = new System.Drawing.Point(0, 100);
-            this.PbTalent1_0.Name = "PbTalent1_0";
-            this.PbTalent1_0.Size = new System.Drawing.Size(100, 100);
-            this.PbTalent1_0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbTalent1_0.TabIndex = 1;
-            this.PbTalent1_0.TabStop = false;
-            this.PbTalent1_0.Click += new System.EventHandler(this.Talent_Activate);
+            // Pnl4
+            // 
+            this.Pnl4.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Screen_4S;
+            this.Pnl4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Pnl4.Controls.Add(this.PbGearSearch9);
+            this.Pnl4.Controls.Add(this.PbGearSearch4);
+            this.Pnl4.Controls.Add(this.PbGearSearch3);
+            this.Pnl4.Controls.Add(this.PbGearSearch1);
+            this.Pnl4.Controls.Add(this.PbGearSearch2);
+            this.Pnl4.Controls.Add(this.PbGearSearch8);
+            this.Pnl4.Controls.Add(this.PbGearSearch7);
+            this.Pnl4.Controls.Add(this.PbGearSearch6);
+            this.Pnl4.Controls.Add(this.PbGearSearch5);
+            this.Pnl4.Controls.Add(this.PbHelp4);
+            this.Pnl4.Controls.Add(this.PbGearSearchX);
+            this.Pnl4.Controls.Add(this.PbGearEquip12);
+            this.Pnl4.Controls.Add(this.PbGearEquip11);
+            this.Pnl4.Controls.Add(this.PbGearEquip10);
+            this.Pnl4.Controls.Add(this.PbGearEquip9);
+            this.Pnl4.Controls.Add(this.PbGearEquip1);
+            this.Pnl4.Controls.Add(this.LblGearStats12);
+            this.Pnl4.Controls.Add(this.LblGearStats11);
+            this.Pnl4.Controls.Add(this.LblGearStats10);
+            this.Pnl4.Controls.Add(this.LblGearStats9);
+            this.Pnl4.Controls.Add(this.LblGearStats8);
+            this.Pnl4.Controls.Add(this.LblGearStats7);
+            this.Pnl4.Controls.Add(this.LblGearStats6);
+            this.Pnl4.Controls.Add(this.LblGearStats5);
+            this.Pnl4.Controls.Add(this.LblGearStats4);
+            this.Pnl4.Controls.Add(this.LblGearStats3);
+            this.Pnl4.Controls.Add(this.LblGearStats2);
+            this.Pnl4.Controls.Add(this.LblGearStats1);
+            this.Pnl4.Controls.Add(this.PbGearStats12);
+            this.Pnl4.Controls.Add(this.PbGearStats11);
+            this.Pnl4.Controls.Add(this.PbGearStats10);
+            this.Pnl4.Controls.Add(this.PbGearStats9);
+            this.Pnl4.Controls.Add(this.PbGearStats8);
+            this.Pnl4.Controls.Add(this.PbGearStats7);
+            this.Pnl4.Controls.Add(this.PbGearStats6);
+            this.Pnl4.Controls.Add(this.PbGearStats5);
+            this.Pnl4.Controls.Add(this.PbGearStats4);
+            this.Pnl4.Controls.Add(this.PbGearStats3);
+            this.Pnl4.Controls.Add(this.PbGearStats2);
+            this.Pnl4.Controls.Add(this.PbGearStats1);
+            this.Pnl4.Controls.Add(this.CbGearSelect);
+            this.Pnl4.Controls.Add(this.PbGear12);
+            this.Pnl4.Controls.Add(this.PbGear11);
+            this.Pnl4.Controls.Add(this.PbGear10);
+            this.Pnl4.Controls.Add(this.PbGear9);
+            this.Pnl4.Controls.Add(this.PbGear8);
+            this.Pnl4.Controls.Add(this.PbGear7);
+            this.Pnl4.Controls.Add(this.PbGear6);
+            this.Pnl4.Controls.Add(this.PbGear5);
+            this.Pnl4.Controls.Add(this.PbGear4);
+            this.Pnl4.Controls.Add(this.PbGear3);
+            this.Pnl4.Controls.Add(this.PbGear2);
+            this.Pnl4.Controls.Add(this.PbGear1);
+            this.Pnl4.Location = new System.Drawing.Point(0, 0);
+            this.Pnl4.Name = "Pnl4";
+            this.Pnl4.Size = new System.Drawing.Size(1400, 910);
+            this.Pnl4.TabIndex = 3;
+            this.Pnl4.Visible = false;
+            this.Pnl4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Drag_Form);
+            // 
+            // PbGearSearch9
+            // 
+            this.PbGearSearch9.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearSearch9.Image = global::Expedition_Builder_Online.Properties.Resources.Gear_SearchSelectTypeD;
+            this.PbGearSearch9.Location = new System.Drawing.Point(470, 20);
+            this.PbGearSearch9.Name = "PbGearSearch9";
+            this.PbGearSearch9.Size = new System.Drawing.Size(190, 20);
+            this.PbGearSearch9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearSearch9.TabIndex = 193;
+            this.PbGearSearch9.TabStop = false;
+            this.PbGearSearch9.Visible = false;
+            this.PbGearSearch9.Click += new System.EventHandler(this.PbGearSelect_Click);
+            // 
+            // PbGearSearch4
+            // 
+            this.PbGearSearch4.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearSearch4.Image = global::Expedition_Builder_Online.Properties.Resources.Gear_SearchSelectTypeD;
+            this.PbGearSearch4.Location = new System.Drawing.Point(30, 680);
+            this.PbGearSearch4.Name = "PbGearSearch4";
+            this.PbGearSearch4.Size = new System.Drawing.Size(190, 20);
+            this.PbGearSearch4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearSearch4.TabIndex = 192;
+            this.PbGearSearch4.TabStop = false;
+            this.PbGearSearch4.Visible = false;
+            this.PbGearSearch4.Click += new System.EventHandler(this.PbGearSelect_Click);
+            // 
+            // PbGearSearch3
+            // 
+            this.PbGearSearch3.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearSearch3.Image = global::Expedition_Builder_Online.Properties.Resources.Gear_SearchSelectTypeD;
+            this.PbGearSearch3.Location = new System.Drawing.Point(30, 460);
+            this.PbGearSearch3.Name = "PbGearSearch3";
+            this.PbGearSearch3.Size = new System.Drawing.Size(190, 20);
+            this.PbGearSearch3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearSearch3.TabIndex = 191;
+            this.PbGearSearch3.TabStop = false;
+            this.PbGearSearch3.Visible = false;
+            this.PbGearSearch3.Click += new System.EventHandler(this.PbGearSelect_Click);
+            // 
+            // PbGearSearch1
+            // 
+            this.PbGearSearch1.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearSearch1.Image = global::Expedition_Builder_Online.Properties.Resources.Gear_SearchSelectTypeD;
+            this.PbGearSearch1.Location = new System.Drawing.Point(30, 20);
+            this.PbGearSearch1.Name = "PbGearSearch1";
+            this.PbGearSearch1.Size = new System.Drawing.Size(190, 20);
+            this.PbGearSearch1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearSearch1.TabIndex = 190;
+            this.PbGearSearch1.TabStop = false;
+            this.PbGearSearch1.Visible = false;
+            this.PbGearSearch1.Click += new System.EventHandler(this.PbGearSelect_Click);
+            // 
+            // PbGearSearch2
+            // 
+            this.PbGearSearch2.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearSearch2.Image = global::Expedition_Builder_Online.Properties.Resources.Gear_SearchSelectTypeD;
+            this.PbGearSearch2.Location = new System.Drawing.Point(30, 240);
+            this.PbGearSearch2.Name = "PbGearSearch2";
+            this.PbGearSearch2.Size = new System.Drawing.Size(190, 20);
+            this.PbGearSearch2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearSearch2.TabIndex = 190;
+            this.PbGearSearch2.TabStop = false;
+            this.PbGearSearch2.Visible = false;
+            this.PbGearSearch2.Click += new System.EventHandler(this.PbGearSelect_Click);
+            // 
+            // PbGearSearch8
+            // 
+            this.PbGearSearch8.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearSearch8.Image = global::Expedition_Builder_Online.Properties.Resources.Gear_SearchSelectTypeD;
+            this.PbGearSearch8.Location = new System.Drawing.Point(250, 680);
+            this.PbGearSearch8.Name = "PbGearSearch8";
+            this.PbGearSearch8.Size = new System.Drawing.Size(190, 20);
+            this.PbGearSearch8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearSearch8.TabIndex = 189;
+            this.PbGearSearch8.TabStop = false;
+            this.PbGearSearch8.Visible = false;
+            this.PbGearSearch8.Click += new System.EventHandler(this.PbGearSelect_Click);
+            // 
+            // PbGearSearch7
+            // 
+            this.PbGearSearch7.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearSearch7.Image = global::Expedition_Builder_Online.Properties.Resources.Gear_SearchSelectTypeD;
+            this.PbGearSearch7.Location = new System.Drawing.Point(250, 460);
+            this.PbGearSearch7.Name = "PbGearSearch7";
+            this.PbGearSearch7.Size = new System.Drawing.Size(190, 20);
+            this.PbGearSearch7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearSearch7.TabIndex = 188;
+            this.PbGearSearch7.TabStop = false;
+            this.PbGearSearch7.Visible = false;
+            this.PbGearSearch7.Click += new System.EventHandler(this.PbGearSelect_Click);
+            // 
+            // PbGearSearch6
+            // 
+            this.PbGearSearch6.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearSearch6.Image = global::Expedition_Builder_Online.Properties.Resources.Gear_SearchSelectTypeD;
+            this.PbGearSearch6.Location = new System.Drawing.Point(250, 240);
+            this.PbGearSearch6.Name = "PbGearSearch6";
+            this.PbGearSearch6.Size = new System.Drawing.Size(190, 20);
+            this.PbGearSearch6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearSearch6.TabIndex = 187;
+            this.PbGearSearch6.TabStop = false;
+            this.PbGearSearch6.Visible = false;
+            this.PbGearSearch6.Click += new System.EventHandler(this.PbGearSelect_Click);
+            // 
+            // PbGearSearch5
+            // 
+            this.PbGearSearch5.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearSearch5.Image = global::Expedition_Builder_Online.Properties.Resources.Gear_SearchSelectTypeD;
+            this.PbGearSearch5.Location = new System.Drawing.Point(250, 20);
+            this.PbGearSearch5.Name = "PbGearSearch5";
+            this.PbGearSearch5.Size = new System.Drawing.Size(190, 20);
+            this.PbGearSearch5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearSearch5.TabIndex = 186;
+            this.PbGearSearch5.TabStop = false;
+            this.PbGearSearch5.Visible = false;
+            this.PbGearSearch5.Click += new System.EventHandler(this.PbGearSelect_Click);
+            // 
+            // PbHelp4
+            // 
+            this.PbHelp4.Image = global::Expedition_Builder_Online.Properties.Resources.EI_S_Help;
+            this.PbHelp4.Location = new System.Drawing.Point(1300, 63);
+            this.PbHelp4.Name = "PbHelp4";
+            this.PbHelp4.Size = new System.Drawing.Size(70, 70);
+            this.PbHelp4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbHelp4.TabIndex = 184;
+            this.PbHelp4.TabStop = false;
+            this.PbHelp4.Visible = false;
+            this.PbHelp4.Click += new System.EventHandler(this.PbHelp4_Click);
+            // 
+            // PbGearSearchX
+            // 
+            this.PbGearSearchX.Image = global::Expedition_Builder_Online.Properties.Resources.Gear_SearchAny;
+            this.PbGearSearchX.Location = new System.Drawing.Point(1070, 780);
+            this.PbGearSearchX.Name = "PbGearSearchX";
+            this.PbGearSearchX.Size = new System.Drawing.Size(300, 100);
+            this.PbGearSearchX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearSearchX.TabIndex = 185;
+            this.PbGearSearchX.TabStop = false;
+            this.PbGearSearchX.Click += new System.EventHandler(this.GearSearch_Toggle);
+            // 
+            // PbGearEquip12
+            // 
+            this.PbGearEquip12.Image = global::Expedition_Builder_Online.Properties.Resources.Gear_EquipMini;
+            this.PbGearEquip12.Location = new System.Drawing.Point(630, 735);
+            this.PbGearEquip12.Name = "PbGearEquip12";
+            this.PbGearEquip12.Size = new System.Drawing.Size(75, 100);
+            this.PbGearEquip12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearEquip12.TabIndex = 37;
+            this.PbGearEquip12.TabStop = false;
+            this.PbGearEquip12.Visible = false;
+            this.PbGearEquip12.Click += new System.EventHandler(this.Equip_Click);
+            // 
+            // PbGearEquip11
+            // 
+            this.PbGearEquip11.Image = global::Expedition_Builder_Online.Properties.Resources.Gear_EquipMini;
+            this.PbGearEquip11.Location = new System.Drawing.Point(630, 515);
+            this.PbGearEquip11.Name = "PbGearEquip11";
+            this.PbGearEquip11.Size = new System.Drawing.Size(75, 100);
+            this.PbGearEquip11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearEquip11.TabIndex = 38;
+            this.PbGearEquip11.TabStop = false;
+            this.PbGearEquip11.Visible = false;
+            this.PbGearEquip11.Click += new System.EventHandler(this.Equip_Click);
+            // 
+            // PbGearEquip10
+            // 
+            this.PbGearEquip10.Image = global::Expedition_Builder_Online.Properties.Resources.Gear_EquipMini;
+            this.PbGearEquip10.Location = new System.Drawing.Point(630, 295);
+            this.PbGearEquip10.Name = "PbGearEquip10";
+            this.PbGearEquip10.Size = new System.Drawing.Size(75, 100);
+            this.PbGearEquip10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearEquip10.TabIndex = 39;
+            this.PbGearEquip10.TabStop = false;
+            this.PbGearEquip10.Visible = false;
+            this.PbGearEquip10.Click += new System.EventHandler(this.Equip_Click);
+            // 
+            // PbGearEquip9
+            // 
+            this.PbGearEquip9.Image = global::Expedition_Builder_Online.Properties.Resources.Gear_EquipMini;
+            this.PbGearEquip9.Location = new System.Drawing.Point(630, 75);
+            this.PbGearEquip9.Name = "PbGearEquip9";
+            this.PbGearEquip9.Size = new System.Drawing.Size(75, 100);
+            this.PbGearEquip9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearEquip9.TabIndex = 40;
+            this.PbGearEquip9.TabStop = false;
+            this.PbGearEquip9.Visible = false;
+            this.PbGearEquip9.Click += new System.EventHandler(this.Equip_Click);
+            // 
+            // PbGearEquip1
+            // 
+            this.PbGearEquip1.Image = global::Expedition_Builder_Online.Properties.Resources.Gear_Equip;
+            this.PbGearEquip1.Location = new System.Drawing.Point(720, 780);
+            this.PbGearEquip1.Name = "PbGearEquip1";
+            this.PbGearEquip1.Size = new System.Drawing.Size(300, 100);
+            this.PbGearEquip1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearEquip1.TabIndex = 36;
+            this.PbGearEquip1.TabStop = false;
+            this.PbGearEquip1.Visible = false;
+            this.PbGearEquip1.Click += new System.EventHandler(this.Equip_Click);
+            // 
+            // LblGearStats12
+            // 
+            this.LblGearStats12.AutoSize = true;
+            this.LblGearStats12.BackColor = System.Drawing.Color.Transparent;
+            this.LblGearStats12.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
+            this.LblGearStats12.Location = new System.Drawing.Point(785, 697);
+            this.LblGearStats12.Name = "LblGearStats12";
+            this.LblGearStats12.Size = new System.Drawing.Size(0, 19);
+            this.LblGearStats12.TabIndex = 35;
+            // 
+            // LblGearStats11
+            // 
+            this.LblGearStats11.AutoSize = true;
+            this.LblGearStats11.BackColor = System.Drawing.Color.Transparent;
+            this.LblGearStats11.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
+            this.LblGearStats11.Location = new System.Drawing.Point(785, 641);
+            this.LblGearStats11.Name = "LblGearStats11";
+            this.LblGearStats11.Size = new System.Drawing.Size(0, 19);
+            this.LblGearStats11.TabIndex = 34;
+            // 
+            // LblGearStats10
+            // 
+            this.LblGearStats10.AutoSize = true;
+            this.LblGearStats10.BackColor = System.Drawing.Color.Transparent;
+            this.LblGearStats10.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
+            this.LblGearStats10.Location = new System.Drawing.Point(785, 585);
+            this.LblGearStats10.Name = "LblGearStats10";
+            this.LblGearStats10.Size = new System.Drawing.Size(0, 19);
+            this.LblGearStats10.TabIndex = 33;
+            // 
+            // LblGearStats9
+            // 
+            this.LblGearStats9.AutoSize = true;
+            this.LblGearStats9.BackColor = System.Drawing.Color.Transparent;
+            this.LblGearStats9.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
+            this.LblGearStats9.Location = new System.Drawing.Point(785, 529);
+            this.LblGearStats9.Name = "LblGearStats9";
+            this.LblGearStats9.Size = new System.Drawing.Size(0, 19);
+            this.LblGearStats9.TabIndex = 32;
+            // 
+            // LblGearStats8
+            // 
+            this.LblGearStats8.AutoSize = true;
+            this.LblGearStats8.BackColor = System.Drawing.Color.Transparent;
+            this.LblGearStats8.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
+            this.LblGearStats8.Location = new System.Drawing.Point(785, 473);
+            this.LblGearStats8.Name = "LblGearStats8";
+            this.LblGearStats8.Size = new System.Drawing.Size(0, 19);
+            this.LblGearStats8.TabIndex = 31;
+            // 
+            // LblGearStats7
+            // 
+            this.LblGearStats7.AutoSize = true;
+            this.LblGearStats7.BackColor = System.Drawing.Color.Transparent;
+            this.LblGearStats7.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
+            this.LblGearStats7.Location = new System.Drawing.Point(785, 417);
+            this.LblGearStats7.Name = "LblGearStats7";
+            this.LblGearStats7.Size = new System.Drawing.Size(0, 19);
+            this.LblGearStats7.TabIndex = 31;
+            // 
+            // LblGearStats6
+            // 
+            this.LblGearStats6.AutoSize = true;
+            this.LblGearStats6.BackColor = System.Drawing.Color.Transparent;
+            this.LblGearStats6.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
+            this.LblGearStats6.Location = new System.Drawing.Point(785, 361);
+            this.LblGearStats6.Name = "LblGearStats6";
+            this.LblGearStats6.Size = new System.Drawing.Size(0, 19);
+            this.LblGearStats6.TabIndex = 30;
+            // 
+            // LblGearStats5
+            // 
+            this.LblGearStats5.AutoSize = true;
+            this.LblGearStats5.BackColor = System.Drawing.Color.Transparent;
+            this.LblGearStats5.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
+            this.LblGearStats5.Location = new System.Drawing.Point(785, 305);
+            this.LblGearStats5.Name = "LblGearStats5";
+            this.LblGearStats5.Size = new System.Drawing.Size(0, 19);
+            this.LblGearStats5.TabIndex = 29;
+            // 
+            // LblGearStats4
+            // 
+            this.LblGearStats4.AutoSize = true;
+            this.LblGearStats4.BackColor = System.Drawing.Color.Transparent;
+            this.LblGearStats4.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
+            this.LblGearStats4.Location = new System.Drawing.Point(785, 249);
+            this.LblGearStats4.Name = "LblGearStats4";
+            this.LblGearStats4.Size = new System.Drawing.Size(0, 19);
+            this.LblGearStats4.TabIndex = 28;
+            // 
+            // LblGearStats3
+            // 
+            this.LblGearStats3.AutoSize = true;
+            this.LblGearStats3.BackColor = System.Drawing.Color.Transparent;
+            this.LblGearStats3.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
+            this.LblGearStats3.Location = new System.Drawing.Point(785, 193);
+            this.LblGearStats3.Name = "LblGearStats3";
+            this.LblGearStats3.Size = new System.Drawing.Size(0, 19);
+            this.LblGearStats3.TabIndex = 27;
+            // 
+            // LblGearStats2
+            // 
+            this.LblGearStats2.AutoSize = true;
+            this.LblGearStats2.BackColor = System.Drawing.Color.Transparent;
+            this.LblGearStats2.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
+            this.LblGearStats2.Location = new System.Drawing.Point(785, 137);
+            this.LblGearStats2.Name = "LblGearStats2";
+            this.LblGearStats2.Size = new System.Drawing.Size(0, 19);
+            this.LblGearStats2.TabIndex = 26;
+            // 
+            // LblGearStats1
+            // 
+            this.LblGearStats1.AutoSize = true;
+            this.LblGearStats1.BackColor = System.Drawing.Color.Transparent;
+            this.LblGearStats1.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
+            this.LblGearStats1.Location = new System.Drawing.Point(785, 81);
+            this.LblGearStats1.Name = "LblGearStats1";
+            this.LblGearStats1.Size = new System.Drawing.Size(0, 19);
+            this.LblGearStats1.TabIndex = 25;
+            // 
+            // PbGearStats12
+            // 
+            this.PbGearStats12.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearStats12.Location = new System.Drawing.Point(729, 675);
+            this.PbGearStats12.Name = "PbGearStats12";
+            this.PbGearStats12.Size = new System.Drawing.Size(50, 50);
+            this.PbGearStats12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearStats12.TabIndex = 24;
+            this.PbGearStats12.TabStop = false;
+            // 
+            // PbGearStats11
+            // 
+            this.PbGearStats11.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearStats11.Location = new System.Drawing.Point(729, 619);
+            this.PbGearStats11.Name = "PbGearStats11";
+            this.PbGearStats11.Size = new System.Drawing.Size(50, 50);
+            this.PbGearStats11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearStats11.TabIndex = 23;
+            this.PbGearStats11.TabStop = false;
+            // 
+            // PbGearStats10
+            // 
+            this.PbGearStats10.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearStats10.Location = new System.Drawing.Point(729, 563);
+            this.PbGearStats10.Name = "PbGearStats10";
+            this.PbGearStats10.Size = new System.Drawing.Size(50, 50);
+            this.PbGearStats10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearStats10.TabIndex = 22;
+            this.PbGearStats10.TabStop = false;
+            // 
+            // PbGearStats9
+            // 
+            this.PbGearStats9.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearStats9.Location = new System.Drawing.Point(729, 511);
+            this.PbGearStats9.Name = "PbGearStats9";
+            this.PbGearStats9.Size = new System.Drawing.Size(50, 50);
+            this.PbGearStats9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearStats9.TabIndex = 21;
+            this.PbGearStats9.TabStop = false;
+            // 
+            // PbGearStats8
+            // 
+            this.PbGearStats8.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearStats8.Location = new System.Drawing.Point(729, 455);
+            this.PbGearStats8.Name = "PbGearStats8";
+            this.PbGearStats8.Size = new System.Drawing.Size(50, 50);
+            this.PbGearStats8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearStats8.TabIndex = 20;
+            this.PbGearStats8.TabStop = false;
+            // 
+            // PbGearStats7
+            // 
+            this.PbGearStats7.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearStats7.Location = new System.Drawing.Point(729, 399);
+            this.PbGearStats7.Name = "PbGearStats7";
+            this.PbGearStats7.Size = new System.Drawing.Size(50, 50);
+            this.PbGearStats7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearStats7.TabIndex = 19;
+            this.PbGearStats7.TabStop = false;
+            // 
+            // PbGearStats6
+            // 
+            this.PbGearStats6.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearStats6.Location = new System.Drawing.Point(729, 343);
+            this.PbGearStats6.Name = "PbGearStats6";
+            this.PbGearStats6.Size = new System.Drawing.Size(50, 50);
+            this.PbGearStats6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearStats6.TabIndex = 18;
+            this.PbGearStats6.TabStop = false;
+            // 
+            // PbGearStats5
+            // 
+            this.PbGearStats5.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearStats5.Location = new System.Drawing.Point(729, 287);
+            this.PbGearStats5.Name = "PbGearStats5";
+            this.PbGearStats5.Size = new System.Drawing.Size(50, 50);
+            this.PbGearStats5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearStats5.TabIndex = 17;
+            this.PbGearStats5.TabStop = false;
+            // 
+            // PbGearStats4
+            // 
+            this.PbGearStats4.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearStats4.Location = new System.Drawing.Point(729, 231);
+            this.PbGearStats4.Name = "PbGearStats4";
+            this.PbGearStats4.Size = new System.Drawing.Size(50, 50);
+            this.PbGearStats4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearStats4.TabIndex = 16;
+            this.PbGearStats4.TabStop = false;
+            // 
+            // PbGearStats3
+            // 
+            this.PbGearStats3.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearStats3.Location = new System.Drawing.Point(729, 175);
+            this.PbGearStats3.Name = "PbGearStats3";
+            this.PbGearStats3.Size = new System.Drawing.Size(50, 50);
+            this.PbGearStats3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearStats3.TabIndex = 15;
+            this.PbGearStats3.TabStop = false;
+            // 
+            // PbGearStats2
+            // 
+            this.PbGearStats2.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearStats2.Location = new System.Drawing.Point(729, 119);
+            this.PbGearStats2.Name = "PbGearStats2";
+            this.PbGearStats2.Size = new System.Drawing.Size(50, 50);
+            this.PbGearStats2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearStats2.TabIndex = 14;
+            this.PbGearStats2.TabStop = false;
+            // 
+            // PbGearStats1
+            // 
+            this.PbGearStats1.BackColor = System.Drawing.Color.Transparent;
+            this.PbGearStats1.Location = new System.Drawing.Point(729, 63);
+            this.PbGearStats1.Name = "PbGearStats1";
+            this.PbGearStats1.Size = new System.Drawing.Size(50, 50);
+            this.PbGearStats1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGearStats1.TabIndex = 13;
+            this.PbGearStats1.TabStop = false;
+            // 
+            // CbGearSelect
+            // 
+            this.CbGearSelect.Font = new System.Drawing.Font("Octapost NBP", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbGearSelect.FormattingEnabled = true;
+            this.CbGearSelect.Location = new System.Drawing.Point(729, 30);
+            this.CbGearSelect.Name = "CbGearSelect";
+            this.CbGearSelect.Size = new System.Drawing.Size(641, 27);
+            this.CbGearSelect.TabIndex = 12;
+            this.CbGearSelect.SelectedIndexChanged += new System.EventHandler(this.CbGearSelect_SelectedIndexChanged);
+            // 
+            // PbGear12
+            // 
+            this.PbGear12.BackColor = System.Drawing.Color.Transparent;
+            this.PbGear12.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_TM2;
+            this.PbGear12.Location = new System.Drawing.Point(470, 690);
+            this.PbGear12.Name = "PbGear12";
+            this.PbGear12.Size = new System.Drawing.Size(190, 190);
+            this.PbGear12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGear12.TabIndex = 11;
+            this.PbGear12.TabStop = false;
+            this.PbGear12.Click += new System.EventHandler(this.Unequip_Click);
+            // 
+            // PbGear11
+            // 
+            this.PbGear11.BackColor = System.Drawing.Color.Transparent;
+            this.PbGear11.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_TM2;
+            this.PbGear11.Location = new System.Drawing.Point(470, 470);
+            this.PbGear11.Name = "PbGear11";
+            this.PbGear11.Size = new System.Drawing.Size(190, 190);
+            this.PbGear11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGear11.TabIndex = 10;
+            this.PbGear11.TabStop = false;
+            this.PbGear11.Click += new System.EventHandler(this.Unequip_Click);
+            // 
+            // PbGear10
+            // 
+            this.PbGear10.BackColor = System.Drawing.Color.Transparent;
+            this.PbGear10.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_TM2;
+            this.PbGear10.Location = new System.Drawing.Point(470, 250);
+            this.PbGear10.Name = "PbGear10";
+            this.PbGear10.Size = new System.Drawing.Size(190, 190);
+            this.PbGear10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGear10.TabIndex = 9;
+            this.PbGear10.TabStop = false;
+            this.PbGear10.Click += new System.EventHandler(this.Unequip_Click);
+            // 
+            // PbGear9
+            // 
+            this.PbGear9.BackColor = System.Drawing.Color.Transparent;
+            this.PbGear9.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_TM2;
+            this.PbGear9.Location = new System.Drawing.Point(470, 30);
+            this.PbGear9.Name = "PbGear9";
+            this.PbGear9.Size = new System.Drawing.Size(190, 190);
+            this.PbGear9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGear9.TabIndex = 5;
+            this.PbGear9.TabStop = false;
+            this.PbGear9.Click += new System.EventHandler(this.Unequip_Click);
+            // 
+            // PbGear8
+            // 
+            this.PbGear8.BackColor = System.Drawing.Color.Transparent;
+            this.PbGear8.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_ABoots2;
+            this.PbGear8.Location = new System.Drawing.Point(250, 690);
+            this.PbGear8.Name = "PbGear8";
+            this.PbGear8.Size = new System.Drawing.Size(190, 190);
+            this.PbGear8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGear8.TabIndex = 8;
+            this.PbGear8.TabStop = false;
+            this.PbGear8.Click += new System.EventHandler(this.Unequip_Click);
+            // 
+            // PbGear7
+            // 
+            this.PbGear7.BackColor = System.Drawing.Color.Transparent;
+            this.PbGear7.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_APants2;
+            this.PbGear7.Location = new System.Drawing.Point(250, 470);
+            this.PbGear7.Name = "PbGear7";
+            this.PbGear7.Size = new System.Drawing.Size(190, 190);
+            this.PbGear7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGear7.TabIndex = 7;
+            this.PbGear7.TabStop = false;
+            this.PbGear7.Click += new System.EventHandler(this.Unequip_Click);
+            // 
+            // PbGear6
+            // 
+            this.PbGear6.BackColor = System.Drawing.Color.Transparent;
+            this.PbGear6.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_AGloves2;
+            this.PbGear6.Location = new System.Drawing.Point(250, 250);
+            this.PbGear6.Name = "PbGear6";
+            this.PbGear6.Size = new System.Drawing.Size(190, 190);
+            this.PbGear6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGear6.TabIndex = 6;
+            this.PbGear6.TabStop = false;
+            this.PbGear6.Click += new System.EventHandler(this.Unequip_Click);
+            // 
+            // PbGear5
+            // 
+            this.PbGear5.BackColor = System.Drawing.Color.Transparent;
+            this.PbGear5.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_WN2;
+            this.PbGear5.Location = new System.Drawing.Point(250, 30);
+            this.PbGear5.Name = "PbGear5";
+            this.PbGear5.Size = new System.Drawing.Size(190, 190);
+            this.PbGear5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGear5.TabIndex = 4;
+            this.PbGear5.TabStop = false;
+            this.PbGear5.Click += new System.EventHandler(this.Unequip_Click);
+            // 
+            // PbGear4
+            // 
+            this.PbGear4.BackColor = System.Drawing.Color.Transparent;
+            this.PbGear4.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_AChest2;
+            this.PbGear4.Location = new System.Drawing.Point(30, 690);
+            this.PbGear4.Name = "PbGear4";
+            this.PbGear4.Size = new System.Drawing.Size(190, 190);
+            this.PbGear4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGear4.TabIndex = 3;
+            this.PbGear4.TabStop = false;
+            this.PbGear4.Click += new System.EventHandler(this.Unequip_Click);
+            // 
+            // PbGear3
+            // 
+            this.PbGear3.BackColor = System.Drawing.Color.Transparent;
+            this.PbGear3.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_ACloak2;
+            this.PbGear3.Location = new System.Drawing.Point(30, 470);
+            this.PbGear3.Name = "PbGear3";
+            this.PbGear3.Size = new System.Drawing.Size(190, 190);
+            this.PbGear3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGear3.TabIndex = 2;
+            this.PbGear3.TabStop = false;
+            this.PbGear3.Click += new System.EventHandler(this.Unequip_Click);
+            // 
+            // PbGear2
+            // 
+            this.PbGear2.BackColor = System.Drawing.Color.Transparent;
+            this.PbGear2.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_AShoulders2;
+            this.PbGear2.Location = new System.Drawing.Point(30, 250);
+            this.PbGear2.Name = "PbGear2";
+            this.PbGear2.Size = new System.Drawing.Size(190, 190);
+            this.PbGear2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGear2.TabIndex = 1;
+            this.PbGear2.TabStop = false;
+            this.PbGear2.Click += new System.EventHandler(this.Unequip_Click);
+            // 
+            // PbGear1
+            // 
+            this.PbGear1.BackColor = System.Drawing.Color.Transparent;
+            this.PbGear1.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_AHelm2;
+            this.PbGear1.Location = new System.Drawing.Point(30, 30);
+            this.PbGear1.Name = "PbGear1";
+            this.PbGear1.Size = new System.Drawing.Size(190, 190);
+            this.PbGear1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbGear1.TabIndex = 0;
+            this.PbGear1.TabStop = false;
+            this.PbGear1.Click += new System.EventHandler(this.Unequip_Click);
             // 
             // Pnl1
             // 
@@ -3357,7 +3197,6 @@
             // PbAff6_7
             // 
             this.PbAff6_7.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff6_7.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_A7;
             this.PbAff6_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff6_7.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_A7;
             this.PbAff6_7.Location = new System.Drawing.Point(781, 729);
@@ -3371,7 +3210,6 @@
             // PbAff6_6
             // 
             this.PbAff6_6.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff6_6.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_A6;
             this.PbAff6_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff6_6.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_A6;
             this.PbAff6_6.Location = new System.Drawing.Point(550, 729);
@@ -3385,7 +3223,6 @@
             // PbAff6_5
             // 
             this.PbAff6_5.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff6_5.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_TX_D3;
             this.PbAff6_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff6_5.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_TX_D3;
             this.PbAff6_5.Location = new System.Drawing.Point(893, 659);
@@ -3399,7 +3236,6 @@
             // PbAff6_4
             // 
             this.PbAff6_4.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff6_4.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D4;
             this.PbAff6_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff6_4.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D4;
             this.PbAff6_4.Location = new System.Drawing.Point(781, 659);
@@ -3413,9 +3249,8 @@
             // PbAff6_3
             // 
             this.PbAff6_3.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff6_3.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D3;
             this.PbAff6_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PbAff6_3.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D3;
+            this.PbAff6_3.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_A3;
             this.PbAff6_3.Location = new System.Drawing.Point(662, 659);
             this.PbAff6_3.Name = "PbAff6_3";
             this.PbAff6_3.Size = new System.Drawing.Size(70, 70);
@@ -3427,7 +3262,6 @@
             // PbAff6_2
             // 
             this.PbAff6_2.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff6_2.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D2;
             this.PbAff6_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff6_2.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D2;
             this.PbAff6_2.Location = new System.Drawing.Point(550, 659);
@@ -3441,7 +3275,6 @@
             // PbAff6_1
             // 
             this.PbAff6_1.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff6_1.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_T2_D1;
             this.PbAff6_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff6_1.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_T2_D1;
             this.PbAff6_1.Location = new System.Drawing.Point(438, 659);
@@ -3466,7 +3299,6 @@
             // PbAff5_7
             // 
             this.PbAff5_7.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff5_7.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_A7;
             this.PbAff5_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff5_7.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_A7;
             this.PbAff5_7.Location = new System.Drawing.Point(1188, 553);
@@ -3480,7 +3312,6 @@
             // PbAff5_6
             // 
             this.PbAff5_6.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff5_6.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_A6;
             this.PbAff5_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff5_6.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_A6;
             this.PbAff5_6.Location = new System.Drawing.Point(957, 553);
@@ -3494,7 +3325,6 @@
             // PbAff5_5
             // 
             this.PbAff5_5.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff5_5.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_TX_D3;
             this.PbAff5_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff5_5.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_TX_D3;
             this.PbAff5_5.Location = new System.Drawing.Point(1300, 483);
@@ -3508,7 +3338,6 @@
             // PbAff5_4
             // 
             this.PbAff5_4.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff5_4.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D4;
             this.PbAff5_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff5_4.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D4;
             this.PbAff5_4.Location = new System.Drawing.Point(1188, 483);
@@ -3522,9 +3351,8 @@
             // PbAff5_3
             // 
             this.PbAff5_3.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff5_3.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D3;
             this.PbAff5_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PbAff5_3.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D3;
+            this.PbAff5_3.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_A3;
             this.PbAff5_3.Location = new System.Drawing.Point(1069, 483);
             this.PbAff5_3.Name = "PbAff5_3";
             this.PbAff5_3.Size = new System.Drawing.Size(70, 70);
@@ -3536,7 +3364,6 @@
             // PbAff5_2
             // 
             this.PbAff5_2.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff5_2.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D2;
             this.PbAff5_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff5_2.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D2;
             this.PbAff5_2.Location = new System.Drawing.Point(957, 483);
@@ -3550,7 +3377,6 @@
             // PbAff5_1
             // 
             this.PbAff5_1.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff5_1.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_T2_D1;
             this.PbAff5_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff5_1.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_T2_D1;
             this.PbAff5_1.Location = new System.Drawing.Point(845, 483);
@@ -3575,7 +3401,6 @@
             // PbAff4_7
             // 
             this.PbAff4_7.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff4_7.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_A7;
             this.PbAff4_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff4_7.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_A7;
             this.PbAff4_7.Location = new System.Drawing.Point(373, 553);
@@ -3589,7 +3414,6 @@
             // PbAff4_6
             // 
             this.PbAff4_6.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff4_6.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_A6;
             this.PbAff4_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff4_6.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_A6;
             this.PbAff4_6.Location = new System.Drawing.Point(142, 553);
@@ -3603,7 +3427,6 @@
             // PbAff4_5
             // 
             this.PbAff4_5.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff4_5.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_TX_D3;
             this.PbAff4_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff4_5.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_TX_D3;
             this.PbAff4_5.Location = new System.Drawing.Point(485, 483);
@@ -3617,7 +3440,6 @@
             // PbAff4_4
             // 
             this.PbAff4_4.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff4_4.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D4;
             this.PbAff4_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff4_4.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D4;
             this.PbAff4_4.Location = new System.Drawing.Point(373, 483);
@@ -3631,9 +3453,8 @@
             // PbAff4_3
             // 
             this.PbAff4_3.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff4_3.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D3;
             this.PbAff4_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PbAff4_3.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D3;
+            this.PbAff4_3.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_A3;
             this.PbAff4_3.Location = new System.Drawing.Point(254, 483);
             this.PbAff4_3.Name = "PbAff4_3";
             this.PbAff4_3.Size = new System.Drawing.Size(70, 70);
@@ -3645,7 +3466,6 @@
             // PbAff4_2
             // 
             this.PbAff4_2.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff4_2.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D2;
             this.PbAff4_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff4_2.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D2;
             this.PbAff4_2.Location = new System.Drawing.Point(142, 483);
@@ -3659,7 +3479,6 @@
             // PbAff4_1
             // 
             this.PbAff4_1.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff4_1.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_T2_D1;
             this.PbAff4_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff4_1.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_T2_D1;
             this.PbAff4_1.Location = new System.Drawing.Point(30, 483);
@@ -3712,7 +3531,6 @@
             // PbAff3_5
             // 
             this.PbAff3_5.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff3_5.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_TX_D3;
             this.PbAff3_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff3_5.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_TX_D3;
             this.PbAff3_5.Location = new System.Drawing.Point(893, 305);
@@ -3726,7 +3544,6 @@
             // PbAff3_4
             // 
             this.PbAff3_4.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff3_4.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D4;
             this.PbAff3_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff3_4.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D4;
             this.PbAff3_4.Location = new System.Drawing.Point(781, 305);
@@ -3740,9 +3557,8 @@
             // PbAff3_3
             // 
             this.PbAff3_3.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff3_3.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D3;
             this.PbAff3_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PbAff3_3.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D3;
+            this.PbAff3_3.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_A3;
             this.PbAff3_3.Location = new System.Drawing.Point(662, 305);
             this.PbAff3_3.Name = "PbAff3_3";
             this.PbAff3_3.Size = new System.Drawing.Size(70, 70);
@@ -3754,7 +3570,6 @@
             // PbAff3_2
             // 
             this.PbAff3_2.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff3_2.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D2;
             this.PbAff3_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff3_2.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_D_D2;
             this.PbAff3_2.Location = new System.Drawing.Point(550, 305);
@@ -3768,7 +3583,6 @@
             // PbAff3_1
             // 
             this.PbAff3_1.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff3_1.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_T2_D1;
             this.PbAff3_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff3_1.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_T2_D1;
             this.PbAff3_1.Location = new System.Drawing.Point(438, 305);
@@ -3793,7 +3607,6 @@
             // PbAff2_7
             // 
             this.PbAff2_7.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff2_7.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_TX_D7;
             this.PbAff2_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff2_7.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_TX_D7;
             this.PbAff2_7.Location = new System.Drawing.Point(1069, 415);
@@ -3807,7 +3620,6 @@
             // PbAff2_6
             // 
             this.PbAff2_6.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff2_6.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_T2_D6;
             this.PbAff2_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff2_6.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_T2_D6;
             this.PbAff2_6.Location = new System.Drawing.Point(1188, 219);
@@ -3821,7 +3633,6 @@
             // PbAff2_5
             // 
             this.PbAff2_5.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff2_5.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_T2_D5;
             this.PbAff2_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff2_5.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_T2_D5;
             this.PbAff2_5.Location = new System.Drawing.Point(957, 219);
@@ -3835,9 +3646,8 @@
             // PbAff2_4
             // 
             this.PbAff2_4.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff2_4.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_T2_D4;
             this.PbAff2_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PbAff2_4.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_T2_D4;
+            this.PbAff2_4.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_T2_A4;
             this.PbAff2_4.Location = new System.Drawing.Point(1069, 156);
             this.PbAff2_4.Name = "PbAff2_4";
             this.PbAff2_4.Size = new System.Drawing.Size(70, 70);
@@ -3849,7 +3659,6 @@
             // PbAff2_3
             // 
             this.PbAff2_3.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff2_3.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_TX_D3;
             this.PbAff2_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff2_3.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_TX_D3;
             this.PbAff2_3.Location = new System.Drawing.Point(1300, 30);
@@ -3863,7 +3672,6 @@
             // PbAff2_2
             // 
             this.PbAff2_2.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff2_2.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_T2_D2;
             this.PbAff2_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff2_2.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_T2_D2;
             this.PbAff2_2.Location = new System.Drawing.Point(1069, 30);
@@ -3877,7 +3685,6 @@
             // PbAff2_1
             // 
             this.PbAff2_1.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff2_1.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_T2_D1;
             this.PbAff2_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff2_1.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_T2_D1;
             this.PbAff2_1.Location = new System.Drawing.Point(845, 30);
@@ -3902,7 +3709,6 @@
             // PbAff1_7
             // 
             this.PbAff1_7.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff1_7.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_TX_D7;
             this.PbAff1_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff1_7.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_TX_D7;
             this.PbAff1_7.Location = new System.Drawing.Point(254, 415);
@@ -3916,7 +3722,6 @@
             // PbAff1_6
             // 
             this.PbAff1_6.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff1_6.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_T1_D6;
             this.PbAff1_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff1_6.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_T1_D6;
             this.PbAff1_6.Location = new System.Drawing.Point(373, 219);
@@ -3930,7 +3735,6 @@
             // PbAff1_5
             // 
             this.PbAff1_5.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff1_5.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_T1_D5;
             this.PbAff1_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff1_5.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_T1_D5;
             this.PbAff1_5.Location = new System.Drawing.Point(142, 219);
@@ -3944,9 +3748,8 @@
             // PbAff1_4
             // 
             this.PbAff1_4.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff1_4.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_T1_D4;
             this.PbAff1_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PbAff1_4.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_T1_D4;
+            this.PbAff1_4.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_T1_A4;
             this.PbAff1_4.Location = new System.Drawing.Point(254, 156);
             this.PbAff1_4.Name = "PbAff1_4";
             this.PbAff1_4.Size = new System.Drawing.Size(70, 70);
@@ -3958,7 +3761,6 @@
             // PbAff1_3
             // 
             this.PbAff1_3.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff1_3.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_TX_D3;
             this.PbAff1_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff1_3.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_TX_D3;
             this.PbAff1_3.Location = new System.Drawing.Point(485, 30);
@@ -3972,7 +3774,6 @@
             // PbAff1_2
             // 
             this.PbAff1_2.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff1_2.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_T1_D2;
             this.PbAff1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff1_2.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_T1_D2;
             this.PbAff1_2.Location = new System.Drawing.Point(254, 30);
@@ -3986,7 +3787,6 @@
             // PbAff1_1
             // 
             this.PbAff1_1.BackColor = System.Drawing.Color.Transparent;
-            this.PbAff1_1.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Affinity_T1_D1;
             this.PbAff1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PbAff1_1.Image = global::Expedition_Builder_Online.Properties.Resources.Affinity_T1_D1;
             this.PbAff1_1.Location = new System.Drawing.Point(30, 30);
@@ -4007,6 +3807,844 @@
             this.PbAff1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbAff1.TabIndex = 0;
             this.PbAff1.TabStop = false;
+            // 
+            // Pnl5
+            // 
+            this.Pnl5.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Screen_5S;
+            this.Pnl5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Pnl5.Controls.Add(this.LblTalent6);
+            this.Pnl5.Controls.Add(this.PbTalent6);
+            this.Pnl5.Controls.Add(this.PbHelp5);
+            this.Pnl5.Controls.Add(this.LblTalentPoint);
+            this.Pnl5.Controls.Add(this.PnlTalent5);
+            this.Pnl5.Controls.Add(this.PnlTalent4);
+            this.Pnl5.Controls.Add(this.PnlTalent3);
+            this.Pnl5.Controls.Add(this.PnlTalent2);
+            this.Pnl5.Controls.Add(this.PnlTalent1);
+            this.Pnl5.Location = new System.Drawing.Point(0, 0);
+            this.Pnl5.Name = "Pnl5";
+            this.Pnl5.Size = new System.Drawing.Size(1400, 910);
+            this.Pnl5.TabIndex = 3;
+            this.Pnl5.Visible = false;
+            this.Pnl5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Drag_Form);
+            // 
+            // LblTalent6
+            // 
+            this.LblTalent6.BackColor = System.Drawing.Color.Transparent;
+            this.LblTalent6.Font = new System.Drawing.Font("Octapost NBP", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTalent6.ForeColor = System.Drawing.Color.White;
+            this.LblTalent6.Location = new System.Drawing.Point(658, 595);
+            this.LblTalent6.Name = "LblTalent6";
+            this.LblTalent6.Size = new System.Drawing.Size(85, 10);
+            this.LblTalent6.TabIndex = 156;
+            this.LblTalent6.Text = "0";
+            this.LblTalent6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PbTalent6
+            // 
+            this.PbTalent6.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_55D;
+            this.PbTalent6.Location = new System.Drawing.Point(650, 589);
+            this.PbTalent6.Name = "PbTalent6";
+            this.PbTalent6.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent6.TabIndex = 156;
+            this.PbTalent6.TabStop = false;
+            this.PbTalent6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Talent_Activate_Ability);
+            // 
+            // PbHelp5
+            // 
+            this.PbHelp5.Image = global::Expedition_Builder_Online.Properties.Resources.EI_S_Help;
+            this.PbHelp5.Location = new System.Drawing.Point(665, 463);
+            this.PbHelp5.Name = "PbHelp5";
+            this.PbHelp5.Size = new System.Drawing.Size(70, 70);
+            this.PbHelp5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbHelp5.TabIndex = 184;
+            this.PbHelp5.TabStop = false;
+            this.PbHelp5.Visible = false;
+            this.PbHelp5.Click += new System.EventHandler(this.PbHelp5_Click);
+            // 
+            // LblTalentPoint
+            // 
+            this.LblTalentPoint.AutoSize = true;
+            this.LblTalentPoint.BackColor = System.Drawing.Color.Transparent;
+            this.LblTalentPoint.Font = new System.Drawing.Font("Octapost NBP", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTalentPoint.ForeColor = System.Drawing.Color.White;
+            this.LblTalentPoint.Location = new System.Drawing.Point(505, 770);
+            this.LblTalentPoint.Name = "LblTalentPoint";
+            this.LblTalentPoint.Size = new System.Drawing.Size(395, 90);
+            this.LblTalentPoint.TabIndex = 156;
+            this.LblTalentPoint.Text = "60 Talent Points\r\nof the\r\n60 available";
+            this.LblTalentPoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PnlTalent5
+            // 
+            this.PnlTalent5.BackColor = System.Drawing.Color.Transparent;
+            this.PnlTalent5.Controls.Add(this.LblTalent5);
+            this.PnlTalent5.Controls.Add(this.PbTalent5_10);
+            this.PnlTalent5.Controls.Add(this.PbTalent5_9);
+            this.PnlTalent5.Controls.Add(this.PbTalent5_8);
+            this.PnlTalent5.Controls.Add(this.PbTalent5_7);
+            this.PnlTalent5.Controls.Add(this.PbTalent5_6);
+            this.PnlTalent5.Controls.Add(this.PbTalent5_5);
+            this.PnlTalent5.Controls.Add(this.PbTalent5_4);
+            this.PnlTalent5.Controls.Add(this.PbTalent5_3);
+            this.PnlTalent5.Controls.Add(this.PbTalent5_2);
+            this.PnlTalent5.Controls.Add(this.PbTalent5_1);
+            this.PnlTalent5.Controls.Add(this.PbTalent5_0);
+            this.PnlTalent5.Location = new System.Drawing.Point(970, 460);
+            this.PnlTalent5.Name = "PnlTalent5";
+            this.PnlTalent5.Size = new System.Drawing.Size(400, 400);
+            this.PnlTalent5.TabIndex = 158;
+            // 
+            // LblTalent5
+            // 
+            this.LblTalent5.AutoSize = true;
+            this.LblTalent5.BackColor = System.Drawing.Color.Transparent;
+            this.LblTalent5.Font = new System.Drawing.Font("Octapost NBP", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTalent5.ForeColor = System.Drawing.Color.White;
+            this.LblTalent5.Location = new System.Drawing.Point(114, 33);
+            this.LblTalent5.Name = "LblTalent5";
+            this.LblTalent5.Size = new System.Drawing.Size(169, 30);
+            this.LblTalent5.TabIndex = 155;
+            this.LblTalent5.Text = "Skills";
+            this.LblTalent5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PbTalent5_10
+            // 
+            this.PbTalent5_10.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_54D;
+            this.PbTalent5_10.Location = new System.Drawing.Point(250, 300);
+            this.PbTalent5_10.Name = "PbTalent5_10";
+            this.PbTalent5_10.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent5_10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent5_10.TabIndex = 11;
+            this.PbTalent5_10.TabStop = false;
+            this.PbTalent5_10.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent5_9
+            // 
+            this.PbTalent5_9.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_53D;
+            this.PbTalent5_9.Location = new System.Drawing.Point(150, 300);
+            this.PbTalent5_9.Name = "PbTalent5_9";
+            this.PbTalent5_9.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent5_9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent5_9.TabIndex = 10;
+            this.PbTalent5_9.TabStop = false;
+            this.PbTalent5_9.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent5_8
+            // 
+            this.PbTalent5_8.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_52D;
+            this.PbTalent5_8.Location = new System.Drawing.Point(50, 300);
+            this.PbTalent5_8.Name = "PbTalent5_8";
+            this.PbTalent5_8.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent5_8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent5_8.TabIndex = 9;
+            this.PbTalent5_8.TabStop = false;
+            this.PbTalent5_8.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent5_7
+            // 
+            this.PbTalent5_7.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_51D;
+            this.PbTalent5_7.Location = new System.Drawing.Point(300, 200);
+            this.PbTalent5_7.Name = "PbTalent5_7";
+            this.PbTalent5_7.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent5_7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent5_7.TabIndex = 8;
+            this.PbTalent5_7.TabStop = false;
+            this.PbTalent5_7.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent5_6
+            // 
+            this.PbTalent5_6.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_50D;
+            this.PbTalent5_6.Location = new System.Drawing.Point(200, 200);
+            this.PbTalent5_6.Name = "PbTalent5_6";
+            this.PbTalent5_6.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent5_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent5_6.TabIndex = 7;
+            this.PbTalent5_6.TabStop = false;
+            this.PbTalent5_6.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent5_5
+            // 
+            this.PbTalent5_5.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_49D;
+            this.PbTalent5_5.Location = new System.Drawing.Point(100, 200);
+            this.PbTalent5_5.Name = "PbTalent5_5";
+            this.PbTalent5_5.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent5_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent5_5.TabIndex = 6;
+            this.PbTalent5_5.TabStop = false;
+            this.PbTalent5_5.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent5_4
+            // 
+            this.PbTalent5_4.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_48D;
+            this.PbTalent5_4.Location = new System.Drawing.Point(0, 200);
+            this.PbTalent5_4.Name = "PbTalent5_4";
+            this.PbTalent5_4.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent5_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent5_4.TabIndex = 5;
+            this.PbTalent5_4.TabStop = false;
+            this.PbTalent5_4.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent5_3
+            // 
+            this.PbTalent5_3.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_47D;
+            this.PbTalent5_3.Location = new System.Drawing.Point(300, 100);
+            this.PbTalent5_3.Name = "PbTalent5_3";
+            this.PbTalent5_3.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent5_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent5_3.TabIndex = 4;
+            this.PbTalent5_3.TabStop = false;
+            this.PbTalent5_3.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent5_2
+            // 
+            this.PbTalent5_2.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_46D;
+            this.PbTalent5_2.Location = new System.Drawing.Point(200, 100);
+            this.PbTalent5_2.Name = "PbTalent5_2";
+            this.PbTalent5_2.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent5_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent5_2.TabIndex = 3;
+            this.PbTalent5_2.TabStop = false;
+            this.PbTalent5_2.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent5_1
+            // 
+            this.PbTalent5_1.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_45D;
+            this.PbTalent5_1.Location = new System.Drawing.Point(100, 100);
+            this.PbTalent5_1.Name = "PbTalent5_1";
+            this.PbTalent5_1.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent5_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent5_1.TabIndex = 2;
+            this.PbTalent5_1.TabStop = false;
+            this.PbTalent5_1.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent5_0
+            // 
+            this.PbTalent5_0.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_44D;
+            this.PbTalent5_0.Location = new System.Drawing.Point(0, 100);
+            this.PbTalent5_0.Name = "PbTalent5_0";
+            this.PbTalent5_0.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent5_0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent5_0.TabIndex = 1;
+            this.PbTalent5_0.TabStop = false;
+            this.PbTalent5_0.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PnlTalent4
+            // 
+            this.PnlTalent4.BackColor = System.Drawing.Color.Transparent;
+            this.PnlTalent4.Controls.Add(this.LblTalent4);
+            this.PnlTalent4.Controls.Add(this.PbTalent4_10);
+            this.PnlTalent4.Controls.Add(this.PbTalent4_9);
+            this.PnlTalent4.Controls.Add(this.PbTalent4_8);
+            this.PnlTalent4.Controls.Add(this.PbTalent4_7);
+            this.PnlTalent4.Controls.Add(this.PbTalent4_6);
+            this.PnlTalent4.Controls.Add(this.PbTalent4_5);
+            this.PnlTalent4.Controls.Add(this.PbTalent4_4);
+            this.PnlTalent4.Controls.Add(this.PbTalent4_3);
+            this.PnlTalent4.Controls.Add(this.PbTalent4_2);
+            this.PnlTalent4.Controls.Add(this.PbTalent4_1);
+            this.PnlTalent4.Controls.Add(this.PbTalent4_0);
+            this.PnlTalent4.Location = new System.Drawing.Point(30, 460);
+            this.PnlTalent4.Name = "PnlTalent4";
+            this.PnlTalent4.Size = new System.Drawing.Size(400, 400);
+            this.PnlTalent4.TabIndex = 157;
+            // 
+            // LblTalent4
+            // 
+            this.LblTalent4.AutoSize = true;
+            this.LblTalent4.BackColor = System.Drawing.Color.Transparent;
+            this.LblTalent4.Font = new System.Drawing.Font("Octapost NBP", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTalent4.ForeColor = System.Drawing.Color.White;
+            this.LblTalent4.Location = new System.Drawing.Point(120, 33);
+            this.LblTalent4.Name = "LblTalent4";
+            this.LblTalent4.Size = new System.Drawing.Size(169, 30);
+            this.LblTalent4.TabIndex = 155;
+            this.LblTalent4.Text = "Growth";
+            this.LblTalent4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PbTalent4_10
+            // 
+            this.PbTalent4_10.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_43D;
+            this.PbTalent4_10.Location = new System.Drawing.Point(250, 300);
+            this.PbTalent4_10.Name = "PbTalent4_10";
+            this.PbTalent4_10.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent4_10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent4_10.TabIndex = 11;
+            this.PbTalent4_10.TabStop = false;
+            this.PbTalent4_10.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent4_9
+            // 
+            this.PbTalent4_9.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_42D;
+            this.PbTalent4_9.Location = new System.Drawing.Point(150, 300);
+            this.PbTalent4_9.Name = "PbTalent4_9";
+            this.PbTalent4_9.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent4_9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent4_9.TabIndex = 10;
+            this.PbTalent4_9.TabStop = false;
+            this.PbTalent4_9.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent4_8
+            // 
+            this.PbTalent4_8.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_41D;
+            this.PbTalent4_8.Location = new System.Drawing.Point(50, 300);
+            this.PbTalent4_8.Name = "PbTalent4_8";
+            this.PbTalent4_8.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent4_8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent4_8.TabIndex = 9;
+            this.PbTalent4_8.TabStop = false;
+            this.PbTalent4_8.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent4_7
+            // 
+            this.PbTalent4_7.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_40D;
+            this.PbTalent4_7.Location = new System.Drawing.Point(300, 200);
+            this.PbTalent4_7.Name = "PbTalent4_7";
+            this.PbTalent4_7.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent4_7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent4_7.TabIndex = 8;
+            this.PbTalent4_7.TabStop = false;
+            this.PbTalent4_7.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent4_6
+            // 
+            this.PbTalent4_6.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_39D;
+            this.PbTalent4_6.Location = new System.Drawing.Point(200, 200);
+            this.PbTalent4_6.Name = "PbTalent4_6";
+            this.PbTalent4_6.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent4_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent4_6.TabIndex = 7;
+            this.PbTalent4_6.TabStop = false;
+            this.PbTalent4_6.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent4_5
+            // 
+            this.PbTalent4_5.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_38D;
+            this.PbTalent4_5.Location = new System.Drawing.Point(100, 200);
+            this.PbTalent4_5.Name = "PbTalent4_5";
+            this.PbTalent4_5.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent4_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent4_5.TabIndex = 6;
+            this.PbTalent4_5.TabStop = false;
+            this.PbTalent4_5.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent4_4
+            // 
+            this.PbTalent4_4.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_37D;
+            this.PbTalent4_4.Location = new System.Drawing.Point(0, 200);
+            this.PbTalent4_4.Name = "PbTalent4_4";
+            this.PbTalent4_4.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent4_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent4_4.TabIndex = 5;
+            this.PbTalent4_4.TabStop = false;
+            this.PbTalent4_4.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent4_3
+            // 
+            this.PbTalent4_3.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_36D;
+            this.PbTalent4_3.Location = new System.Drawing.Point(300, 100);
+            this.PbTalent4_3.Name = "PbTalent4_3";
+            this.PbTalent4_3.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent4_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent4_3.TabIndex = 4;
+            this.PbTalent4_3.TabStop = false;
+            this.PbTalent4_3.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent4_2
+            // 
+            this.PbTalent4_2.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_35D;
+            this.PbTalent4_2.Location = new System.Drawing.Point(200, 100);
+            this.PbTalent4_2.Name = "PbTalent4_2";
+            this.PbTalent4_2.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent4_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent4_2.TabIndex = 3;
+            this.PbTalent4_2.TabStop = false;
+            this.PbTalent4_2.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent4_1
+            // 
+            this.PbTalent4_1.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_34D;
+            this.PbTalent4_1.Location = new System.Drawing.Point(100, 100);
+            this.PbTalent4_1.Name = "PbTalent4_1";
+            this.PbTalent4_1.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent4_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent4_1.TabIndex = 2;
+            this.PbTalent4_1.TabStop = false;
+            this.PbTalent4_1.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent4_0
+            // 
+            this.PbTalent4_0.Image = ((System.Drawing.Image)(resources.GetObject("PbTalent4_0.Image")));
+            this.PbTalent4_0.Location = new System.Drawing.Point(0, 100);
+            this.PbTalent4_0.Name = "PbTalent4_0";
+            this.PbTalent4_0.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent4_0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent4_0.TabIndex = 1;
+            this.PbTalent4_0.TabStop = false;
+            this.PbTalent4_0.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PnlTalent3
+            // 
+            this.PnlTalent3.BackColor = System.Drawing.Color.Transparent;
+            this.PnlTalent3.Controls.Add(this.LblTalent3);
+            this.PnlTalent3.Controls.Add(this.PbTalent3_10);
+            this.PnlTalent3.Controls.Add(this.PbTalent3_9);
+            this.PnlTalent3.Controls.Add(this.PbTalent3_8);
+            this.PnlTalent3.Controls.Add(this.PbTalent3_7);
+            this.PnlTalent3.Controls.Add(this.PbTalent3_6);
+            this.PnlTalent3.Controls.Add(this.PbTalent3_5);
+            this.PnlTalent3.Controls.Add(this.PbTalent3_4);
+            this.PnlTalent3.Controls.Add(this.PbTalent3_3);
+            this.PnlTalent3.Controls.Add(this.PbTalent3_2);
+            this.PnlTalent3.Controls.Add(this.PbTalent3_1);
+            this.PnlTalent3.Controls.Add(this.PbTalent3_0);
+            this.PnlTalent3.Location = new System.Drawing.Point(970, 30);
+            this.PnlTalent3.Name = "PnlTalent3";
+            this.PnlTalent3.Size = new System.Drawing.Size(400, 400);
+            this.PnlTalent3.TabIndex = 156;
+            // 
+            // LblTalent3
+            // 
+            this.LblTalent3.AutoSize = true;
+            this.LblTalent3.BackColor = System.Drawing.Color.Transparent;
+            this.LblTalent3.Font = new System.Drawing.Font("Octapost NBP", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTalent3.ForeColor = System.Drawing.Color.White;
+            this.LblTalent3.Location = new System.Drawing.Point(75, 33);
+            this.LblTalent3.Name = "LblTalent3";
+            this.LblTalent3.Size = new System.Drawing.Size(256, 30);
+            this.LblTalent3.TabIndex = 155;
+            this.LblTalent3.Text = "Trade Offs";
+            this.LblTalent3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PbTalent3_10
+            // 
+            this.PbTalent3_10.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_32D;
+            this.PbTalent3_10.Location = new System.Drawing.Point(250, 300);
+            this.PbTalent3_10.Name = "PbTalent3_10";
+            this.PbTalent3_10.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent3_10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent3_10.TabIndex = 11;
+            this.PbTalent3_10.TabStop = false;
+            this.PbTalent3_10.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent3_9
+            // 
+            this.PbTalent3_9.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_31D;
+            this.PbTalent3_9.Location = new System.Drawing.Point(150, 300);
+            this.PbTalent3_9.Name = "PbTalent3_9";
+            this.PbTalent3_9.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent3_9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent3_9.TabIndex = 10;
+            this.PbTalent3_9.TabStop = false;
+            this.PbTalent3_9.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent3_8
+            // 
+            this.PbTalent3_8.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_30D;
+            this.PbTalent3_8.Location = new System.Drawing.Point(50, 300);
+            this.PbTalent3_8.Name = "PbTalent3_8";
+            this.PbTalent3_8.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent3_8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent3_8.TabIndex = 9;
+            this.PbTalent3_8.TabStop = false;
+            this.PbTalent3_8.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent3_7
+            // 
+            this.PbTalent3_7.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_29D;
+            this.PbTalent3_7.Location = new System.Drawing.Point(300, 200);
+            this.PbTalent3_7.Name = "PbTalent3_7";
+            this.PbTalent3_7.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent3_7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent3_7.TabIndex = 8;
+            this.PbTalent3_7.TabStop = false;
+            this.PbTalent3_7.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent3_6
+            // 
+            this.PbTalent3_6.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_28D;
+            this.PbTalent3_6.Location = new System.Drawing.Point(200, 200);
+            this.PbTalent3_6.Name = "PbTalent3_6";
+            this.PbTalent3_6.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent3_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent3_6.TabIndex = 7;
+            this.PbTalent3_6.TabStop = false;
+            this.PbTalent3_6.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent3_5
+            // 
+            this.PbTalent3_5.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_27D;
+            this.PbTalent3_5.Location = new System.Drawing.Point(100, 200);
+            this.PbTalent3_5.Name = "PbTalent3_5";
+            this.PbTalent3_5.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent3_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent3_5.TabIndex = 6;
+            this.PbTalent3_5.TabStop = false;
+            this.PbTalent3_5.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent3_4
+            // 
+            this.PbTalent3_4.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_26D;
+            this.PbTalent3_4.Location = new System.Drawing.Point(0, 200);
+            this.PbTalent3_4.Name = "PbTalent3_4";
+            this.PbTalent3_4.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent3_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent3_4.TabIndex = 5;
+            this.PbTalent3_4.TabStop = false;
+            this.PbTalent3_4.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent3_3
+            // 
+            this.PbTalent3_3.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_25D;
+            this.PbTalent3_3.Location = new System.Drawing.Point(300, 100);
+            this.PbTalent3_3.Name = "PbTalent3_3";
+            this.PbTalent3_3.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent3_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent3_3.TabIndex = 4;
+            this.PbTalent3_3.TabStop = false;
+            this.PbTalent3_3.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent3_2
+            // 
+            this.PbTalent3_2.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_24D;
+            this.PbTalent3_2.Location = new System.Drawing.Point(200, 100);
+            this.PbTalent3_2.Name = "PbTalent3_2";
+            this.PbTalent3_2.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent3_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent3_2.TabIndex = 3;
+            this.PbTalent3_2.TabStop = false;
+            this.PbTalent3_2.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent3_1
+            // 
+            this.PbTalent3_1.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_23D;
+            this.PbTalent3_1.Location = new System.Drawing.Point(100, 100);
+            this.PbTalent3_1.Name = "PbTalent3_1";
+            this.PbTalent3_1.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent3_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent3_1.TabIndex = 2;
+            this.PbTalent3_1.TabStop = false;
+            this.PbTalent3_1.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent3_0
+            // 
+            this.PbTalent3_0.Image = ((System.Drawing.Image)(resources.GetObject("PbTalent3_0.Image")));
+            this.PbTalent3_0.Location = new System.Drawing.Point(0, 100);
+            this.PbTalent3_0.Name = "PbTalent3_0";
+            this.PbTalent3_0.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent3_0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent3_0.TabIndex = 1;
+            this.PbTalent3_0.TabStop = false;
+            this.PbTalent3_0.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PnlTalent2
+            // 
+            this.PnlTalent2.BackColor = System.Drawing.Color.Transparent;
+            this.PnlTalent2.Controls.Add(this.LblTalent2);
+            this.PnlTalent2.Controls.Add(this.PbTalent2_10);
+            this.PnlTalent2.Controls.Add(this.PbTalent2_9);
+            this.PnlTalent2.Controls.Add(this.PbTalent2_8);
+            this.PnlTalent2.Controls.Add(this.PbTalent2_7);
+            this.PnlTalent2.Controls.Add(this.PbTalent2_6);
+            this.PnlTalent2.Controls.Add(this.PbTalent2_5);
+            this.PnlTalent2.Controls.Add(this.PbTalent2_4);
+            this.PnlTalent2.Controls.Add(this.PbTalent2_3);
+            this.PnlTalent2.Controls.Add(this.PbTalent2_2);
+            this.PnlTalent2.Controls.Add(this.PbTalent2_1);
+            this.PnlTalent2.Controls.Add(this.PbTalent2_0);
+            this.PnlTalent2.Location = new System.Drawing.Point(500, 30);
+            this.PnlTalent2.Name = "PnlTalent2";
+            this.PnlTalent2.Size = new System.Drawing.Size(400, 400);
+            this.PnlTalent2.TabIndex = 156;
+            // 
+            // LblTalent2
+            // 
+            this.LblTalent2.AutoSize = true;
+            this.LblTalent2.BackColor = System.Drawing.Color.Transparent;
+            this.LblTalent2.Font = new System.Drawing.Font("Octapost NBP", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTalent2.ForeColor = System.Drawing.Color.White;
+            this.LblTalent2.Location = new System.Drawing.Point(144, 33);
+            this.LblTalent2.Name = "LblTalent2";
+            this.LblTalent2.Size = new System.Drawing.Size(117, 30);
+            this.LblTalent2.TabIndex = 155;
+            this.LblTalent2.Text = "Gear";
+            this.LblTalent2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PbTalent2_10
+            // 
+            this.PbTalent2_10.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_21D;
+            this.PbTalent2_10.Location = new System.Drawing.Point(250, 300);
+            this.PbTalent2_10.Name = "PbTalent2_10";
+            this.PbTalent2_10.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent2_10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent2_10.TabIndex = 11;
+            this.PbTalent2_10.TabStop = false;
+            this.PbTalent2_10.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent2_9
+            // 
+            this.PbTalent2_9.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_20D;
+            this.PbTalent2_9.Location = new System.Drawing.Point(150, 300);
+            this.PbTalent2_9.Name = "PbTalent2_9";
+            this.PbTalent2_9.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent2_9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent2_9.TabIndex = 10;
+            this.PbTalent2_9.TabStop = false;
+            this.PbTalent2_9.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent2_8
+            // 
+            this.PbTalent2_8.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_19D;
+            this.PbTalent2_8.Location = new System.Drawing.Point(50, 300);
+            this.PbTalent2_8.Name = "PbTalent2_8";
+            this.PbTalent2_8.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent2_8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent2_8.TabIndex = 9;
+            this.PbTalent2_8.TabStop = false;
+            this.PbTalent2_8.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent2_7
+            // 
+            this.PbTalent2_7.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_18D;
+            this.PbTalent2_7.Location = new System.Drawing.Point(300, 200);
+            this.PbTalent2_7.Name = "PbTalent2_7";
+            this.PbTalent2_7.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent2_7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent2_7.TabIndex = 8;
+            this.PbTalent2_7.TabStop = false;
+            this.PbTalent2_7.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent2_6
+            // 
+            this.PbTalent2_6.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_17D;
+            this.PbTalent2_6.Location = new System.Drawing.Point(200, 200);
+            this.PbTalent2_6.Name = "PbTalent2_6";
+            this.PbTalent2_6.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent2_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent2_6.TabIndex = 7;
+            this.PbTalent2_6.TabStop = false;
+            this.PbTalent2_6.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent2_5
+            // 
+            this.PbTalent2_5.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_16D;
+            this.PbTalent2_5.Location = new System.Drawing.Point(100, 200);
+            this.PbTalent2_5.Name = "PbTalent2_5";
+            this.PbTalent2_5.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent2_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent2_5.TabIndex = 6;
+            this.PbTalent2_5.TabStop = false;
+            this.PbTalent2_5.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent2_4
+            // 
+            this.PbTalent2_4.Image = ((System.Drawing.Image)(resources.GetObject("PbTalent2_4.Image")));
+            this.PbTalent2_4.Location = new System.Drawing.Point(0, 200);
+            this.PbTalent2_4.Name = "PbTalent2_4";
+            this.PbTalent2_4.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent2_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent2_4.TabIndex = 5;
+            this.PbTalent2_4.TabStop = false;
+            this.PbTalent2_4.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent2_3
+            // 
+            this.PbTalent2_3.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_14D;
+            this.PbTalent2_3.Location = new System.Drawing.Point(300, 100);
+            this.PbTalent2_3.Name = "PbTalent2_3";
+            this.PbTalent2_3.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent2_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent2_3.TabIndex = 4;
+            this.PbTalent2_3.TabStop = false;
+            this.PbTalent2_3.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent2_2
+            // 
+            this.PbTalent2_2.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_13D;
+            this.PbTalent2_2.Location = new System.Drawing.Point(200, 100);
+            this.PbTalent2_2.Name = "PbTalent2_2";
+            this.PbTalent2_2.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent2_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent2_2.TabIndex = 3;
+            this.PbTalent2_2.TabStop = false;
+            this.PbTalent2_2.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent2_1
+            // 
+            this.PbTalent2_1.Image = ((System.Drawing.Image)(resources.GetObject("PbTalent2_1.Image")));
+            this.PbTalent2_1.Location = new System.Drawing.Point(100, 100);
+            this.PbTalent2_1.Name = "PbTalent2_1";
+            this.PbTalent2_1.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent2_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent2_1.TabIndex = 2;
+            this.PbTalent2_1.TabStop = false;
+            this.PbTalent2_1.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent2_0
+            // 
+            this.PbTalent2_0.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_11D;
+            this.PbTalent2_0.Location = new System.Drawing.Point(0, 100);
+            this.PbTalent2_0.Name = "PbTalent2_0";
+            this.PbTalent2_0.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent2_0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent2_0.TabIndex = 1;
+            this.PbTalent2_0.TabStop = false;
+            this.PbTalent2_0.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PnlTalent1
+            // 
+            this.PnlTalent1.BackColor = System.Drawing.Color.Transparent;
+            this.PnlTalent1.Controls.Add(this.LblTalent1);
+            this.PnlTalent1.Controls.Add(this.PbTalent1_10);
+            this.PnlTalent1.Controls.Add(this.PbTalent1_9);
+            this.PnlTalent1.Controls.Add(this.PbTalent1_8);
+            this.PnlTalent1.Controls.Add(this.PbTalent1_7);
+            this.PnlTalent1.Controls.Add(this.PbTalent1_6);
+            this.PnlTalent1.Controls.Add(this.PbTalent1_5);
+            this.PnlTalent1.Controls.Add(this.PbTalent1_4);
+            this.PnlTalent1.Controls.Add(this.PbTalent1_3);
+            this.PnlTalent1.Controls.Add(this.PbTalent1_2);
+            this.PnlTalent1.Controls.Add(this.PbTalent1_1);
+            this.PnlTalent1.Controls.Add(this.PbTalent1_0);
+            this.PnlTalent1.Location = new System.Drawing.Point(30, 30);
+            this.PnlTalent1.Name = "PnlTalent1";
+            this.PnlTalent1.Size = new System.Drawing.Size(400, 400);
+            this.PnlTalent1.TabIndex = 0;
+            // 
+            // LblTalent1
+            // 
+            this.LblTalent1.AutoSize = true;
+            this.LblTalent1.BackColor = System.Drawing.Color.Transparent;
+            this.LblTalent1.Font = new System.Drawing.Font("Octapost NBP", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTalent1.ForeColor = System.Drawing.Color.White;
+            this.LblTalent1.Location = new System.Drawing.Point(70, 33);
+            this.LblTalent1.Name = "LblTalent1";
+            this.LblTalent1.Size = new System.Drawing.Size(273, 30);
+            this.LblTalent1.TabIndex = 155;
+            this.LblTalent1.Text = "Affinities";
+            this.LblTalent1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PbTalent1_10
+            // 
+            this.PbTalent1_10.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_10D;
+            this.PbTalent1_10.Location = new System.Drawing.Point(250, 300);
+            this.PbTalent1_10.Name = "PbTalent1_10";
+            this.PbTalent1_10.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent1_10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent1_10.TabIndex = 11;
+            this.PbTalent1_10.TabStop = false;
+            this.PbTalent1_10.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent1_9
+            // 
+            this.PbTalent1_9.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_9D;
+            this.PbTalent1_9.Location = new System.Drawing.Point(150, 300);
+            this.PbTalent1_9.Name = "PbTalent1_9";
+            this.PbTalent1_9.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent1_9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent1_9.TabIndex = 10;
+            this.PbTalent1_9.TabStop = false;
+            this.PbTalent1_9.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent1_8
+            // 
+            this.PbTalent1_8.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_8D;
+            this.PbTalent1_8.Location = new System.Drawing.Point(50, 300);
+            this.PbTalent1_8.Name = "PbTalent1_8";
+            this.PbTalent1_8.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent1_8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent1_8.TabIndex = 9;
+            this.PbTalent1_8.TabStop = false;
+            this.PbTalent1_8.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent1_7
+            // 
+            this.PbTalent1_7.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_7D;
+            this.PbTalent1_7.Location = new System.Drawing.Point(300, 200);
+            this.PbTalent1_7.Name = "PbTalent1_7";
+            this.PbTalent1_7.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent1_7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent1_7.TabIndex = 8;
+            this.PbTalent1_7.TabStop = false;
+            this.PbTalent1_7.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent1_6
+            // 
+            this.PbTalent1_6.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_6D;
+            this.PbTalent1_6.Location = new System.Drawing.Point(200, 200);
+            this.PbTalent1_6.Name = "PbTalent1_6";
+            this.PbTalent1_6.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent1_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent1_6.TabIndex = 7;
+            this.PbTalent1_6.TabStop = false;
+            this.PbTalent1_6.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent1_5
+            // 
+            this.PbTalent1_5.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_5D;
+            this.PbTalent1_5.Location = new System.Drawing.Point(100, 200);
+            this.PbTalent1_5.Name = "PbTalent1_5";
+            this.PbTalent1_5.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent1_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent1_5.TabIndex = 6;
+            this.PbTalent1_5.TabStop = false;
+            this.PbTalent1_5.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent1_4
+            // 
+            this.PbTalent1_4.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_4D;
+            this.PbTalent1_4.Location = new System.Drawing.Point(0, 200);
+            this.PbTalent1_4.Name = "PbTalent1_4";
+            this.PbTalent1_4.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent1_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent1_4.TabIndex = 5;
+            this.PbTalent1_4.TabStop = false;
+            this.PbTalent1_4.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent1_3
+            // 
+            this.PbTalent1_3.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_3D;
+            this.PbTalent1_3.Location = new System.Drawing.Point(300, 100);
+            this.PbTalent1_3.Name = "PbTalent1_3";
+            this.PbTalent1_3.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent1_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent1_3.TabIndex = 4;
+            this.PbTalent1_3.TabStop = false;
+            this.PbTalent1_3.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent1_2
+            // 
+            this.PbTalent1_2.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_2D;
+            this.PbTalent1_2.Location = new System.Drawing.Point(200, 100);
+            this.PbTalent1_2.Name = "PbTalent1_2";
+            this.PbTalent1_2.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent1_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent1_2.TabIndex = 3;
+            this.PbTalent1_2.TabStop = false;
+            this.PbTalent1_2.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent1_1
+            // 
+            this.PbTalent1_1.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_1D;
+            this.PbTalent1_1.Location = new System.Drawing.Point(100, 100);
+            this.PbTalent1_1.Name = "PbTalent1_1";
+            this.PbTalent1_1.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent1_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent1_1.TabIndex = 2;
+            this.PbTalent1_1.TabStop = false;
+            this.PbTalent1_1.Click += new System.EventHandler(this.Talent_Activate);
+            // 
+            // PbTalent1_0
+            // 
+            this.PbTalent1_0.Image = global::Expedition_Builder_Online.Properties.Resources.EI_T_0D;
+            this.PbTalent1_0.Location = new System.Drawing.Point(0, 100);
+            this.PbTalent1_0.Name = "PbTalent1_0";
+            this.PbTalent1_0.Size = new System.Drawing.Size(100, 100);
+            this.PbTalent1_0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbTalent1_0.TabIndex = 1;
+            this.PbTalent1_0.TabStop = false;
+            this.PbTalent1_0.Click += new System.EventHandler(this.Talent_Activate);
             // 
             // Pnl3
             // 
@@ -5647,526 +6285,6 @@
             this.PbAbility1.TabIndex = 0;
             this.PbAbility1.TabStop = false;
             // 
-            // Pnl4
-            // 
-            this.Pnl4.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Screen_4S;
-            this.Pnl4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Pnl4.Controls.Add(this.PbHelp4);
-            this.Pnl4.Controls.Add(this.PbGearEquip12);
-            this.Pnl4.Controls.Add(this.PbGearEquip11);
-            this.Pnl4.Controls.Add(this.PbGearEquip10);
-            this.Pnl4.Controls.Add(this.PbGearEquip9);
-            this.Pnl4.Controls.Add(this.PbGearEquip1);
-            this.Pnl4.Controls.Add(this.LblGearStats12);
-            this.Pnl4.Controls.Add(this.LblGearStats11);
-            this.Pnl4.Controls.Add(this.LblGearStats10);
-            this.Pnl4.Controls.Add(this.LblGearStats9);
-            this.Pnl4.Controls.Add(this.LblGearStats8);
-            this.Pnl4.Controls.Add(this.LblGearStats7);
-            this.Pnl4.Controls.Add(this.LblGearStats6);
-            this.Pnl4.Controls.Add(this.LblGearStats5);
-            this.Pnl4.Controls.Add(this.LblGearStats4);
-            this.Pnl4.Controls.Add(this.LblGearStats3);
-            this.Pnl4.Controls.Add(this.LblGearStats2);
-            this.Pnl4.Controls.Add(this.LblGearStats1);
-            this.Pnl4.Controls.Add(this.PbGearStats12);
-            this.Pnl4.Controls.Add(this.PbGearStats11);
-            this.Pnl4.Controls.Add(this.PbGearStats10);
-            this.Pnl4.Controls.Add(this.PbGearStats9);
-            this.Pnl4.Controls.Add(this.PbGearStats8);
-            this.Pnl4.Controls.Add(this.PbGearStats7);
-            this.Pnl4.Controls.Add(this.PbGearStats6);
-            this.Pnl4.Controls.Add(this.PbGearStats5);
-            this.Pnl4.Controls.Add(this.PbGearStats4);
-            this.Pnl4.Controls.Add(this.PbGearStats3);
-            this.Pnl4.Controls.Add(this.PbGearStats2);
-            this.Pnl4.Controls.Add(this.PbGearStats1);
-            this.Pnl4.Controls.Add(this.CbGearSelect);
-            this.Pnl4.Controls.Add(this.PbGear12);
-            this.Pnl4.Controls.Add(this.PbGear11);
-            this.Pnl4.Controls.Add(this.PbGear10);
-            this.Pnl4.Controls.Add(this.PbGear9);
-            this.Pnl4.Controls.Add(this.PbGear8);
-            this.Pnl4.Controls.Add(this.PbGear7);
-            this.Pnl4.Controls.Add(this.PbGear6);
-            this.Pnl4.Controls.Add(this.PbGear5);
-            this.Pnl4.Controls.Add(this.PbGear4);
-            this.Pnl4.Controls.Add(this.PbGear3);
-            this.Pnl4.Controls.Add(this.PbGear2);
-            this.Pnl4.Controls.Add(this.PbGear1);
-            this.Pnl4.Location = new System.Drawing.Point(0, 0);
-            this.Pnl4.Name = "Pnl4";
-            this.Pnl4.Size = new System.Drawing.Size(1400, 910);
-            this.Pnl4.TabIndex = 3;
-            this.Pnl4.Visible = false;
-            this.Pnl4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Drag_Form);
-            // 
-            // PbHelp4
-            // 
-            this.PbHelp4.Image = global::Expedition_Builder_Online.Properties.Resources.EI_S_Help;
-            this.PbHelp4.Location = new System.Drawing.Point(980, 799);
-            this.PbHelp4.Name = "PbHelp4";
-            this.PbHelp4.Size = new System.Drawing.Size(70, 70);
-            this.PbHelp4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbHelp4.TabIndex = 184;
-            this.PbHelp4.TabStop = false;
-            this.PbHelp4.Visible = false;
-            this.PbHelp4.Click += new System.EventHandler(this.PbHelp4_Click);
-            // 
-            // PbGearEquip12
-            // 
-            this.PbGearEquip12.Image = global::Expedition_Builder_Online.Properties.Resources.Gear_EquipMini;
-            this.PbGearEquip12.Location = new System.Drawing.Point(630, 735);
-            this.PbGearEquip12.Name = "PbGearEquip12";
-            this.PbGearEquip12.Size = new System.Drawing.Size(75, 100);
-            this.PbGearEquip12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGearEquip12.TabIndex = 37;
-            this.PbGearEquip12.TabStop = false;
-            this.PbGearEquip12.Visible = false;
-            this.PbGearEquip12.Click += new System.EventHandler(this.Equip_Click);
-            // 
-            // PbGearEquip11
-            // 
-            this.PbGearEquip11.Image = global::Expedition_Builder_Online.Properties.Resources.Gear_EquipMini;
-            this.PbGearEquip11.Location = new System.Drawing.Point(630, 515);
-            this.PbGearEquip11.Name = "PbGearEquip11";
-            this.PbGearEquip11.Size = new System.Drawing.Size(75, 100);
-            this.PbGearEquip11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGearEquip11.TabIndex = 38;
-            this.PbGearEquip11.TabStop = false;
-            this.PbGearEquip11.Visible = false;
-            this.PbGearEquip11.Click += new System.EventHandler(this.Equip_Click);
-            // 
-            // PbGearEquip10
-            // 
-            this.PbGearEquip10.Image = global::Expedition_Builder_Online.Properties.Resources.Gear_EquipMini;
-            this.PbGearEquip10.Location = new System.Drawing.Point(630, 295);
-            this.PbGearEquip10.Name = "PbGearEquip10";
-            this.PbGearEquip10.Size = new System.Drawing.Size(75, 100);
-            this.PbGearEquip10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGearEquip10.TabIndex = 39;
-            this.PbGearEquip10.TabStop = false;
-            this.PbGearEquip10.Visible = false;
-            this.PbGearEquip10.Click += new System.EventHandler(this.Equip_Click);
-            // 
-            // PbGearEquip9
-            // 
-            this.PbGearEquip9.Image = global::Expedition_Builder_Online.Properties.Resources.Gear_EquipMini;
-            this.PbGearEquip9.Location = new System.Drawing.Point(630, 75);
-            this.PbGearEquip9.Name = "PbGearEquip9";
-            this.PbGearEquip9.Size = new System.Drawing.Size(75, 100);
-            this.PbGearEquip9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGearEquip9.TabIndex = 40;
-            this.PbGearEquip9.TabStop = false;
-            this.PbGearEquip9.Visible = false;
-            this.PbGearEquip9.Click += new System.EventHandler(this.Equip_Click);
-            // 
-            // PbGearEquip1
-            // 
-            this.PbGearEquip1.Image = global::Expedition_Builder_Online.Properties.Resources.Gear_Equip;
-            this.PbGearEquip1.Location = new System.Drawing.Point(1070, 780);
-            this.PbGearEquip1.Name = "PbGearEquip1";
-            this.PbGearEquip1.Size = new System.Drawing.Size(300, 100);
-            this.PbGearEquip1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGearEquip1.TabIndex = 36;
-            this.PbGearEquip1.TabStop = false;
-            this.PbGearEquip1.Visible = false;
-            this.PbGearEquip1.Click += new System.EventHandler(this.Equip_Click);
-            // 
-            // LblGearStats12
-            // 
-            this.LblGearStats12.AutoSize = true;
-            this.LblGearStats12.BackColor = System.Drawing.Color.Transparent;
-            this.LblGearStats12.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
-            this.LblGearStats12.Location = new System.Drawing.Point(785, 697);
-            this.LblGearStats12.Name = "LblGearStats12";
-            this.LblGearStats12.Size = new System.Drawing.Size(0, 19);
-            this.LblGearStats12.TabIndex = 35;
-            // 
-            // LblGearStats11
-            // 
-            this.LblGearStats11.AutoSize = true;
-            this.LblGearStats11.BackColor = System.Drawing.Color.Transparent;
-            this.LblGearStats11.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
-            this.LblGearStats11.Location = new System.Drawing.Point(785, 641);
-            this.LblGearStats11.Name = "LblGearStats11";
-            this.LblGearStats11.Size = new System.Drawing.Size(0, 19);
-            this.LblGearStats11.TabIndex = 34;
-            // 
-            // LblGearStats10
-            // 
-            this.LblGearStats10.AutoSize = true;
-            this.LblGearStats10.BackColor = System.Drawing.Color.Transparent;
-            this.LblGearStats10.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
-            this.LblGearStats10.Location = new System.Drawing.Point(785, 585);
-            this.LblGearStats10.Name = "LblGearStats10";
-            this.LblGearStats10.Size = new System.Drawing.Size(0, 19);
-            this.LblGearStats10.TabIndex = 33;
-            // 
-            // LblGearStats9
-            // 
-            this.LblGearStats9.AutoSize = true;
-            this.LblGearStats9.BackColor = System.Drawing.Color.Transparent;
-            this.LblGearStats9.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
-            this.LblGearStats9.Location = new System.Drawing.Point(785, 529);
-            this.LblGearStats9.Name = "LblGearStats9";
-            this.LblGearStats9.Size = new System.Drawing.Size(0, 19);
-            this.LblGearStats9.TabIndex = 32;
-            // 
-            // LblGearStats8
-            // 
-            this.LblGearStats8.AutoSize = true;
-            this.LblGearStats8.BackColor = System.Drawing.Color.Transparent;
-            this.LblGearStats8.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
-            this.LblGearStats8.Location = new System.Drawing.Point(785, 473);
-            this.LblGearStats8.Name = "LblGearStats8";
-            this.LblGearStats8.Size = new System.Drawing.Size(0, 19);
-            this.LblGearStats8.TabIndex = 31;
-            // 
-            // LblGearStats7
-            // 
-            this.LblGearStats7.AutoSize = true;
-            this.LblGearStats7.BackColor = System.Drawing.Color.Transparent;
-            this.LblGearStats7.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
-            this.LblGearStats7.Location = new System.Drawing.Point(785, 417);
-            this.LblGearStats7.Name = "LblGearStats7";
-            this.LblGearStats7.Size = new System.Drawing.Size(0, 19);
-            this.LblGearStats7.TabIndex = 31;
-            // 
-            // LblGearStats6
-            // 
-            this.LblGearStats6.AutoSize = true;
-            this.LblGearStats6.BackColor = System.Drawing.Color.Transparent;
-            this.LblGearStats6.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
-            this.LblGearStats6.Location = new System.Drawing.Point(785, 361);
-            this.LblGearStats6.Name = "LblGearStats6";
-            this.LblGearStats6.Size = new System.Drawing.Size(0, 19);
-            this.LblGearStats6.TabIndex = 30;
-            // 
-            // LblGearStats5
-            // 
-            this.LblGearStats5.AutoSize = true;
-            this.LblGearStats5.BackColor = System.Drawing.Color.Transparent;
-            this.LblGearStats5.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
-            this.LblGearStats5.Location = new System.Drawing.Point(785, 305);
-            this.LblGearStats5.Name = "LblGearStats5";
-            this.LblGearStats5.Size = new System.Drawing.Size(0, 19);
-            this.LblGearStats5.TabIndex = 29;
-            // 
-            // LblGearStats4
-            // 
-            this.LblGearStats4.AutoSize = true;
-            this.LblGearStats4.BackColor = System.Drawing.Color.Transparent;
-            this.LblGearStats4.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
-            this.LblGearStats4.Location = new System.Drawing.Point(785, 249);
-            this.LblGearStats4.Name = "LblGearStats4";
-            this.LblGearStats4.Size = new System.Drawing.Size(0, 19);
-            this.LblGearStats4.TabIndex = 28;
-            // 
-            // LblGearStats3
-            // 
-            this.LblGearStats3.AutoSize = true;
-            this.LblGearStats3.BackColor = System.Drawing.Color.Transparent;
-            this.LblGearStats3.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
-            this.LblGearStats3.Location = new System.Drawing.Point(785, 193);
-            this.LblGearStats3.Name = "LblGearStats3";
-            this.LblGearStats3.Size = new System.Drawing.Size(0, 19);
-            this.LblGearStats3.TabIndex = 27;
-            // 
-            // LblGearStats2
-            // 
-            this.LblGearStats2.AutoSize = true;
-            this.LblGearStats2.BackColor = System.Drawing.Color.Transparent;
-            this.LblGearStats2.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
-            this.LblGearStats2.Location = new System.Drawing.Point(785, 137);
-            this.LblGearStats2.Name = "LblGearStats2";
-            this.LblGearStats2.Size = new System.Drawing.Size(0, 19);
-            this.LblGearStats2.TabIndex = 26;
-            // 
-            // LblGearStats1
-            // 
-            this.LblGearStats1.AutoSize = true;
-            this.LblGearStats1.BackColor = System.Drawing.Color.Transparent;
-            this.LblGearStats1.Font = new System.Drawing.Font("Octapost NBP", 15.75F);
-            this.LblGearStats1.Location = new System.Drawing.Point(785, 81);
-            this.LblGearStats1.Name = "LblGearStats1";
-            this.LblGearStats1.Size = new System.Drawing.Size(0, 19);
-            this.LblGearStats1.TabIndex = 25;
-            // 
-            // PbGearStats12
-            // 
-            this.PbGearStats12.BackColor = System.Drawing.Color.Transparent;
-            this.PbGearStats12.Location = new System.Drawing.Point(729, 675);
-            this.PbGearStats12.Name = "PbGearStats12";
-            this.PbGearStats12.Size = new System.Drawing.Size(50, 50);
-            this.PbGearStats12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGearStats12.TabIndex = 24;
-            this.PbGearStats12.TabStop = false;
-            // 
-            // PbGearStats11
-            // 
-            this.PbGearStats11.BackColor = System.Drawing.Color.Transparent;
-            this.PbGearStats11.Location = new System.Drawing.Point(729, 619);
-            this.PbGearStats11.Name = "PbGearStats11";
-            this.PbGearStats11.Size = new System.Drawing.Size(50, 50);
-            this.PbGearStats11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGearStats11.TabIndex = 23;
-            this.PbGearStats11.TabStop = false;
-            // 
-            // PbGearStats10
-            // 
-            this.PbGearStats10.BackColor = System.Drawing.Color.Transparent;
-            this.PbGearStats10.Location = new System.Drawing.Point(729, 563);
-            this.PbGearStats10.Name = "PbGearStats10";
-            this.PbGearStats10.Size = new System.Drawing.Size(50, 50);
-            this.PbGearStats10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGearStats10.TabIndex = 22;
-            this.PbGearStats10.TabStop = false;
-            // 
-            // PbGearStats9
-            // 
-            this.PbGearStats9.BackColor = System.Drawing.Color.Transparent;
-            this.PbGearStats9.Location = new System.Drawing.Point(729, 511);
-            this.PbGearStats9.Name = "PbGearStats9";
-            this.PbGearStats9.Size = new System.Drawing.Size(50, 50);
-            this.PbGearStats9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGearStats9.TabIndex = 21;
-            this.PbGearStats9.TabStop = false;
-            // 
-            // PbGearStats8
-            // 
-            this.PbGearStats8.BackColor = System.Drawing.Color.Transparent;
-            this.PbGearStats8.Location = new System.Drawing.Point(729, 455);
-            this.PbGearStats8.Name = "PbGearStats8";
-            this.PbGearStats8.Size = new System.Drawing.Size(50, 50);
-            this.PbGearStats8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGearStats8.TabIndex = 20;
-            this.PbGearStats8.TabStop = false;
-            // 
-            // PbGearStats7
-            // 
-            this.PbGearStats7.BackColor = System.Drawing.Color.Transparent;
-            this.PbGearStats7.Location = new System.Drawing.Point(729, 399);
-            this.PbGearStats7.Name = "PbGearStats7";
-            this.PbGearStats7.Size = new System.Drawing.Size(50, 50);
-            this.PbGearStats7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGearStats7.TabIndex = 19;
-            this.PbGearStats7.TabStop = false;
-            // 
-            // PbGearStats6
-            // 
-            this.PbGearStats6.BackColor = System.Drawing.Color.Transparent;
-            this.PbGearStats6.Location = new System.Drawing.Point(729, 343);
-            this.PbGearStats6.Name = "PbGearStats6";
-            this.PbGearStats6.Size = new System.Drawing.Size(50, 50);
-            this.PbGearStats6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGearStats6.TabIndex = 18;
-            this.PbGearStats6.TabStop = false;
-            // 
-            // PbGearStats5
-            // 
-            this.PbGearStats5.BackColor = System.Drawing.Color.Transparent;
-            this.PbGearStats5.Location = new System.Drawing.Point(729, 287);
-            this.PbGearStats5.Name = "PbGearStats5";
-            this.PbGearStats5.Size = new System.Drawing.Size(50, 50);
-            this.PbGearStats5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGearStats5.TabIndex = 17;
-            this.PbGearStats5.TabStop = false;
-            // 
-            // PbGearStats4
-            // 
-            this.PbGearStats4.BackColor = System.Drawing.Color.Transparent;
-            this.PbGearStats4.Location = new System.Drawing.Point(729, 231);
-            this.PbGearStats4.Name = "PbGearStats4";
-            this.PbGearStats4.Size = new System.Drawing.Size(50, 50);
-            this.PbGearStats4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGearStats4.TabIndex = 16;
-            this.PbGearStats4.TabStop = false;
-            // 
-            // PbGearStats3
-            // 
-            this.PbGearStats3.BackColor = System.Drawing.Color.Transparent;
-            this.PbGearStats3.Location = new System.Drawing.Point(729, 175);
-            this.PbGearStats3.Name = "PbGearStats3";
-            this.PbGearStats3.Size = new System.Drawing.Size(50, 50);
-            this.PbGearStats3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGearStats3.TabIndex = 15;
-            this.PbGearStats3.TabStop = false;
-            // 
-            // PbGearStats2
-            // 
-            this.PbGearStats2.BackColor = System.Drawing.Color.Transparent;
-            this.PbGearStats2.Location = new System.Drawing.Point(729, 119);
-            this.PbGearStats2.Name = "PbGearStats2";
-            this.PbGearStats2.Size = new System.Drawing.Size(50, 50);
-            this.PbGearStats2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGearStats2.TabIndex = 14;
-            this.PbGearStats2.TabStop = false;
-            // 
-            // PbGearStats1
-            // 
-            this.PbGearStats1.BackColor = System.Drawing.Color.Transparent;
-            this.PbGearStats1.Location = new System.Drawing.Point(729, 63);
-            this.PbGearStats1.Name = "PbGearStats1";
-            this.PbGearStats1.Size = new System.Drawing.Size(50, 50);
-            this.PbGearStats1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGearStats1.TabIndex = 13;
-            this.PbGearStats1.TabStop = false;
-            // 
-            // CbGearSelect
-            // 
-            this.CbGearSelect.Font = new System.Drawing.Font("Octapost NBP", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CbGearSelect.FormattingEnabled = true;
-            this.CbGearSelect.Location = new System.Drawing.Point(729, 30);
-            this.CbGearSelect.Name = "CbGearSelect";
-            this.CbGearSelect.Size = new System.Drawing.Size(641, 27);
-            this.CbGearSelect.TabIndex = 12;
-            this.CbGearSelect.SelectedIndexChanged += new System.EventHandler(this.CbGearSelect_SelectedIndexChanged);
-            // 
-            // PbGear12
-            // 
-            this.PbGear12.BackColor = System.Drawing.Color.Transparent;
-            this.PbGear12.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_TM2;
-            this.PbGear12.Location = new System.Drawing.Point(470, 690);
-            this.PbGear12.Name = "PbGear12";
-            this.PbGear12.Size = new System.Drawing.Size(190, 190);
-            this.PbGear12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGear12.TabIndex = 11;
-            this.PbGear12.TabStop = false;
-            this.PbGear12.Click += new System.EventHandler(this.Unequip_Click);
-            // 
-            // PbGear11
-            // 
-            this.PbGear11.BackColor = System.Drawing.Color.Transparent;
-            this.PbGear11.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_TM2;
-            this.PbGear11.Location = new System.Drawing.Point(470, 470);
-            this.PbGear11.Name = "PbGear11";
-            this.PbGear11.Size = new System.Drawing.Size(190, 190);
-            this.PbGear11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGear11.TabIndex = 10;
-            this.PbGear11.TabStop = false;
-            this.PbGear11.Click += new System.EventHandler(this.Unequip_Click);
-            // 
-            // PbGear10
-            // 
-            this.PbGear10.BackColor = System.Drawing.Color.Transparent;
-            this.PbGear10.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_TM2;
-            this.PbGear10.Location = new System.Drawing.Point(470, 250);
-            this.PbGear10.Name = "PbGear10";
-            this.PbGear10.Size = new System.Drawing.Size(190, 190);
-            this.PbGear10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGear10.TabIndex = 9;
-            this.PbGear10.TabStop = false;
-            this.PbGear10.Click += new System.EventHandler(this.Unequip_Click);
-            // 
-            // PbGear9
-            // 
-            this.PbGear9.BackColor = System.Drawing.Color.Transparent;
-            this.PbGear9.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_TM2;
-            this.PbGear9.Location = new System.Drawing.Point(470, 30);
-            this.PbGear9.Name = "PbGear9";
-            this.PbGear9.Size = new System.Drawing.Size(190, 190);
-            this.PbGear9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGear9.TabIndex = 5;
-            this.PbGear9.TabStop = false;
-            this.PbGear9.Click += new System.EventHandler(this.Unequip_Click);
-            // 
-            // PbGear8
-            // 
-            this.PbGear8.BackColor = System.Drawing.Color.Transparent;
-            this.PbGear8.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_ABoots2;
-            this.PbGear8.Location = new System.Drawing.Point(250, 690);
-            this.PbGear8.Name = "PbGear8";
-            this.PbGear8.Size = new System.Drawing.Size(190, 190);
-            this.PbGear8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGear8.TabIndex = 8;
-            this.PbGear8.TabStop = false;
-            this.PbGear8.Click += new System.EventHandler(this.Unequip_Click);
-            // 
-            // PbGear7
-            // 
-            this.PbGear7.BackColor = System.Drawing.Color.Transparent;
-            this.PbGear7.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_APants2;
-            this.PbGear7.Location = new System.Drawing.Point(250, 470);
-            this.PbGear7.Name = "PbGear7";
-            this.PbGear7.Size = new System.Drawing.Size(190, 190);
-            this.PbGear7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGear7.TabIndex = 7;
-            this.PbGear7.TabStop = false;
-            this.PbGear7.Click += new System.EventHandler(this.Unequip_Click);
-            // 
-            // PbGear6
-            // 
-            this.PbGear6.BackColor = System.Drawing.Color.Transparent;
-            this.PbGear6.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_AGloves2;
-            this.PbGear6.Location = new System.Drawing.Point(250, 250);
-            this.PbGear6.Name = "PbGear6";
-            this.PbGear6.Size = new System.Drawing.Size(190, 190);
-            this.PbGear6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGear6.TabIndex = 6;
-            this.PbGear6.TabStop = false;
-            this.PbGear6.Click += new System.EventHandler(this.Unequip_Click);
-            // 
-            // PbGear5
-            // 
-            this.PbGear5.BackColor = System.Drawing.Color.Transparent;
-            this.PbGear5.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_WN2;
-            this.PbGear5.Location = new System.Drawing.Point(250, 30);
-            this.PbGear5.Name = "PbGear5";
-            this.PbGear5.Size = new System.Drawing.Size(190, 190);
-            this.PbGear5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGear5.TabIndex = 4;
-            this.PbGear5.TabStop = false;
-            this.PbGear5.Click += new System.EventHandler(this.Unequip_Click);
-            // 
-            // PbGear4
-            // 
-            this.PbGear4.BackColor = System.Drawing.Color.Transparent;
-            this.PbGear4.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_AChest2;
-            this.PbGear4.Location = new System.Drawing.Point(30, 690);
-            this.PbGear4.Name = "PbGear4";
-            this.PbGear4.Size = new System.Drawing.Size(190, 190);
-            this.PbGear4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGear4.TabIndex = 3;
-            this.PbGear4.TabStop = false;
-            this.PbGear4.Click += new System.EventHandler(this.Unequip_Click);
-            // 
-            // PbGear3
-            // 
-            this.PbGear3.BackColor = System.Drawing.Color.Transparent;
-            this.PbGear3.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_ACloak2;
-            this.PbGear3.Location = new System.Drawing.Point(30, 470);
-            this.PbGear3.Name = "PbGear3";
-            this.PbGear3.Size = new System.Drawing.Size(190, 190);
-            this.PbGear3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGear3.TabIndex = 2;
-            this.PbGear3.TabStop = false;
-            this.PbGear3.Click += new System.EventHandler(this.Unequip_Click);
-            // 
-            // PbGear2
-            // 
-            this.PbGear2.BackColor = System.Drawing.Color.Transparent;
-            this.PbGear2.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_AShoulders2;
-            this.PbGear2.Location = new System.Drawing.Point(30, 250);
-            this.PbGear2.Name = "PbGear2";
-            this.PbGear2.Size = new System.Drawing.Size(190, 190);
-            this.PbGear2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGear2.TabIndex = 1;
-            this.PbGear2.TabStop = false;
-            this.PbGear2.Click += new System.EventHandler(this.Unequip_Click);
-            // 
-            // PbGear1
-            // 
-            this.PbGear1.BackColor = System.Drawing.Color.Transparent;
-            this.PbGear1.Image = global::Expedition_Builder_Online.Properties.Resources.EI_I_AHelm2;
-            this.PbGear1.Location = new System.Drawing.Point(30, 30);
-            this.PbGear1.Name = "PbGear1";
-            this.PbGear1.Size = new System.Drawing.Size(190, 190);
-            this.PbGear1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbGear1.TabIndex = 0;
-            this.PbGear1.TabStop = false;
-            this.PbGear1.Click += new System.EventHandler(this.Unequip_Click);
-            // 
             // PbTab1
             // 
             this.PbTab1.BackgroundImage = global::Expedition_Builder_Online.Properties.Resources.Tab_1_DeactiveS;
@@ -6245,11 +6363,11 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1400, 1050);
-            this.Controls.Add(this.Pnl5);
             this.Controls.Add(this.Pnl1);
             this.Controls.Add(this.Pnl2);
             this.Controls.Add(this.Pnl3);
             this.Controls.Add(this.Pnl4);
+            this.Controls.Add(this.Pnl5);
             this.Controls.Add(this.PbTab1);
             this.Controls.Add(this.PbTab2);
             this.Controls.Add(this.PbTab3);
@@ -6261,75 +6379,48 @@
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.Initial_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Drag_Form);
-            this.Pnl5.ResumeLayout(false);
-            this.Pnl5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbHelp5)).EndInit();
-            this.PnlTalent5.ResumeLayout(false);
-            this.PnlTalent5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_0)).EndInit();
-            this.PnlTalent4.ResumeLayout(false);
-            this.PnlTalent4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_0)).EndInit();
-            this.PnlTalent3.ResumeLayout(false);
-            this.PnlTalent3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_0)).EndInit();
-            this.PnlTalent2.ResumeLayout(false);
-            this.PnlTalent2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_0)).EndInit();
-            this.PnlTalent1.ResumeLayout(false);
-            this.PnlTalent1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_0)).EndInit();
+            this.Pnl4.ResumeLayout(false);
+            this.Pnl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearSearch9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearSearch4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearSearch3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearSearch1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearSearch2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearSearch8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearSearch7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearSearch6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearSearch5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbHelp4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearSearchX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearEquip12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearEquip11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearEquip10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearEquip9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearEquip1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbGear1)).EndInit();
             this.Pnl1.ResumeLayout(false);
             this.Pnl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbSheets)).EndInit();
@@ -6440,6 +6531,75 @@
             ((System.ComponentModel.ISupportInitialize)(this.PbAff1_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbAff1_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbAff1)).EndInit();
+            this.Pnl5.ResumeLayout(false);
+            this.Pnl5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbHelp5)).EndInit();
+            this.PnlTalent5.ResumeLayout(false);
+            this.PnlTalent5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent5_0)).EndInit();
+            this.PnlTalent4.ResumeLayout(false);
+            this.PnlTalent4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent4_0)).EndInit();
+            this.PnlTalent3.ResumeLayout(false);
+            this.PnlTalent3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent3_0)).EndInit();
+            this.PnlTalent2.ResumeLayout(false);
+            this.PnlTalent2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent2_0)).EndInit();
+            this.PnlTalent1.ResumeLayout(false);
+            this.PnlTalent1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbTalent1_0)).EndInit();
             this.Pnl3.ResumeLayout(false);
             this.Pnl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbHelp3)).EndInit();
@@ -6551,38 +6711,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PbAbility3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbAbility2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbAbility1)).EndInit();
-            this.Pnl4.ResumeLayout(false);
-            this.Pnl4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbHelp4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearEquip12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearEquip11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearEquip10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearEquip9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearEquip1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGearStats1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbGear1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbTab1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbTab2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbTab3)).EndInit();
@@ -7031,5 +7159,15 @@
         public System.Windows.Forms.PictureBox PbSheets;
         private System.Windows.Forms.PictureBox PbTalent6;
         private System.Windows.Forms.Label LblTalent6;
+        private System.Windows.Forms.PictureBox PbGearSearchX;
+        private System.Windows.Forms.PictureBox PbGearSearch5;
+        private System.Windows.Forms.PictureBox PbGearSearch9;
+        private System.Windows.Forms.PictureBox PbGearSearch4;
+        private System.Windows.Forms.PictureBox PbGearSearch3;
+        private System.Windows.Forms.PictureBox PbGearSearch1;
+        private System.Windows.Forms.PictureBox PbGearSearch2;
+        private System.Windows.Forms.PictureBox PbGearSearch8;
+        private System.Windows.Forms.PictureBox PbGearSearch7;
+        private System.Windows.Forms.PictureBox PbGearSearch6;
     }
 }

@@ -80,14 +80,16 @@ namespace Expedition_Builder_Online
                 CbCharSource.Items.Add(Source.Name(i, false));
             }
 
-            Character.Data[0] = 100; // Role Rank
-            Character.Data[1] = 100; // Skill Rank
-            Character.Data[2] = 100; // Quest Rank
+            Character_Data[0] = 100; // Role Rank
+            Character_Data[1] = 100; // Skill Rank
+            Character_Data[2] = 100; // Quest Rank
         }
 
         int Tab_Current = 1; // The current Tab in the form
+        bool GearSelectiveSearch = false;
+        int GearSelectiveSlot = 0;
 
-        int[] AffinityChoice = new int[6]; // Saving the Affinity choices
+        int[] AffinityChoice = new int[6] { 4, 4, 3, 3, 3, 3 }; // Saving the Affinity choices
         int[] AbilityChoice = new int[9]; // Saving the Ability choices
         int[] TalentChoice = new int[60]; // Saving the Talent choices
 
@@ -109,136 +111,122 @@ namespace Expedition_Builder_Online
         bool TT_Affinity_Check = false;
         bool HelpMode = false;
 
-
-        public class Character
+        string Character_Name = "No Character Loaded";
+        string Character_Code = "Enter Character Code";
+        int Character_Data_Row = 0;
+        int[] Character_Data = new int[91];
+        double[] Character_Stats = new double[28];
+        string[] Character_Stats_Print = new string[28];
+        void Character_Load(string InputCode)
         {
-            public static string Name = "No Character Loaded";
-            public static string Code = "Enter Character Code";
-            public static int Row = 0;
-            public static int[] Data = new int[91];
-            /* 
-             * 0: Lvl
-             * 1: Feats
-             * 2: Source
-             * 3-8: Affinities
-             * 9-17: Abilities
-             * 18-29: Gear
-             * 30-89: Talents
-             */
-            public static double[] Stats = new double[28];
-            public static string[] StatsPrint = new string[28];
-            public static void Load(string InputCode)
+            string ConvertCode = InputCode.ToLower();
+
+            int Skipper = 0;
+
+            try
             {
-                string ConvertCode = InputCode.ToLower();
+                var GValues = GSheets.Service.Spreadsheets.Values.Get(GSheets.Code, GSheets.TabChar + GSheets.TabCharRange).Execute().Values;
 
-                int Skipper = 0;
-
-                try
+                foreach (var GRow in GValues)
                 {
-                    var GValues = GSheets.Service.Spreadsheets.Values.Get(GSheets.Code, GSheets.TabChar + GSheets.TabCharRange).Execute().Values;
+                    Skipper++;
 
-                    foreach (var GRow in GValues)
+                    if (GRow[0] != null && Skipper > 2)
                     {
-                        Skipper++;
-
-                        if (GRow[0] != null && Skipper > 2)
+                        if (GRow[0].ToString() == ConvertCode) // If the code matches
                         {
-                            if (GRow[0].ToString() == ConvertCode) // If the code matches
+                            Character_Code = GRow[0].ToString();
+                            Character_Name = GRow[1].ToString();
+
+                            for (int i = 0; i <= 90; i++)
                             {
-                                Code = GRow[0].ToString(); 
-                                Name = GRow[1].ToString();
-
-                                for (int i = 0; i <= 90; i++)
+                                try
                                 {
-                                    try
-                                    {
-                                        string Row = GRow[i + 2].ToString();
-                                        Data[i] = int.Parse(Row);
-                                    }
-                                    catch
-                                    {
-                                        Data[i] = 0;
-                                    }
+                                    string Row = GRow[i + 2].ToString();
+                                    Character_Data[i] = int.Parse(Row);
                                 }
-                                Character.Row = Skipper;
-                                break;
+                                catch
+                                {
+                                    Character_Data[i] = 0;
+                                }
                             }
+                            Character_Data_Row = Skipper;
+                            break;
                         }
-
                     }
 
                 }
-                catch
-                {
-                    //MessageBox.Show(ex.Message, "Character Load did not work at Row " + Skipper.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    MessageBox.Show("That input code did not work, maybe you typed it wrong (with a spacebar added where it shouldn't) or your connection with Sheets have been lost. A button has been added to refresh the Google Sheets connection!", "Character Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
 
-            public static void Save(string Tab, string Range, bool Fresh = false)
+            }
+            catch
             {
-                string Placement = "";
-                if (Fresh)
-                {
-                    SpreadsheetsResource.ValuesResource.GetRequest GRequest = GSheets.Service.Spreadsheets.Values.Get(GSheets.Code, Tab + Range); // Tab + TabChar
-                    System.Net.ServicePointManager.ServerCertificateValidationCallback = delegate (object sender2, X509Certificate certificate, X509Chain chain, System.Net.Security.SslPolicyErrors sslPolicyErrors) { return true; };
-                    ValueRange GResponse = GRequest.Execute();
-                    IList<IList<Object>> GValues = GResponse.Values;
-                    Placement = (GValues.Count + 1).ToString();
-                }
-                else
-                {
-                    Placement = Character.Row.ToString();
-                }
-                string RangeFrom = Range.Substring(0, 2);
-                string RangeTo = Range.Substring(2, 3);
-                var GRange = $"{Tab}" + RangeFrom + Placement + RangeTo + Placement;
-                var GValueRange = new ValueRange();
-
-                GValueRange.Values = new List<IList<Object>>();
-                List<Object> GValueRangeInner = new List<Object>();
-                if ((Fresh && Tab == GSheets.TabChar) || (Tab == GSheets.TabStats)) // first editions need to be placed for fresh characters
-                {
-                    GValueRangeInner.Add(Character.Code);
-                    GValueRangeInner.Add(Character.Name);
-                }  
-                if (Fresh && Tab == GSheets.TabChar)
-                {
-                    for (int i = 0; i <= 90; i++)
-                    {
-                        GValueRangeInner.Add(Character.Data[i]);
-                    }
-                }
-                else if (Tab == GSheets.TabChar)
-                {
-                    for (int i = 3; i <= 90; i++)
-                    {
-                        GValueRangeInner.Add(Character.Data[i]);
-                    }
-                    RangeFrom = "!G";
-                    GRange = $"{Tab}" + RangeFrom + Placement + RangeTo + Placement;
-                }
-                else if (Tab == GSheets.TabStats)
-                {
-                    for (int i = 0; i <= 87; i++) // other range, talents still added
-                    {
-                        if (i <= 27)
-                        {
-                            GValueRangeInner.Add(Character.StatsPrint[i]); // Stats for Raw stats, StatsPrint for converted stats
-                        }
-                        else
-                        {
-                            GValueRangeInner.Add(Character.Data[i + 3]); // make up for the difference
-                        }
-                    }
-                }
-
-                GValueRange.Values.Add(GValueRangeInner);
-
-                var GUpdateRequest = G.Service.Spreadsheets.Values.Update(GValueRange, GSheets.Code, GRange);
-                GUpdateRequest.ValueInputOption = SpreadsheetsResource.ValuesResource.UpdateRequest.ValueInputOptionEnum.USERENTERED;
-                var GUpdateResponse = GUpdateRequest.Execute();
+                //MessageBox.Show(ex.Message, "Character Load did not work at Row " + Skipper.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("That input code did not work, maybe you typed it wrong (with a spacebar added where it shouldn't) or your connection with Sheets have been lost. A button has been added to refresh the Google Sheets connection!", "Character Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+        void Character_Save(string Tab, string Range, bool Fresh = false)
+        {
+            string Placement = "";
+            if (Fresh)
+            {
+                SpreadsheetsResource.ValuesResource.GetRequest GRequest = GSheets.Service.Spreadsheets.Values.Get(GSheets.Code, Tab + Range); // Tab + TabChar
+                System.Net.ServicePointManager.ServerCertificateValidationCallback = delegate (object sender2, X509Certificate certificate, X509Chain chain, System.Net.Security.SslPolicyErrors sslPolicyErrors) { return true; };
+                ValueRange GResponse = GRequest.Execute();
+                IList<IList<Object>> GValues = GResponse.Values;
+                Placement = (GValues.Count + 1).ToString();
+            }
+            else
+            {
+                Placement = Character_Data_Row.ToString();
+            }
+            string RangeFrom = Range.Substring(0, 2);
+            string RangeTo = Range.Substring(2, 3);
+            var GRange = $"{Tab}" + RangeFrom + Placement + RangeTo + Placement;
+            var GValueRange = new ValueRange();
+
+            GValueRange.Values = new List<IList<Object>>();
+            List<Object> GValueRangeInner = new List<Object>();
+            if ((Fresh && Tab == GSheets.TabChar) || (Tab == GSheets.TabStats)) // first editions need to be placed for fresh characters
+            {
+                GValueRangeInner.Add(Character_Code);
+                GValueRangeInner.Add(Character_Name);
+            }
+            if (Fresh && Tab == GSheets.TabChar)
+            {
+                for (int i = 0; i <= 90; i++)
+                {
+                    GValueRangeInner.Add(Character_Data[i]);
+                }
+            }
+            else if (Tab == GSheets.TabChar)
+            {
+                for (int i = 3; i <= 90; i++)
+                {
+                    GValueRangeInner.Add(Character_Data[i]);
+                }
+                RangeFrom = "!G";
+                GRange = $"{Tab}" + RangeFrom + Placement + RangeTo + Placement;
+            }
+            else if (Tab == GSheets.TabStats)
+            {
+                for (int i = 0; i <= 87; i++) // other range, talents still added
+                {
+                    if (i <= 27)
+                    {
+                        GValueRangeInner.Add(Character_Stats_Print[i]); // Stats for Raw stats, StatsPrint for converted stats
+                    }
+                    else
+                    {
+                        GValueRangeInner.Add(Character_Data[i + 3]); // make up for the difference
+                    }
+                }
+            }
+
+            GValueRange.Values.Add(GValueRangeInner);
+
+            var GUpdateRequest = G.Service.Spreadsheets.Values.Update(GValueRange, GSheets.Code, GRange);
+            GUpdateRequest.ValueInputOption = SpreadsheetsResource.ValuesResource.UpdateRequest.ValueInputOptionEnum.USERENTERED;
+            var GUpdateResponse = GUpdateRequest.Execute();
         }
 
         ///
@@ -264,13 +252,13 @@ namespace Expedition_Builder_Online
 
                     if (i == Nr)
                     {
-                        ThisBox.Image = Tabs_A.ElementAt(i - 1);
+                        ImageChanger(ThisBox, "Tab-" + i.ToString() + "-ActiveS");
                         ThisPanel.Visible = true;
-                        PbBG.Image = Screen_Images.ElementAt(Nr - 1);
+                        ImageChanger(PbBG, "Screen-" + Nr.ToString() + "S");
                     }
                     else if (i == Tab_Current)
                     {
-                        ThisBox.Image = Tabs_D.ElementAt(i - 1);
+                        ImageChanger(ThisBox, "Tab-" + i.ToString() + "-DeactiveS");
                         ThisPanel.Visible = false;
                     }
                 }
@@ -283,7 +271,7 @@ namespace Expedition_Builder_Online
                 Ability_Calculate(); // Calculates abilities and prints them
                 Talent_Calculate();
                 Talent_Calculate_TradeOff();
-                SourceLoad(Character.Data[3]);
+                SourceLoad(Character_Data[3]);
                 Character_Data_Print();
                 TT_Character_Load();
             }
@@ -306,11 +294,11 @@ namespace Expedition_Builder_Online
                 {
                     if (i == Nr)
                     {
-                        ThisBox.Image = Tabs_S.ElementAt(i - 1);
+                        ImageChanger(ThisBox, "Tab-" + i.ToString() + "-SelectS");
                     }
                     else
                     {
-                        ThisBox.Image = Tabs_D.ElementAt(i - 1);
+                        ImageChanger(ThisBox, "Tab-" + i.ToString() + "-DeactiveS");
                     }
                 }
             }
@@ -325,41 +313,12 @@ namespace Expedition_Builder_Online
             SColor.FromArgb(46,46,46)
         };
 
-        List<Image> Screen_Images = new List<Image>()
+        void ImageChanger(PictureBox PBox, string ResourceName)
         {
-            Properties.Resources.Screen_1S,
-            Properties.Resources.Screen_2S,
-            Properties.Resources.Screen_3S,
-            Properties.Resources.Screen_4S,
-            Properties.Resources.Screen_5S
-        };
-
-        List<Image> Tabs_A = new List<Image>()
-        {
-            Properties.Resources.Tab_1_ActiveS,
-            Properties.Resources.Tab_2_ActiveS,
-            Properties.Resources.Tab_3_ActiveS,
-            Properties.Resources.Tab_4_ActiveS,
-            Properties.Resources.Tab_5_ActiveS
-        };
-
-        List<Image> Tabs_D = new List<Image>()
-        {
-            Properties.Resources.Tab_1_DeactiveS,
-            Properties.Resources.Tab_2_DeactiveS,
-            Properties.Resources.Tab_3_DeactiveS,
-            Properties.Resources.Tab_4_DeactiveS,
-            Properties.Resources.Tab_5_DeactiveS
-        };
-
-        List<Image> Tabs_S = new List<Image>()
-        {
-            Properties.Resources.Tab_1_SelectS,
-            Properties.Resources.Tab_2_SelectS,
-            Properties.Resources.Tab_3_SelectS,
-            Properties.Resources.Tab_4_SelectS,
-            Properties.Resources.Tab_5_SelectS
-        };
+            if (PBox.Image != null)
+            { PBox.Image.Dispose(); }
+            PBox.Image = (Bitmap)Expedition_Builder_Online.Properties.Resources.ResourceManager.GetObject(ResourceName);
+        }      
 
         //
         //          Dragging the Forms
@@ -392,21 +351,21 @@ namespace Expedition_Builder_Online
         {
             Character_Data_Print();
             Character_Data_Return();
-            if (Character.Row != 0 && TxtCode.Text.ToLower() == Character.Code)
+            if (Character_Data_Row != 0 && TxtCode.Text.ToLower() == Character_Code)
             {
                 MessageBox.Show("Time to Save this character");
-                Character.Save(GSheets.TabChar, GSheets.TabCharRange);
-                Character.Save(GSheets.TabStats, GSheets.TabStatsRange);
+                Character_Save(GSheets.TabChar, GSheets.TabCharRange);
+                Character_Save(GSheets.TabStats, GSheets.TabStatsRange);
             }
             else
             {
-                DialogResult dialogResult = MessageBox.Show(string.Format("{1} does not exist yet in the database.{0}Do you wish to create it with the following code?{0}Code: {2}", Environment.NewLine, Character.Name, TxtCode.Text.ToLower()), "Fresh Character", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show(string.Format("{1} does not exist yet in the database.{0}Do you wish to create it with the following code?{0}Code: {2}", Environment.NewLine, Character_Name, TxtCode.Text.ToLower()), "Fresh Character", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Character.Code = TxtCode.Text.ToLower();
+                    Character_Code = TxtCode.Text.ToLower();
                     MessageBox.Show("Great! Remember to ask the Expedition Master to link a ranking track when you start using this character!","You got it");
-                    Character.Save(GSheets.TabChar, GSheets.TabCharRange, true);
-                    Character.Save(GSheets.TabStats, GSheets.TabStatsRange, true);
+                    Character_Save(GSheets.TabChar, GSheets.TabCharRange, true);
+                    Character_Save(GSheets.TabStats, GSheets.TabStatsRange, true);
 
                     TT_Character_Load();
                 }
@@ -419,7 +378,7 @@ namespace Expedition_Builder_Online
 
         private void Char_Load(object sender, EventArgs e)
         {
-            Character.Load(TxtCode.Text); // Load the data in
+            Character_Load(TxtCode.Text); // Load the data in
             Character_Data_Convert(); // Use the data and put it in the right buckets
 
             Affinity_Calculate();
@@ -428,11 +387,11 @@ namespace Expedition_Builder_Online
             Talent_Calculate();
             Talent_Calculate_TradeOff();
 
-            LblCharName.Text = Character.Name;
-            LblChar0.Text = Character.Data[0].ToString();
-            LblChar1.Text = Character.Data[1].ToString();
-            LblChar2.Text = Character.Data[2].ToString();
-            SourceLoad(Character.Data[3]);
+            LblCharName.Text = Character_Name;
+            LblChar0.Text = Character_Data[0].ToString();
+            LblChar1.Text = Character_Data[1].ToString();
+            LblChar2.Text = Character_Data[2].ToString();
+            SourceLoad(Character_Data[3]);
             Character_Data_Print();
             TT_Affinity_Load();
             TT_Character_Load();
@@ -440,7 +399,7 @@ namespace Expedition_Builder_Online
 
         void Char_Update_Silent(string Code)
         {
-            Character.Load(Code);
+            Character_Load(Code);
             Character_Data_Convert();
 
             Affinity_Calculate();
@@ -452,7 +411,7 @@ namespace Expedition_Builder_Online
             Character_Data_Print();
             Character_Data_Return();
             
-            Character.Save(GSheets.TabStats, GSheets.TabStatsRange);
+            Character_Save(GSheets.TabStats, GSheets.TabStatsRange);
         }
 
         void Char_Update_MainCast()
@@ -523,19 +482,19 @@ namespace Expedition_Builder_Online
 19-30 gear
 30-89 talent
                  */
-                Character.Data[i] = AffinityChoice[i - 4];
+                Character_Data[i] = AffinityChoice[i - 4];
             }
             for (int i = 10; i <= 18; i++)
             {
-                Character.Data[i] = AbilityChoice[i - 10];
+                Character_Data[i] = AbilityChoice[i - 10];
             }
             for (int i = 19; i <= 30; i++)
             {
-                Character.Data[i] = Gear.Stats[i - 19][0];
+                Character_Data[i] = Gear.Stats[i - 19][0];
             }
             for (int i = 31; i <= 90; i++)
             {
-                Character.Data[i] = TalentChoice[i - 31];
+                Character_Data[i] = TalentChoice[i - 31];
             }
         }
 
@@ -545,7 +504,7 @@ namespace Expedition_Builder_Online
             // Load Affinity Scores
             for (int i = 1; i <= 6; i++)
             {
-                Affinity_Change(i, Character.Data[i + 3]); // 4-9 are affinities
+                Affinity_Change(i, Character_Data[i + 3]); // 4-9 are affinities
             }
 
             // Load Ability Growth Points
@@ -553,16 +512,16 @@ namespace Expedition_Builder_Online
             for (int i = 1; i <= 9; i++)
             {
                 AbilityChoice[i - 1] = -1; // 10-18 are abilities
-                Ability_Change(i, Character.Data[i + 9]);
+                Ability_Change(i, Character_Data[i + 9]);
             }
 
             // Load Equiped Gear
             TheNakedTruth(); // First, remove all gear
             for (int i = 1; i <= 12; i++)
             {
-                if (Character.Data[i + 18] > 0)
+                if (Character_Data[i + 18] > 0)
                 {
-                    GearEquip(i, Character.Data[i + 18]); // 19-30 are gear itemcodes
+                    GearEquip(i, Character_Data[i + 18]); // 19-30 are gear itemcodes
                 }
             }
             TT_Gear_Load();
@@ -578,7 +537,7 @@ namespace Expedition_Builder_Online
                     for (int j = 0; j <= 10; j++)
                     {
                         Select = Talent_Select_Index(i, j);
-                        if (Character.Data[Select + 31] > 0) // 31-90 are Talents
+                        if (Character_Data[Select + 31] > 0) // 31-90 are Talents
                         {
                             Talent_Selected(i, j, Select, true);
                         }
@@ -591,9 +550,9 @@ namespace Expedition_Builder_Online
                 else
                 {
                     Select = Talent_Select_Index(i, 0);
-                    if (Character.Data[Select + 31] > 0)
+                    if (Character_Data[Select + 31] > 0)
                     {
-                        for (int j = 0; j < Character.Data[Select + 31]; j++)
+                        for (int j = 0; j < Character_Data[Select + 31]; j++)
                         {
                             Talent_Selected_Ability(true);
                         }
@@ -615,11 +574,11 @@ namespace Expedition_Builder_Online
             {
                 if (i <= 18)
                 {
-                    Character.Stats[i] = AffinityStats[i] + GearStats[i] + TalentStats[i];
+                    Character_Stats[i] = AffinityStats[i] + GearStats[i] + TalentStats[i];
                 }
                 else
                 {
-                    Character.Stats[i] = AbilityStats[i-19] + GearStats[i] + TalentStats[i];
+                    Character_Stats[i] = AbilityStats[i-19] + GearStats[i] + TalentStats[i];
                 }
                 string LblName = "LblChar" + (i +4 ).ToString();
                 Label ThisLbl = this.Controls.Find(LblName, true).FirstOrDefault() as Label;
@@ -627,19 +586,19 @@ namespace Expedition_Builder_Online
                 switch (i)
                 {
                     case 15:
-                        Character.StatsPrint[i] = (12 - Character.Stats[i]).ToString();
+                        Character_Stats_Print[i] = (12 - Character_Stats[i]).ToString();
                         break;
                     case 17:
-                        Character.StatsPrint[i] = (20 - Character.Stats[i]).ToString();
+                        Character_Stats_Print[i] = (20 - Character_Stats[i]).ToString();
                         break;
                     case 3: case 18:
-                        Character.StatsPrint[i] = (1 + Character.Stats[i]).ToString();
+                        Character_Stats_Print[i] = (1 + Character_Stats[i]).ToString();
                         break;
                     default:
-                        Character.StatsPrint[i] = Character.Stats[i].ToString();
+                        Character_Stats_Print[i] = Character_Stats[i].ToString();
                         break;
                 }
-                ThisLbl.Text = Character.StatsPrint[i];
+                ThisLbl.Text = Character_Stats_Print[i];
             }        
         }
         private void TxtCode_TextChanged(object sender, EventArgs e)
@@ -698,8 +657,8 @@ namespace Expedition_Builder_Online
                 string TT = string.Format("Make sure you use the correct!{0}Current Code Sender: {1}", Environment.NewLine, TxtCode.Text);
                 if (i == 0)
                 { 
-                    TT += string.Format("{0}Current Code in Data: {1}", Environment.NewLine, Character.Code); 
-                    if (TxtCode.Text.ToLower() == Character.Code)
+                    TT += string.Format("{0}Current Code in Data: {1}", Environment.NewLine, Character_Code); 
+                    if (TxtCode.Text.ToLower() == Character_Code)
                     {
                         TT += string.Format("{0}Your current codes match!{0}Data will be written to the same character.", Environment.NewLine);
                     }
@@ -739,18 +698,23 @@ namespace Expedition_Builder_Online
 
             if (AffinityChoice[NrAffinity - 1] != NrAffinitySelect)
             {
-                for (int i = 1; i <= 7; i++) // There are 7 nodes for tri-affinities, and 5 nodes for duo-affinities. Does extra work for duo's currently
+                int Total = 5; // Duo affinity
+                if (NrAffinity <= 2)
+                { Total = 7; }
+
+                for (int i = 1; i <= Total; i++) // There are 7 nodes for tri-affinities, and 5 nodes for duo-affinities.
                 {
                     string PbAffName = "PbAff" + NrAffinity.ToString() + "_" + i.ToString(); // PbAff1_4 for example
                     PictureBox ThisBox = this.Controls.Find(PbAffName, true).FirstOrDefault() as PictureBox;
 
                     if (i == NrAffinitySelect)
                     {
-                        ThisBox.Image = Affinity_A.ElementAt(i - 1 + Skip);
+                        ImageChanger(ThisBox, Icon_Affinity(i + Skip, true, NrAffinity));
                     }
                     else if (i == AffinityChoice[NrAffinity - 1])
                     {
-                        ThisBox.Image = Affinity_D.ElementAt(i - 1 + Skip);
+                        ImageChanger(ThisBox, Icon_Affinity(i + Skip, false, NrAffinity));
+
                     }
                 }
                 AffinityChoice[NrAffinity - 1] = NrAffinitySelect;
@@ -759,6 +723,7 @@ namespace Expedition_Builder_Online
 
         void Affinity_Calculate()
         {
+            /* OBSOLUTE DUE TO START VALUES
             for (int i = 1; i <= 6; i++)
             {
                 if (AffinityChoice[i - 1] == 0)
@@ -774,8 +739,8 @@ namespace Expedition_Builder_Online
 
                 }
             } // Always choose a middle feat when calculating with empty slots
-
-            double SkillRank = (double)Character.Data[1] + TalentStats[29];
+            */
+            double SkillRank = (double)Character_Data[1] + TalentStats[29];
 
             // Offense Affinity
             double[] Off = Affinity_Results.ElementAt(AffinityChoice[0] + AIndexBoost[0]); // 1 Tri
@@ -912,55 +877,40 @@ namespace Expedition_Builder_Online
             new double[] { 0.00, 0.15 }
         };
 
-        List<Image> Affinity_A = new List<Image>()
+        string Icon_Affinity(int Index, bool Active, int Aff)
         {
-            Properties.Resources.Affinity_T1_A1,
-            Properties.Resources.Affinity_T1_A2,
-            Properties.Resources.Affinity_TX_A3,
-            Properties.Resources.Affinity_T1_A4,
-            Properties.Resources.Affinity_T1_A5,
-            Properties.Resources.Affinity_T1_A6,
-            Properties.Resources.Affinity_TX_A7,
-
-            Properties.Resources.Affinity_T2_A1,
-            Properties.Resources.Affinity_T2_A2,
-            Properties.Resources.Affinity_TX_A3,
-            Properties.Resources.Affinity_T2_A4,
-            Properties.Resources.Affinity_T2_A5,
-            Properties.Resources.Affinity_T2_A6,
-            Properties.Resources.Affinity_TX_A7,
-
-            Properties.Resources.Affinity_T2_A1,
-            Properties.Resources.Affinity_D_A2,
-            Properties.Resources.Affinity_D_A3,
-            Properties.Resources.Affinity_D_A4,
-            Properties.Resources.Affinity_TX_A3
-        };
-
-        List<Image> Affinity_D = new List<Image>()
-        {
-            Properties.Resources.Affinity_T1_D1,
-            Properties.Resources.Affinity_T1_D2,
-            Properties.Resources.Affinity_TX_D3,
-            Properties.Resources.Affinity_T1_D4,
-            Properties.Resources.Affinity_T1_D5,
-            Properties.Resources.Affinity_T1_D6,
-            Properties.Resources.Affinity_TX_D7,
-
-            Properties.Resources.Affinity_T2_D1,
-            Properties.Resources.Affinity_T2_D2,
-            Properties.Resources.Affinity_TX_D3,
-            Properties.Resources.Affinity_T2_D4,
-            Properties.Resources.Affinity_T2_D5,
-            Properties.Resources.Affinity_T2_D6,
-            Properties.Resources.Affinity_TX_D7,
-
-            Properties.Resources.Affinity_T2_D1,
-            Properties.Resources.Affinity_D_D2,
-            Properties.Resources.Affinity_D_D3,
-            Properties.Resources.Affinity_D_D4,
-            Properties.Resources.Affinity_TX_D3
-        };
+            int Number = Index;
+            if (Aff > 2)
+            {
+                Number = Index - 14;
+            }
+            else
+            {
+                Number = Index - (Aff - 1) * 7;
+            }
+            string Add = null;
+            if (Active)
+            {
+                Add = "A";
+            }
+            else
+            {
+                Add = "D";
+            }
+            switch(Index)
+            {
+                case 1: case 2: case 4: case 5: case 6:
+                    return "Affinity-T1-" + Add + Number.ToString();
+                case 8: case 9: case 11: case 12: case 13: case 15:
+                    return "Affinity-T2-" + Add + Number.ToString();
+                case 3: case 7: case 10: case 14:
+                    return "Affinity-TX-" + Add + Number.ToString();
+                case 16: case 17: case 18:
+                    return "Affinity-D-" + Add + Number.ToString();
+                default: // also for 19
+                    return "Affinity-TX-" + Add + "3";
+            }
+        }
 
         string[] AffinityNames = new string[6] { "Offense Trio Affinity", "Defense Trio Affinity", "Strike Affinity", "Survival Affinity", "Endurance Affinity", "Flexibility Affinity" };
         string[] ARed = new string[6] { "Physical Prowess", "Armor and Avoidance", "All Power", "Armor, Warding and Ease", "Health Points", "Link Points" };
@@ -1006,11 +956,11 @@ namespace Expedition_Builder_Online
 
                 TT_Affinity[i].ToolTipTitle = AffinityNames[i];
                 string TT = string.Format("Your {0} choice gives you the following bonusses (rounded down).{1}{1}", AffinityNames[i], Environment.NewLine);
-                TT += string.Format("Red Track: {1}.{0}{3}% of Rank {4}.{0}{2} total.{0}{0}", Environment.NewLine, ARed[i], Values[i], Tuple[0] * 100, Character.Data[1] );
-                TT += string.Format("Blue Track: {1}.{0}{3}% of Rank {4}.{0}{2} total.{0}{0}", Environment.NewLine, ABlue[i], Values[i + 6], Tuple[1] * 100, Character.Data[1] );
+                TT += string.Format("Red Track: {1}.{0}{3}% of Rank {4}.{0}{2} total.{0}{0}", Environment.NewLine, ARed[i], Values[i], Tuple[0] * 100, Character_Data[1] );
+                TT += string.Format("Blue Track: {1}.{0}{3}% of Rank {4}.{0}{2} total.{0}{0}", Environment.NewLine, ABlue[i], Values[i + 6], Tuple[1] * 100, Character_Data[1] );
                 if (i < 2)
                 {
-                    TT += string.Format("Yellow Track: {1}.{0}{3}% of Rank {4}.{0}{2} total.{0}{0}", Environment.NewLine, AYellow[i], Values[i + 12], Tuple[2] * 100, Character.Data[1] );
+                    TT += string.Format("Yellow Track: {1}.{0}{3}% of Rank {4}.{0}{2} total.{0}{0}", Environment.NewLine, AYellow[i], Values[i + 12], Tuple[2] * 100, Character_Data[1] );
                 }
                 if (i == 1 || i == 3)
                 {
@@ -1036,7 +986,8 @@ namespace Expedition_Builder_Online
             Ability_Change(NrAbi, NrAbiS);
             Ability_Growth_Update();
             Ability_Visibility();
-            Ability_Calculation(NrAbi - 1, Character.Data[0]);
+            Ability_Calculation(NrAbi - 1, Character_Data[0]);
+            GC.Collect(); // To use all those picture shizzle
         }
         private void Ability_Change(int NrAbility, int NrAbilitySelect)
         {
@@ -1046,27 +997,25 @@ namespace Expedition_Builder_Online
                 {
                     string PbAbiName = "PbAbility" + NrAbility.ToString() + "_" + i.ToString(); // PbAbility2_0 for example
                     PictureBox ThisBox = this.Controls.Find(PbAbiName, true).FirstOrDefault() as PictureBox;
+                    int Number = 0; // Standard = Deactivated
 
                     if (i == 0 && NrAbilitySelect > 0)
                     {
-                        ThisBox.Image = Ability_Image.ElementAt(2); // Start Node
+                        Number = 2; // Start Node
                     }
                     else if (i == 0 && NrAbilitySelect == 0)
                     {
-                        ThisBox.Image = Ability_Image.ElementAt(1); // Zero Node only
+                        Number = 1; // Zero Node only
                     }
                     else if (i > 0 && i < NrAbilitySelect)
                     {
-                        ThisBox.Image = Ability_Image.ElementAt(3); // Center Nodes
+                        Number = 3; // Center Nodes
                     }
                     else if (i == NrAbilitySelect)
                     {
-                        ThisBox.Image = Ability_Image.ElementAt(4); // End Node
+                        Number = 4; // End Node
                     }
-                    else
-                    {
-                        ThisBox.Image = Ability_Image.ElementAt(0); // Deactivated Node
-                    }
+                    ImageChanger(ThisBox, Icon_Ability(Number));
 
                 }
                 AbilityChoice[NrAbility - 1] = NrAbilitySelect;
@@ -1105,15 +1054,24 @@ namespace Expedition_Builder_Online
                 }
             }
         }
-
-        List<Image> Ability_Image = new List<Image>()
+        string Icon_Ability(int Index)
         {
-            Properties.Resources.Ability_D,         // 0: Deactivated
-            Properties.Resources.Ability_A_Zero,    // 1: Activated Zero Node
-            Properties.Resources.Ability_A_Start,   // 2: Activated Start Node
-            Properties.Resources.Ability_A_Center,  // 3: Activated Center Node
-            Properties.Resources.Ability_A_End      // 4: Activated End Node
-        };
+            string Base = "Ability-";
+            switch(Index)
+            {
+                case 1:
+                    return Base + "A-Zero";
+                case 2:
+                    return Base + "A-Start";
+                case 3:
+                    return Base + "A-Center";
+                case 4:
+                    return Base + "A-End";
+                default:
+                    return Base + "D";
+            }
+
+        }
 
         List<string> AbilityLevels = new List<string>
         {
@@ -1159,14 +1117,130 @@ namespace Expedition_Builder_Online
         {
             for (int i = 0; i <= 8; i++) // 23+
             {
-                Ability_Calculation(i, Character.Data[0]);
+                Ability_Calculation(i, Character_Data[0]);
             }
         }
 
         //
         //          Gear Loading (Tab 4)
         //
-
+        string Icon_Gear(int Index)
+        {
+            string Base = "EI-I-";
+            string Add = "";
+            if (Index > 15) 
+            { 
+                Add = "2"; 
+                Index -= 16; 
+            }
+            switch(Index)
+            {
+                case 1: // Head
+                    return Base + "AHelm" + Add;
+                case 2: // Shoulders
+                    return Base + "AShoulders" + Add;
+                case 3: // Cloak
+                    return Base + "ACloak" + Add;
+                case 4: // Chest
+                    return Base + "AChest" + Add;
+                case 5: // No Weapon
+                    return Base + "WN" + Add;
+                case 6: // Gloves
+                    return Base + "AGloves" + Add;
+                case 7: // Pants
+                    return Base + "APants" + Add;
+                case 8: // Boots
+                    return Base + "ABoots" + Add;
+                case 9: // Trinket - Medal
+                    return Base + "TM" + Add;
+                case 10: // Trinket - Ring
+                    return Base + "T" + Add;
+                case 11: // Trinket - Necklace
+                    return Base + "TN" + Add;
+                case 12: // Trinket - Orb
+                    return Base + "TO" + Add;
+                case 13: // Weapon - Martial
+                    return Base + "WP" + Add;
+                case 14: // Weapon - Magical
+                    return Base + "WM" + Add;
+                case 15: // Weapon - Supporting
+                    return Base + "WH" + Add;
+                default: // None
+                    return Base + "N" + Add;
+            }
+        }
+        string Icon_Stat(int Index)
+        {
+            string Base = "Stat-";
+            if (Index > 21) { Base = "EI-AB" + (Index-21).ToString() + "-"; }
+            switch (Index)
+            {
+                case 0:
+                    return Base + "Comment";
+                case 1:
+                    return Base + "Source";
+                case 2:
+                    return Base + "Lvl";
+                case 3:
+                    return Base + "HP";
+                case 4:
+                    return Base + "RP";
+                case 5:
+                    return Base + "LP";
+                case 6:
+                    return Base + "MP";
+                case 7:
+                    return Base + "PProw";
+                case 8:
+                    return Base + "PPower";
+                case 9:
+                    return Base + "Armor";
+                case 10:
+                    return Base + "Avoid";
+                case 11:
+                    return Base + "MProw";
+                case 12:
+                    return Base + "MPower";
+                case 13:
+                    return Base + "Ward";
+                case 14:
+                    return Base + "Resist";
+                case 15:
+                    return Base + "HProw";
+                case 16:
+                    return Base + "HPower";
+                case 17:
+                    return Base + "Rgn";
+                case 18:
+                    return Base + "Attune";
+                case 19:
+                    return Base + "Prec";
+                case 20:
+                    return Base + "CritHit";
+                case 21:
+                    return Base + "CritFail";
+                case 22:
+                    return Base + "Strength";
+                case 23:
+                    return Base + "Control";
+                case 24:
+                    return Base + "Perception";
+                case 25:
+                    return Base + "Knowledge";
+                case 26:
+                    return Base + "Magica";
+                case 27:
+                    return Base + "Survival";
+                case 28:
+                    return Base + "Deception";
+                case 29:
+                    return Base + "Finesse";
+                case 30:
+                    return Base + "Mentality";
+                default:
+                    return Base + "Lvl";
+            }
+        }
         public static class Gear
         {
             public static string[] Name = new string[12];
@@ -1222,45 +1296,6 @@ namespace Expedition_Builder_Online
               "Mentality"           // 30
             };
 
-            public static List<Image> Icons = new List<Image>()
-            {
-                // Equiped
-                Properties.Resources.EI_I_N,          // 0: None
-                Properties.Resources.EI_I_AHelm,      // 1: Head
-                Properties.Resources.EI_I_AShoulders, // 2: Shoulders
-                Properties.Resources.EI_I_ACloak,     // 3: Cloak
-                Properties.Resources.EI_I_AChest,     // 4: Chest
-                Properties.Resources.EI_I_WN,         // 5: NoWeapon
-                Properties.Resources.EI_I_AGloves,    // 6: Gloves
-                Properties.Resources.EI_I_APants,     // 7: Pants
-                Properties.Resources.EI_I_ABoots,     // 8: Boots
-                Properties.Resources.EI_I_TM,         // 9: Trinket - Medal
-                Properties.Resources.EI_I_T,          // 10: Trinket - Ring
-                Properties.Resources.EI_I_TN,         // 11: Trinket - Necklace
-                Properties.Resources.EI_I_TO,         // 12: Trinket - Orb
-                Properties.Resources.EI_I_WP,         // 13: Weapon - Martial
-                Properties.Resources.EI_I_WM,         // 14: Weapon - Magical
-                Properties.Resources.EI_I_WH,         // 15: Weapon - Supporting
-
-                // Unequiped
-                Properties.Resources.EI_I_N2,         // 16: None
-                Properties.Resources.EI_I_AHelm2,     // 17: Head
-                Properties.Resources.EI_I_AShoulders2,// 18: Shoulders
-                Properties.Resources.EI_I_ACloak2,    // 19: Cloak
-                Properties.Resources.EI_I_AChest2,    // 20: Chest
-                Properties.Resources.EI_I_WN2,        // 21: NoWeapon
-                Properties.Resources.EI_I_AGloves2,   // 22: Gloves
-                Properties.Resources.EI_I_APants2,    // 23: Pants
-                Properties.Resources.EI_I_ABoots2,    // 24: Boots
-                Properties.Resources.EI_I_TM2,        // 25: Trinket - Medal
-                Properties.Resources.EI_I_T2,         // 26: Trinket - Ring
-                Properties.Resources.EI_I_TN2,        // 27: Trinket - Necklace
-                Properties.Resources.EI_I_TO2,        // 28: Trinket - Orb
-                Properties.Resources.EI_I_WP2,        // 29: Weapon - Martial
-                Properties.Resources.EI_I_WM2,        // 30: Weapon - Magical
-                Properties.Resources.EI_I_WH2         // 31: Weapon - Supporting
-            };
-
             public static List<double> Budget = new List<double>()
             {
                 0.2,    // 0: HP
@@ -1312,48 +1347,6 @@ namespace Expedition_Builder_Online
         };
         }
 
-        List<Image> StatIcon = new List<Image>()
-        {
-            Properties.Resources.Stat_Comment,      // 0
-            Properties.Resources.Stat_Source,       // 1
-            Properties.Resources.Stat_Lvl,          // 2
-
-            Properties.Resources.Stat_HP,           // 3
-            Properties.Resources.Stat_RP,           // 4
-            Properties.Resources.Stat_LP,           // 5
-            Properties.Resources.Stat_MP,           // 6
-            
-            Properties.Resources.Stat_PProw,        // 7
-            Properties.Resources.Stat_PPower,       // 8
-            Properties.Resources.Stat_Armor,        // 9
-            Properties.Resources.Stat_Avoid,        // 10
-
-            Properties.Resources.Stat_MProw,        // 11
-            Properties.Resources.Stat_MPower,       // 12
-            Properties.Resources.Stat_Ward,         // 13
-            Properties.Resources.Stat_Resist,       // 14
-
-            Properties.Resources.Stat_HProw,        // 15
-            Properties.Resources.Stat_HPower,       // 16
-            Properties.Resources.Stat_Rgn,          // 17
-            Properties.Resources.Stat_Attune,       // 18
-
-            Properties.Resources.Stat_Prec,         // 19
-            Properties.Resources.Stat_CritHit,      // 20
-            Properties.Resources.Stat_CritFail,     // 21
-
-            Properties.Resources.EI_AB1_Strength,   // 22
-            Properties.Resources.EI_AB2_Control,    // 23
-            Properties.Resources.EI_AB3_Perception, // 24
-            
-            Properties.Resources.EI_AB4_Knowledge,  // 25
-            Properties.Resources.EI_AB5_Magica,     // 26
-            Properties.Resources.EI_AB6_Survival,   // 27
-
-            Properties.Resources.EI_AB7_Deception,  // 28
-            Properties.Resources.EI_AB8_Finesse,    // 29
-            Properties.Resources.EI_AB9_Mentality   // 30
-        };
         void TempGearLoad(int ItemCode)
         {
             int Skipper = 0;  // Skip a few rows that contain headers
@@ -1390,6 +1383,7 @@ namespace Expedition_Builder_Online
                         }
                     }
                 }
+                GValues.Clear();
             }
             catch (Exception ex)
             {
@@ -1415,32 +1409,32 @@ namespace Expedition_Builder_Online
             }
 
             int ImageSlot = GearSlotImage(Gear.TempStats[1], Gear.TempType);
-            PbGearStats1.Image = Gear.Icons[ImageSlot];
+            ImageChanger(PbGearStats1, Icon_Gear(ImageSlot));
             LblGearStats1.Text = string.Format("{1}{0}", Gear.TempType, GearRater(Gear.TempStats));
 
             for (int i = 2; i <= 30; i++) // First without abilities (21)
             {
-                if (Gear.TempStats[i] != 0)
+                if (Gear.TempStats[i] != 0 && UsedBox < 12)
                 {
                     PbGearName = "PbGearStats" + UsedBox.ToString();
                     LblGearName = "LblGearStats" + UsedBox.ToString();
                     ThisBox = this.Controls.Find(PbGearName, true).FirstOrDefault() as PictureBox;
                     ThisLbl = this.Controls.Find(LblGearName, true).FirstOrDefault() as Label;
 
-                    ThisBox.Image = StatIcon[i];
+                    ImageChanger(ThisBox, Icon_Stat(i));
                     ThisLbl.Text = string.Format("{0}:{1}", Gear.StatNames.ElementAt(i), Gear.TempStats[i]);
 
                     UsedBox++;
                 }
             }
-            if (Gear.TempSource != "")
+            if (Gear.TempSource != "" && UsedBox < 12)
             {
                 PbGearName = "PbGearStats" + UsedBox.ToString();
                 LblGearName = "LblGearStats" + UsedBox.ToString();
                 ThisBox = this.Controls.Find(PbGearName, true).FirstOrDefault() as PictureBox;
                 ThisLbl = this.Controls.Find(LblGearName, true).FirstOrDefault() as Label;
 
-                ThisBox.Image = StatIcon[1];
+                ImageChanger(ThisBox, Icon_Stat(1));
                 ThisLbl.Text = Gear.TempSource;
 
                 UsedBox++;
@@ -1451,7 +1445,7 @@ namespace Expedition_Builder_Online
             ThisBox = this.Controls.Find(PbGearName, true).FirstOrDefault() as PictureBox;
             ThisLbl = this.Controls.Find(LblGearName, true).FirstOrDefault() as Label;
 
-            ThisBox.Image = StatIcon[0];
+            ImageChanger(ThisBox, Icon_Stat(0));
             ThisLbl.Text = string.Format(Gear.TempDescription, System.Environment.NewLine);
         }
         void TempGearListReset()
@@ -1460,14 +1454,30 @@ namespace Expedition_Builder_Online
             {
                 var GValues = GSheets.Service.Spreadsheets.Values.Get(GSheets.Code, GSheets.TabItem + GSheets.TabItemRange).Execute().Values; // Values is made up of a list of rows with columns as index
                 CbGearSelect.Items.Clear(); // Refresh this list
+                CbGearSelectIndex.Clear();
 
                 foreach (var GRow in GValues)
                 {
                     try
                     {
-                        int.Parse((GRow[1].ToString())); // Check if the Item Slot exists
-                        string ItemNameType = string.Format("{0}-{1}: {2}", GRow[0].ToString(), GRow[2].ToString(), GRow[3].ToString()); // Add the type in front for better navigating
-                        CbGearSelect.Items.Add(ItemNameType); // Add the names to the combobox
+                        int.Parse(GRow[1].ToString()); // Check if the Item Slot exists
+                        int Code = int.Parse(GRow[0].ToString()); // Remember the code
+
+                        if (GearSelectiveSlot == 0)
+                        {
+                            string ItemNameType = string.Format("{0}-{1}: {2}", GRow[0].ToString(), GRow[2].ToString(), GRow[3].ToString()); // Add the type in front for better navigating
+                            CbGearSelect.Items.Add(ItemNameType); // Add the names to the combobox
+                            CbGearSelectIndex.Add(Code);
+                        }
+                        else
+                        {
+                            string ItemName = string.Format("{0}-{1}", GRow[0].ToString(), GRow[3].ToString()); // Add only the code, type is not needed.
+                            if (GRow[1].ToString() == GearSelectiveSlot.ToString())
+                            { 
+                                CbGearSelect.Items.Add(ItemName);
+                                CbGearSelectIndex.Add(Code);                      
+                            }
+                        }
                     }
                     catch
                     { }
@@ -1480,9 +1490,67 @@ namespace Expedition_Builder_Online
         }
         private void CbGearSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TempGearLoad(CbGearSelect.SelectedIndex + 1);
+            TempGearLoad(CbGearSelectIndex.ElementAt(CbGearSelect.SelectedIndex));
             TempGearPrintOut();
             EquipVisible(Gear.TempStats[1]);
+            GC.Collect(); // Collect some garbage
+        }
+        List<int> CbGearSelectIndex = new List<int>();
+        private void GearSearch_Toggle(object sender, EventArgs e)
+        {
+            PbGearSearchX.Image.Dispose();
+            if (GearSelectiveSearch)
+            {
+                PbGearSearchX.Image = Properties.Resources.Gear_SearchAny;
+                GearSelectiveSearch = false;
+                GearSelect_Toggle(GearSelectiveSlot);
+            }
+            else
+            {
+                PbGearSearchX.Image = Properties.Resources.Gear_SearchSelective;
+                GearSelectiveSearch = true;
+            }
+            
+            for (int i = 1; i <= 9; i++)
+            {
+                string PbGearSName = "PbGearSearch" + i.ToString();
+                PictureBox ThisBox = this.Controls.Find(PbGearSName, true).FirstOrDefault() as PictureBox;
+                ThisBox.Visible = GearSelectiveSearch;
+            }
+        }
+        private void PbGearSelect_Click(object sender, EventArgs e)
+        {
+            PictureBox TempBox = (PictureBox)sender;
+            int Nr = 0;
+            try
+            { Nr = int.Parse(TempBox.Name.Substring(12, 2)); }
+            catch
+            { Nr = int.Parse(TempBox.Name.Substring(12, 1)); }
+
+            GearSelect_Toggle(Nr);
+        }
+        void GearSelect_Toggle(int Slot)
+        {
+            string PbGearSName = "PbGearSearch" + Slot.ToString();
+            PictureBox ThisBox = this.Controls.Find(PbGearSName, true).FirstOrDefault() as PictureBox;
+
+            if (Slot == GearSelectiveSlot) // If it's the type already chosen
+            {
+                GearSelectiveSlot = 0; // No Type
+                ThisBox.Image = Resources.Gear_SearchSelectTypeD;
+            }
+            else // If it's a new type
+            {
+                if (GearSelectiveSlot != 0)
+                {
+                    string PbGearSOldName = "PbGearSearch" + GearSelectiveSlot.ToString();
+                    PictureBox ThatBox = this.Controls.Find(PbGearSOldName, true).FirstOrDefault() as PictureBox;
+                    ThatBox.Image = Resources.Gear_SearchSelectTypeD;
+                }
+                GearSelectiveSlot = Slot;
+                ThisBox.Image = Resources.Gear_SearchSelectTypeA;
+            }
+            TempGearListReset();
         }
         void EquipVisible(int Slot = 0) // No additions = Invisible
         {
@@ -1663,7 +1731,7 @@ namespace Expedition_Builder_Online
             Gear.Quality[Slot - 1] = GearRater(Gear.Stats[Slot - 1]);
             string PbGearName = "PbGear" + Slot.ToString();
             PictureBox ThisBox = this.Controls.Find(PbGearName, true).FirstOrDefault() as PictureBox;
-            ThisBox.Image = Gear.Icons[GearSlotImage(Slot, Gear.Type[Slot - 1])];
+            ImageChanger(ThisBox, Icon_Gear(GearSlotImage(Slot, Gear.Type[Slot - 1])));
         }
         void GearUnequip(int Slot)
         {
@@ -1675,7 +1743,7 @@ namespace Expedition_Builder_Online
             Gear.Equiped[Slot - 1] = false;
             string PbGearName = "PbGear" + Slot.ToString();
             PictureBox ThisBox = this.Controls.Find(PbGearName, true).FirstOrDefault() as PictureBox;
-            ThisBox.Image = Gear.Icons[Slot + 16];
+            ImageChanger(ThisBox, Icon_Gear(Slot + 16));
         }
         void TheNakedTruth()
         {
@@ -1764,21 +1832,18 @@ namespace Expedition_Builder_Online
         //       
         public class Talent
         {
-            public Image Image_A = null;
-            public Image Image_D = null;
             public int Cost = 0;
             public int Exclusive = 0;
             public string Name = null;
             public string Description = null;
             public string Effect = null;
-            public PictureBox Box = null;
             public ToolTip TT = new ToolTip() 
             {
                 BackColor = SColor.Black, 
                 ForeColor = SColor.White,
             };
 
-            public void TT_Generate()
+            public void TT_Generate(PictureBox Box)
             {
                 TT.ToolTipTitle = Name;
                 string Caption = string.Format("Point Cost: {1}{0}" + Description + "{0}" + Effect, Environment.NewLine, Cost);
@@ -1791,8 +1856,6 @@ namespace Expedition_Builder_Online
             // AFFINITY TALENTS
             new Talent
             {
-                Image_A = Resources.EI_T_0A,
-                Image_D = Resources.EI_T_0D,
                 Cost = 15,
                 Name = "Natural Affinity: Strike",
                 Description = "You've got this!{0}Your Strike affinity will have a higher maximum to reach!",
@@ -1800,8 +1863,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_1A,
-                Image_D = Resources.EI_T_1D,
                 Cost = 15,
                 Name = "Natural Affinity: Survival",
                 Description = "You've got this!{0}Your Survival affinity will have a higher maximum to reach!",
@@ -1809,8 +1870,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_2A,
-                Image_D = Resources.EI_T_2D,
                 Cost = 15,
                 Name = "Natural Affinity: Endurance",
                 Description = "You've got this!{0}Your Endurance affinity will have a higher maximum to reach!",
@@ -1818,8 +1877,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_3A,
-                Image_D = Resources.EI_T_3D,
                 Cost = 15,
                 Name = "Natural Affinity: Flexibility",
                 Description = "You've got this!{0}Your Flexibility affinity will have a higher maximum to reach!",
@@ -1827,8 +1884,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_4A,
-                Image_D = Resources.EI_T_4D,
                 Cost = 10,
                 Name = "Hybrid Potency: Strike",
                 Description = "I get it, you do not want downsides.{0}Your Strike affinity will have a higher minimum.{0}No dump stats for you, my friend.",
@@ -1836,8 +1891,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_5A,
-                Image_D = Resources.EI_T_5D,
                 Cost = 10,
                 Name = "Hybrid Potency: Survival",
                 Description = "I get it, you do not want downsides.{0}Your Survival affinity will have a higher minimum.{0}No dump stats for you, my friend.",
@@ -1845,8 +1898,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_6A,
-                Image_D = Resources.EI_T_6D,
                 Cost = 10,
                 Name = "Hybrid Potency: Endurance",
                 Description = "I get it, you do not want downsides.{0}Your Endurance affinity will have a higher minimum.{0}No dump stats for you, my friend.",
@@ -1854,8 +1905,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_7A,
-                Image_D = Resources.EI_T_7D,
                 Cost = 10,
                 Name = "Hybrid Potency: Flexibility",
                 Description = "I get it, you do not want downsides.{0}Your Flexibility affinity will have a higher minimum.{0}No dump stats for you, my friend.",
@@ -1863,8 +1912,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_8A,
-                Image_D = Resources.EI_T_8D,
                 Cost = 12,
                 Name = "Ironskin",
                 Description = "They think they slash you.{0}They think wrong.",
@@ -1872,8 +1919,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_9A,
-                Image_D = Resources.EI_T_9D,
                 Cost = 12,
                 Name = "Barrier",
                 Description = "It might not be visible, but{0}it certainly works.",
@@ -1881,8 +1926,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_10A,
-                Image_D = Resources.EI_T_10D,
                 Cost = 12,
                 Name = "Regenerate",
                 Description = "It is very important to keep yourself alive.{0}And to do so, it's better to be very healable.",
@@ -1891,8 +1934,6 @@ namespace Expedition_Builder_Online
             // GEAR TALENTS
             new Talent
             {
-                Image_A = Resources.EI_T_11A,
-                Image_D = Resources.EI_T_11D,
                 Cost = 26,
                 Name = "Old Favorite",
                 Description = "Everyone likes to smack others with something,{0}but nothing is as satisfying as using your favorite smacking stick.{0}Of course our competence gives prowess!",
@@ -1900,8 +1941,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_12A,
-                Image_D = Resources.EI_T_12D,
                 Cost = 26,
                 Name = "Competent Wizardry",
                 Description = "My weapon will do pew pew, kablamo, pazazzz!{0}Some more prowess will never hurt when using my magical stick",
@@ -1909,8 +1948,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_13A,
-                Image_D = Resources.EI_T_13D,
                 Cost = 26,
                 Name = "My Faithfull Tools",
                 Description = "Faith is our strength.{0}Using it wisely will allow us{0}When wearing the right tool{0}It shall give us more prowess",
@@ -1918,8 +1955,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_14A,
-                Image_D = Resources.EI_T_14D,
                 Cost = 22,
                 Name = "Anything Will Do",
                 Description = "Just grab a stick or something.{0}Just not one of those conventional weapons.",
@@ -1927,8 +1962,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_15A,
-                Image_D = Resources.EI_T_15D,
                 Cost = 20,
                 Name = "Comfortable Wear",
                 Description = "This outfit fits like a charm!{0} You get 1 avoidance for every of the following{0}slots which has an item equiped:{0}Shoulders, Chest, Gloves, Pants",
@@ -1936,8 +1969,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_16A,
-                Image_D = Resources.EI_T_16D,
                 Cost = 20,
                 Name = "Grounded in Reality",
                 Description = "The power to resist{0} You get 1 resistance for every of the following{0}slots which has an item equiped:{0}Head, Cloak, Chest, Boots",
@@ -1945,8 +1976,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_17A,
-                Image_D = Resources.EI_T_17D,
                 Cost = 20,
                 Name = "Healing Magnets",
                 Description = "Use your trinkets to find solace{0} You get 1 attune for every of trinket{0}slot which has an item equiped",
@@ -1954,8 +1983,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_18A,
-                Image_D = Resources.EI_T_18D,
                 Cost = 28,
                 Name = "I Am Unbreakable",
                 Description = "Who needs clothes anyway?{0}You get 1 armor, warding and ease if you aren't fully equiped.",
@@ -1963,8 +1990,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_19A,
-                Image_D = Resources.EI_T_19D,
                 Cost = 25,
                 Name = "The One Ring",
                 Description = "You only ever need one ring",
@@ -1972,8 +1997,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_20A,
-                Image_D = Resources.EI_T_20D,
                 Cost = 14,
                 Name = "Medal of Honor",
                 Description = "You served the people well{0}Wear your medals with pride!{0}If you have 4 medals equiped, get an{0}Abiltiy bonus!",
@@ -1981,8 +2004,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_21A,
-                Image_D = Resources.EI_T_21D,
                 Cost = -20,
                 Name = "Cursebearer",
                 Description = "Don't you just love gear{0}with a fair bit of extra challenge?{0}Cursed Gear gives you additional penalties.",
@@ -1992,8 +2013,6 @@ namespace Expedition_Builder_Online
             new Talent
             {
                 Exclusive = 23,
-                Image_A = Resources.EI_T_22A,
-                Image_D = Resources.EI_T_22D,
                 Cost = 12,
                 Name = "Cowardice",
                 Description = "Because why would you even try to hit something.{0}As long as you don't get hit, you do not lose.",
@@ -2002,8 +2021,6 @@ namespace Expedition_Builder_Online
             new Talent
             {
                 Exclusive = 22,
-                Image_A = Resources.EI_T_23A,
-                Image_D = Resources.EI_T_23D,
                 Cost = 12,
                 Name = "Recklessness",
                 Description = "True fighters handle just take attacks,{0}and they will make sure to return the favor.",
@@ -2012,8 +2029,6 @@ namespace Expedition_Builder_Online
             new Talent
             {
                 Exclusive = 25,
-                Image_A = Resources.EI_T_24A,
-                Image_D = Resources.EI_T_24D,
                 Cost = 12,
                 Name = "Plaguedoctor",
                 Description = "A little bit of sickness gives you so much more profit.{0}Becoming tougher to heal is well worth the better attunement!",
@@ -2022,8 +2037,6 @@ namespace Expedition_Builder_Online
             new Talent
             {
                 Exclusive = 24,
-                Image_A = Resources.EI_T_25A,
-                Image_D = Resources.EI_T_25D,
                 Cost = 12,
                 Name = "Nine Lives",
                 Description = "So petable, so hard to be pet.{0}So healable, so hard to be healed",
@@ -2032,8 +2045,6 @@ namespace Expedition_Builder_Online
             new Talent
             {
                 Exclusive = 27,
-                Image_A = Resources.EI_T_26A,
-                Image_D = Resources.EI_T_26D,
                 Cost = 12,
                 Name = "Make it Count",
                 Description = "Power is for the taking!{0}However, you will not be as resourceful as you could be.",
@@ -2042,8 +2053,6 @@ namespace Expedition_Builder_Online
             new Talent
             {
                 Exclusive = 26,
-                Image_A = Resources.EI_T_27A,
-                Image_D = Resources.EI_T_27D,
                 Cost = 12,
                 Name = "More, Not Stronger",
                 Description = "The winner is the one who{0}can still keep going!",
@@ -2052,8 +2061,6 @@ namespace Expedition_Builder_Online
             new Talent
             {
                 Exclusive = 29,
-                Image_A = Resources.EI_T_28A,
-                Image_D = Resources.EI_T_28D,
                 Cost = 16,
                 Name = "Lone Wolf",
                 Description = "Others only get in the way.{0}All this connected nonsense is nothing for you.{0}All your Link Points will become extra Resource Points instead.",
@@ -2062,8 +2069,6 @@ namespace Expedition_Builder_Online
             new Talent
             {
                 Exclusive = 28,
-                Image_A = Resources.EI_T_29A,
-                Image_D = Resources.EI_T_29D,
                 Cost = 16,
                 Name = "Connected",
                 Description = "My friends are my power, literally!{0}As long as your pals know some decent moves..{0}All your Resource Points will become extra Link Points instead.",
@@ -2071,8 +2076,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_30A,
-                Image_D = Resources.EI_T_30D,
                 Cost = 16,
                 Name = "Eye for an Eye",
                 Description = "Eye for an eye.{0}Smackdown for a smackdown.",
@@ -2080,8 +2083,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_31A,
-                Image_D = Resources.EI_T_31D,
                 Cost = 16,
                 Name = "Glass Cannon",
                 Description = "Sacrifice all your defenses.{0}Obtain even more offenses.{0}Glass cannons do shoot hard!",
@@ -2089,8 +2090,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_32A,
-                Image_D = Resources.EI_T_32D,
                 Cost = 16,
                 Name = "Selfless",
                 Description = "You better dodge, because you{0}will barely get healed anymore.",
@@ -2099,8 +2098,6 @@ namespace Expedition_Builder_Online
             // GROWTH TALENTS
             new Talent
             {
-                Image_A = Resources.EI_T_33A,
-                Image_D = Resources.EI_T_33D,
                 Cost = 24,
                 Name = "Unlimited Power!",
                 Description = "Unlimited might be an overstatement,{0}but every little bit of resource helps, right?",
@@ -2109,8 +2106,6 @@ namespace Expedition_Builder_Online
             new Talent
             {
                 Exclusive = 35,
-                Image_A = Resources.EI_T_34A,
-                Image_D = Resources.EI_T_34D,
                 Cost = 24,
                 Name = "Like the Wind",
                 Description = "Sting like a butterfly, strike like the...{0}Wait...{0}No?{0}Well, GOTTA GO FAST THEN!",
@@ -2119,8 +2114,6 @@ namespace Expedition_Builder_Online
             new Talent
             {
                 Exclusive = 34,
-                Image_A = Resources.EI_T_35A,
-                Image_D = Resources.EI_T_35D,
                 Cost = -24,
                 Name = "Slow and Steady",
                 Description = "Just taunt the enemy enough to come to you!",
@@ -2128,8 +2121,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_36A,
-                Image_D = Resources.EI_T_36D,
                 Cost = 18,
                 Name = "Trust me, I'm a Doctor",
                 Description = "Wait, are you really a doctor?{0}'I can do the healing'{0}I do not feel safe{0}'But with this talent it's even more healing!",
@@ -2138,8 +2129,6 @@ namespace Expedition_Builder_Online
             new Talent
             {
                 Exclusive = 38,
-                Image_A = Resources.EI_T_37A,
-                Image_D = Resources.EI_T_37D,
                 Cost = 24,
                 Name = "I Just Wanna Live",
                 Description = "As long as you have health, you are not dead.{0}So better get more of it then!",
@@ -2148,8 +2137,6 @@ namespace Expedition_Builder_Online
             new Talent
             {
                 Exclusive = 37,
-                Image_A = Resources.EI_T_38A,
-                Image_D = Resources.EI_T_38D,
                 Cost = -24,
                 Name = "Just Don't Get Hit",
                 Description = "Pain and misery always hit the spot.{0}Knowing you can't lose what you haven't got.",
@@ -2158,8 +2145,6 @@ namespace Expedition_Builder_Online
             new Talent
             {
                 Exclusive = 40,
-                Image_A = Resources.EI_T_39A,
-                Image_D = Resources.EI_T_39D,
                 Cost = 20,
                 Name = "High Roller",
                 Description = "Just what if everything had more{0}chances to be the best?",
@@ -2168,8 +2153,6 @@ namespace Expedition_Builder_Online
             new Talent
             {
                 Exclusive = 39,
-                Image_A = Resources.EI_T_40A,
-                Image_D = Resources.EI_T_40D,
                 Cost = -20,
                 Name = "Skillfull Mistake",
                 Description = "We all like to live a little...{0}..but this just seems like asking for it.",
@@ -2177,8 +2160,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_41A,
-                Image_D = Resources.EI_T_41D,
                 Cost = 14,
                 Name = "Elemental Prowess",
                 Description = "Your own element is something you should be good at.{0}Some extra prowess never hurts then!",
@@ -2186,8 +2167,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_42A,
-                Image_D = Resources.EI_T_42D,
                 Cost = 16,
                 Name = "Source Overdrive",
                 Description = "Your source of power is your core.{0}You should figure out it's full potential.",
@@ -2195,8 +2174,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_43A,
-                Image_D = Resources.EI_T_43D,
                 Cost = 14,
                 Name = "Connected Prowess",
                 Description = "You should be a true teamplayer.{0}Or you are just using your friends for power..{0}Either way, prowess on link skills helps!",
@@ -2205,8 +2182,6 @@ namespace Expedition_Builder_Online
             // SKILL TALENTS
             new Talent
             {
-                Image_A = Resources.EI_T_44A,
-                Image_D = Resources.EI_T_44D,
                 Cost = 16,
                 Name = "God Eater",
                 Description = "Sometimes you make stupid decisions.{0}Sometimes it was intentional.{0}Either way, to quickly solve this problem, you need more prowess!",
@@ -2214,8 +2189,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_45A,
-                Image_D = Resources.EI_T_45D,
                 Cost = 24,
                 Name = "Combat Meditation",
                 Description = "Being passive might save you one day.{0}You get 1 resource point at the end of your turn if you did not use your Main action to attack",
@@ -2223,8 +2196,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_46A,
-                Image_D = Resources.EI_T_46D,
                 Cost = 15,
                 Name = "Initial T",
                 Description = "It's gonna be so exciting!{0}On the first turn of combat, get double the movement points{0}and two Main actions. You do not have a Minor action.",
@@ -2232,8 +2203,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_47A,
-                Image_D = Resources.EI_T_47D,
                 Cost = 20,
                 Name = "Hyperfocus",
                 Description = "Take a breather for once, and focus.{0}You'll notice that things aren't as hard as they seem.{0}You can use this stored power when you really need it.",
@@ -2241,8 +2210,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_48A,
-                Image_D = Resources.EI_T_48D,
                 Cost = 25,
                 Name = "Minor Bargain",
                 Description = "More is more, and time is resource!{0}You can use Minor action indefinitly, but each time{0}you use it in a turn, it costs 1 extra resource point.",
@@ -2251,8 +2218,6 @@ namespace Expedition_Builder_Online
             new Talent
             {
                 Exclusive = 50,
-                Image_A = Resources.EI_T_49A,
-                Image_D = Resources.EI_T_49D,
                 Cost = 15,
                 Name = "Experienced Adventurer",
                 Description = "I get knocked down,{0}I get up again.{0}You are never gonna keep me down",
@@ -2261,8 +2226,6 @@ namespace Expedition_Builder_Online
             new Talent
             {
                 Exclusive = 49,
-                Image_A = Resources.EI_T_50A,
-                Image_D = Resources.EI_T_50D,
                 Cost = -15,
                 Name = "Too Much Pain",
                 Description = "I get knocked down,{0}I give up again.{0}You are always gonna keep me down",
@@ -2270,8 +2233,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_51A,
-                Image_D = Resources.EI_T_51D,
                 Cost = -18,
                 Name = "Blind Master",
                 Description = "I see in other ways..{0}..just not as good as I wanted..",
@@ -2279,8 +2240,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_52A,
-                Image_D = Resources.EI_T_52D,
                 Cost = 44,
                 Name = "Self-inserted Heroics",
                 Description = "You are always there!{0}When a party member gains skills, you can say{0}'I was also there'{0}Your party might start to hate you for this",
@@ -2288,8 +2247,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_53A,
-                Image_D = Resources.EI_T_53D,
                 Cost = 1,
                 Name = "Yee of Yellow Faith",
                 Description = "Once you get yellow, you always want to go back!{0}All Critical Hits are Unavoidable and Piercing.{0}All Critical Failures hit yourself.{0}Live a litte, become one with the yellow.",
@@ -2297,8 +2254,6 @@ namespace Expedition_Builder_Online
             },
             new Talent
             {
-                Image_A = Resources.EI_T_54A,
-                Image_D = Resources.EI_T_54D,
                 Cost = 28,
                 Name = "Master of Many Faces",
                 Description = "Everybody knows your name and fame.{0}But not your other name.{0}Or the other one.",
@@ -2307,8 +2262,6 @@ namespace Expedition_Builder_Online
             // ABILITY TALENT
             new Talent
             {
-                Image_A = Resources.EI_T_55A,
-                Image_D = Resources.EI_T_55D,
                 Cost = 10,
                 Name = "True Ability",
                 Description = "Reflecting on your abilities makes{0}them improve ever so slowly..{0}",
@@ -2341,6 +2294,7 @@ namespace Expedition_Builder_Online
             Talent_Change(NrTal, NrTalS);
             Talent_Label_Update();
             Talent_Calculate();
+            GC.Collect(); // Collect all garbage from the picturebox idiotics
         }
 
         private void Talent_Activate_Ability(object sender, MouseEventArgs e)
@@ -2427,11 +2381,13 @@ namespace Expedition_Builder_Online
             }
             if (TalentChoice[55] > 0)
             {
-                PbTalent6.Image = Talents[55].Image_A;
+                ImageChanger(PbTalent6, "EI_T_55A");
+                //PbTalent6.Image = Talents[55].Image_A;
             }
             else
             {
-                PbTalent6.Image = Talents[55].Image_D;
+                ImageChanger(PbTalent6, "EI_T_55D");
+                //PbTalent6.Image = Talents[55].Image_D;
             }
             LblTalent6.Text = TalentChoice[55].ToString();
         }
@@ -2443,26 +2399,26 @@ namespace Expedition_Builder_Online
 
             if (Activate && Pay)
             {
-                ThisBox.Image = Talents[Select].Image_A;
+                ImageChanger(ThisBox, "EI_T_" + Select.ToString() + "A");
                 TalentChoice[Select] = 1;
                 TalentPoints -= Talents[Select].Cost;
             }
             else if (Pay)
             {
-                ThisBox.Image = Talents[Select].Image_D; 
+                ImageChanger(ThisBox, "EI_T_" + Select.ToString() + "D");
                 TalentChoice[Select] = 0;
                 TalentPoints += Talents[Select].Cost;
             }
             else
             {
-                ThisBox.Image = Talents[Select].Image_D;
+                ImageChanger(ThisBox, "EI_T_" + Select.ToString() + "D");
                 TalentChoice[Select] = 0;
             }
         }
 
         void Talent_Point_Calculate()
         {
-            TalentPointsMax = Character.Data[2] * 3;
+            TalentPointsMax = Character_Data[2] * 3;
             TalentPoints = TalentPointsMax;
             for (int i = 0; i <= 55; i++)
             {
@@ -2504,7 +2460,7 @@ namespace Expedition_Builder_Online
                 TalentStats[28] += 10;
             }
 
-            double SkillRank = (double)Character.Data[1] + TalentStats[29];
+            double SkillRank = (double)Character_Data[1] + TalentStats[29];
             double TenPercent = Math.Floor(SkillRank * 0.1);
 
             // Gear Talents
@@ -2723,8 +2679,7 @@ namespace Expedition_Builder_Online
                 else
                 { PbTalName = "PbTalent" + Nr[0].ToString(); }
 
-                Talents[i].Box = this.Controls.Find(PbTalName, true).FirstOrDefault() as PictureBox;
-                Talents[i].TT_Generate();
+                Talents[i].TT_Generate(this.Controls.Find(PbTalName, true).FirstOrDefault() as PictureBox);
             }
         }
 
@@ -2737,17 +2692,18 @@ namespace Expedition_Builder_Online
             PictureBox ThisBox = this.Controls.Find("PbChar3",true).FirstOrDefault() as PictureBox;
             Label ThisLbl = this.Controls.Find("LblChar3", true).FirstOrDefault() as Label;
 
-            ThisBox.Image = Source.Pic.ElementAt(Index);
+            //ThisBox.Image = Source.Pic.ElementAt(Index); // IMAGECHANGER
+            ImageChanger(ThisBox, Source.Icon_Source(Index));
             ThisLbl.Text = Source.Name(Index, TalentChoice[42] > 0);
         }
 
         private void CbCharSource_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Character.Data[3] = CbCharSource.SelectedIndex;
+            Character_Data[3] = CbCharSource.SelectedIndex;
             LblChar3.Text = CbCharSource.Text;
 
             SelectToggle(CbCharSource, LblChar3);
-            SourceLoad(Character.Data[3]);
+            SourceLoad(Character_Data[3]);
         }
 
         void SelectToggle(object A, object B)
@@ -2802,7 +2758,7 @@ namespace Expedition_Builder_Online
         {
             if (e.KeyCode == Keys.Enter)
             {
-                Character.Name = TxtCharName.Text;
+                Character_Name = TxtCharName.Text;
                 LblCharName.Text = TxtCharName.Text;
                 SelectToggle(TxtCharName, LblCharName);
             }
@@ -2818,7 +2774,7 @@ namespace Expedition_Builder_Online
                 LblRank.Text = TxtRank.Text;
                 SelectToggle(TxtRank, LblRank);
 
-                Character.Data[NrRank] = int.Parse(TxtRank.Text);
+                Character_Data[NrRank] = int.Parse(TxtRank.Text);
                 Affinity_Calculate();
                 Ability_Calculate();
                 Talent_Calculate();
@@ -2891,52 +2847,44 @@ namespace Expedition_Builder_Online
             DialogResult dialogResult = MessageBox.Show("Do you want to refresh your connection to Google Sheets?", "Refresh Sheets", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                SpreadsheetsResource.ValuesResource.GetRequest GRequest = GSheets.Service.Spreadsheets.Values.Get(GSheets.Code, GSheets.TabChar + GSheets.TabCharRange); // Do nothing but load
-                MessageBox.Show("A browser window should have popped up. Make sure to press continue and accept the link! Once the browser tells you that the link has been established, close the browser and try again!", "I'm not a virus", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                try
+                {
+                    var GValues = GSheets.Service.Spreadsheets.Values.Get(GSheets.Code, GSheets.TabItem + GSheets.TabItemRange).Execute().Values; // Values is made up of a list of rows with columns as index
+                    foreach (var GRow in GValues)
+                    {
+                        string Test = GRow[0].ToString();
+                    }
+                    MessageBox.Show("The load seems to work properly. Google Sheets should be connected!", "I'm not a virus", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show("A browser window should have popped up. Make sure to press continue and accept the link! Once the browser tells you that the link has been established, close the browser and try again!", "I'm not a virus", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
             if (dialogResult == DialogResult.No)
             {
                 MessageBox.Show("If you keep getting errors whilst typing a correct code, refreshing might be a good choice", "Next time maybe?", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-
     }
 
     public static class Source
     {
-        public static List<Image> Pic = new List<Image>()
+        public static string Icon_Source(int Index)
         {
-            Properties.Resources.S_None,                // 0
-            Properties.Resources.S_Arcane_Illusion,     // 1
-            Properties.Resources.S_Arcane_Magic,        // 2
-            Properties.Resources.S_Chaos_Anomaly,       // 3
-            Properties.Resources.S_Chaos_Gambler,       // 4
-            Properties.Resources.S_Earth_Mineral,       // 5
-            Properties.Resources.S_Earth_Sand,          // 6
-            Properties.Resources.S_Energy_Anima,        // 7
-            Properties.Resources.S_Energy_Force,        // 8    
-            Properties.Resources.S_Fire_Flame,          // 9   
-            Properties.Resources.S_Fire_Mythical,       // 10
-            Properties.Resources.S_Lightning_Magnetism, // 11
-            Properties.Resources.S_Lightning_Storm,     // 12
-            Properties.Resources.S_Light_Holy,          // 13
-            Properties.Resources.S_Light_Prismatic,     // 14
-            Properties.Resources.S_Nature_Fae,          // 15
-            Properties.Resources.S_Nature_Wind,         // 16
-            Properties.Resources.S_Poison_Alchemic,     // 17
-            Properties.Resources.S_Poison_Toxic,        // 18
-            Properties.Resources.S_Primal_Beastial,     // 19
-            Properties.Resources.S_Primal_Shamanistic,  // 20
-            Properties.Resources.S_Psi_Ki,              // 21
-            Properties.Resources.S_Psi_Psychic,         // 22
-            Properties.Resources.S_Shadow_Darkness,     // 23
-            Properties.Resources.S_Shadow_Necrotic,     // 24
-            Properties.Resources.S_Void_Consuming,      // 25
-            Properties.Resources.S_Void_Space,          // 26
-            Properties.Resources.S_Water_Flow,          // 27
-            Properties.Resources.S_Water_Ice            // 28
-        };
+            int MainTrack = 0;
+            if (Index%2 > 0) { MainTrack = (Index + 1) / 2; }
+            else { MainTrack = Index / 2; }
+
+            if (Index == 0)
+            {
+                return string.Format("S_{0}", MainName.ElementAt(0));
+            }
+            else
+            {
+                return string.Format("S_{0}_{1}", MainName.ElementAt(MainTrack), SubName.ElementAt(Index));
+            }
+        }
 
         public static string Name(int Index, bool Talent)
         {
